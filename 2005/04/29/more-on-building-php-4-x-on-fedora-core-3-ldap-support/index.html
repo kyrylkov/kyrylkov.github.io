@@ -1,31 +1,25 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hexo">
-    <title>More on building PHP 4.x on Fedora Core 3 (LDAP support) - Hexo</title>
-    <meta name="author" content="John Doe">
-    
-    
-    
-    <meta name="description" content="To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:
+  <meta charset="utf-8">
+  
+  <title>More on building PHP 4.x on Fedora Core 3 (LDAP support) - Blog of Sergiy Kyrylkov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:
 --with-ldap=/usr
 
 The command line should look like this
 ./configure --with-apxs2=/usr/sbin/apxs --">
-<meta property="og:type" content="blog">
+<meta property="og:type" content="article">
 <meta property="og:title" content="More on building PHP 4.x on Fedora Core 3 (LDAP support)">
-<meta property="og:url" content="http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https://kyrylkov.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/index.html">
+<meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:
 --with-ldap=/usr
 
 The command line should look like this
 ./configure --with-apxs2=/usr/sbin/apxs --">
-<meta property="og:updated_time" content="2016-07-03T17:39:30.236Z">
+<meta property="og:updated_time" content="2016-07-03T17:59:20.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="More on building PHP 4.x on Fedora Core 3 (LDAP support)">
 <meta name="twitter:description" content="To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:
@@ -33,382 +27,183 @@ The command line should look like this
 
 The command line should look like this
 ./configure --with-apxs2=/usr/sbin/apxs --">
-    
-    
-        
-    
-    
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
-    <!--STYLES END-->
-    
-    
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-339047-5', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
 </head>
 
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
-
-
-    
-
-<header id="header" data-behavior="4">
-    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-    <h1 class="header-title">
-        <a class="header-title-link" href="/ ">Hexo</a>
-    </h1>
-    
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
         
-            <a  class="header-right-picture "
-                href="#about">
+          <a class="main-nav-link" href="/">Home</a>
         
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-        </a>
-    
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+          <a class="main-nav-link" href="/atom.xml">Rss</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kyrylkov.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
 </header>
+    <section id="main" class="outer"><article id="post-more-on-building-php-4-x-on-fedora-core-3-ldap-support" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      More on building PHP 4.x on Fedora Core 3 (LDAP support)
+    </h1>
+  
 
-            <!-- Define author's picture -->
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/" class="article-date">
+  <time datetime="2005-04-28T21:03:00.000Z" itemprop="datePublished">2005-04-29</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
 
-
-<nav id="sidebar" data-behavior="4">
-    
-    
-        <ul class="sidebar-buttons">
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/ "
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                    <span class="sidebar-button-desc">Home</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-categories"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                    <span class="sidebar-button-desc">Categories</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-tags"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                    <span class="sidebar-button-desc">Tags</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-archives"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                    <span class="sidebar-button-desc">Archives</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link st-search-show-outputs"
-                         href="#search"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
-                    <span class="sidebar-button-desc">Search</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="#about"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                    <span class="sidebar-button-desc">About</span>
-                </a>
-        </li>
-        
-    </ul>
-    
-        <ul class="sidebar-buttons">
-        
-    </ul>
-    
-        <ul class="sidebar-buttons">
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/atom.xml"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-                    <span class="sidebar-button-desc">RSS</span>
-                </a>
-        </li>
-        
-    </ul>
-    
-</nav>
-
-            
-            <div id="main" data-behavior="4"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-    
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            More on building PHP 4.x on Fedora Core 3 (LDAP support)
-        </h1>
-    
-    <div class="post-meta">
-    <time itemprop="datePublished" datetime="2005-04-29T00:03:00+03:00">
-	
-		    Apr 29, 2005
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
-
-
-    
-</div>
-
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <p>To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:</p>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:</p>
 <pre>--with-ldap=/usr</pre>
 
 <p>The command line should look like this</p>
 <pre>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr
   --with-zlib=/usr --enable-mbstring --with-ldap=/usr</pre>
-            
-        </div>
+      
     </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
+    
+    
+      <footer class="article-footer">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/fedora/">fedora</a> <a class="tag tag--primary tag--small t-link" href="/tags/ldap/">ldap</a> <a class="tag tag--primary tag--small t-link" href="/tags/linux/">linux</a> <a class="tag tag--primary tag--small t-link" href="/tags/php/">php</a>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ldap/">ldap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
 
-            </div>
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
         
-        <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/"  data-tooltip="Installing JK Connector on Fedora Core 3 with Tomcat 5.5.x and Apache 2.0.x">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2005/04/26/severe-error-listenerstart/" data-tooltip="SEVERE: Error listenerStart">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
+          Installing JK Connector on Fedora Core 3 with Tomcat 5.5.x and Apache 2.0.x
         
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
+      </div>
+    </a>
+  
+  
+    <a href="/2005/04/26/severe-error-listenerstart/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SEVERE: Error listenerStart&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
 
-
-        
-            
-        
-    </div>
+  
 </article>
 
 
 
-                <footer id="footer" class="main-content-wrap">
-    <span class="copyrights">
-        Copyrights &copy; 2016 John Doe. All Rights Reserved.
-    </span>
-</footer>
 
-            </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/"  data-tooltip="Installing JK Connector on Fedora Core 3 with Tomcat 5.5.x and Apache 2.0.x">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2005/04/26/severe-error-listenerstart/" data-tooltip="SEVERE: Error listenerStart">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
 </div>
 
 
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <ul class="share-options">
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
-                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-            
-        </div>
-        
 
 
-<div id="about">
-    <div id="about-card">
-        <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
-        </div>
-        
-            <h4 id="about-card-name">John Doe</h4>
-        
-            <h5 id="about-card-bio"><p>author.bio</p>
-</h5>
-        
-        
-            <h5 id="about-card-job">
-                <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>author.job</p>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
-            </h5>
-        
-        
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sergiy Kyrylkov&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
     </div>
-</div>
-
-        
-<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
-    </body>
-    <!--SCRIPTS-->
-<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
-<!--SCRIPTS END-->
-
+  </div>
+</footer>
     
+<script>
+  var disqus_shortname = 'kyrylkov';
+  
+  var disqus_url = 'https://kyrylkov.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
+<script src="/js/jquery.min.js"></script>
 
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
 </html>

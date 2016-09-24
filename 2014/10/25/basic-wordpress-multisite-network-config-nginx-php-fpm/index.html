@@ -1,515 +1,196 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hexo">
-    <title>Basic WordPress Multisite Network config for nginx with php-fpm - Hexo</title>
-    <meta name="author" content="John Doe">
-    
-    
-    
-    <meta name="description" content="A starter working config combined from nginx and WordPress sites to provide initial configuration starting point
-
-user  www www;
-worker_processes  1;
-
-events {
-  #worker_connections  1024;
-}
-
-error_lo">
-<meta property="og:type" content="blog">
+  <meta charset="utf-8">
+  
+  <title>Basic WordPress Multisite Network config for nginx with php-fpm - Blog of Sergiy Kyrylkov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A starter working config combined from nginx and WordPress sites to provide initial configuration starting point
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Basic WordPress Multisite Network config for nginx with php-fpm">
-<meta property="og:url" content="http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https://kyrylkov.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/index.html">
+<meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="A starter working config combined from nginx and WordPress sites to provide initial configuration starting point
-
-user  www www;
-worker_processes  1;
-
-events {
-  #worker_connections  1024;
-}
-
-error_lo">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.949Z">
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748">
+<meta property="og:updated_time" content="2016-07-03T18:59:56.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Basic WordPress Multisite Network config for nginx with php-fpm">
 <meta name="twitter:description" content="A starter working config combined from nginx and WordPress sites to provide initial configuration starting point
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-user  www www;
-worker_processes  1;
+ga('create', 'UA-339047-5', 'auto');
+ga('send', 'pageview');
 
-events {
-  #worker_connections  1024;
-}
+</script>
+<!-- End Google Analytics -->
 
-error_lo">
-    
-    
-        
-    
-    
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
-    <!--STYLES END-->
-    
-    
+
 </head>
 
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
-
-
-    
-
-<header id="header" data-behavior="4">
-    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-    <h1 class="header-title">
-        <a class="header-title-link" href="/ ">Hexo</a>
-    </h1>
-    
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
         
-            <a  class="header-right-picture "
-                href="#about">
+          <a class="main-nav-link" href="/">Home</a>
         
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-        </a>
-    
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+          <a class="main-nav-link" href="/atom.xml">Rss</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kyrylkov.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
 </header>
+    <section id="main" class="outer"><article id="post-basic-wordpress-multisite-network-config-nginx-php-fpm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Basic WordPress Multisite Network config for nginx with php-fpm
+    </h1>
+  
 
-            <!-- Define author's picture -->
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/" class="article-date">
+  <time datetime="2014-10-25T09:41:58.000Z" itemprop="datePublished">2014-10-25</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>A starter working config combined from nginx and WordPress sites to provide initial configuration starting point</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line">user  www www;</div><div class="line">worker_processes  1;</div><div class="line"></div><div class="line">events &#123;</div><div class="line">  #worker_connections  1024;</div><div class="line">&#125;</div><div class="line"></div><div class="line">error_log  /var/log/nginx-error.log;</div><div class="line"></div><div class="line">http &#123;</div><div class="line">  include       mime.types;</div><div class="line">  default_type  application/octet-stream;</div><div class="line"></div><div class="line">  server_names_hash_bucket_size  64;</div><div class="line"></div><div class="line">  sendfile        on;</div><div class="line">  #tcp_nopush     on;</div><div class="line"></div><div class="line">  keepalive_timeout  65;</div><div class="line"></div><div class="line">  gzip  on;</div><div class="line">  gzip_types       text/plain application/xml text/css text/js text/xml application/x-javascript text/javascript application/json application/xml+rss;</div><div class="line"></div><div class="line">  upstream php &#123;</div><div class="line">      server 127.0.0.1:9000;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  map $http_host $blogid &#123;</div><div class="line">    default       -999;</div><div class="line"></div><div class="line">    #Ref: http://wordpress.org/extend/plugins/nginx-helper/</div><div class="line">    #include /var/www/wordpress/wp-content/plugins/nginx-helper/map.conf ;</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  server &#123;</div><div class="line">    server_name example.net *.example.net ;</div><div class="line"></div><div class="line">    access_log  /var/log/wordpress.log;</div><div class="line"></div><div class="line">    root /home/www/wordpress;</div><div class="line">    index index.php;</div><div class="line"></div><div class="line">    location = /favicon.ico &#123;</div><div class="line">      log_not_found off;</div><div class="line">      access_log off;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location = /robots.txt &#123;</div><div class="line">      allow all;</div><div class="line">      log_not_found off;</div><div class="line">      access_log off;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">      try_files $uri $uri/ /index.php?$args ;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location ~ \.php$ &#123;</div><div class="line">      try_files $uri =404;</div><div class="line">      include fastcgi_params;</div><div class="line">      fastcgi_pass php;</div><div class="line">      fastcgi_param SCRIPT_FILENAME /home/www/wordpress$fastcgi_script_name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    #WPMU Files</div><div class="line">    location ~ ^/files/(.*)$ &#123;</div><div class="line">      try_files /wp-content/blogs.dir/$blogid/$uri /wp-includes/ms-files.php?file=$1 ;</div><div class="line">      access_log off; log_not_found off;      expires max;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    #WPMU x-sendfile to avoid php readfile()</div><div class="line">    location ^~ /blogs.dir &#123;</div><div class="line">      internal;</div><div class="line">      alias /home/www/wordpress/wp-content/blogs.dir;</div><div class="line">      access_log off; log_not_found off;      expires max;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    #XML Sitemaps - Yoast WordPress SEO</div><div class="line">    rewrite ^/sitemap_index\.xml$ /index.php?sitemap=1 last;</div><div class="line">    rewrite ^/([^/]+?)-sitemap([0-9]+)?\.xml$ /index.php?sitemap=$1&amp;sitemap_n=$2 last;</div><div class="line"></div><div class="line">    #add some rules for static content expiry-headers here</div><div class="line">    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ &#123;</div><div class="line">      expires max;</div><div class="line">      log_not_found off;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php-fpm/">php-fpm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
 
-<nav id="sidebar" data-behavior="4">
+      </footer>
     
+  </div>
+  
     
-        <ul class="sidebar-buttons">
+<nav id="article-nav">
+  
+    <a href="/2015/02/01/es6-es7-node-js-io-js-nodemon/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
         
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/ "
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                    <span class="sidebar-button-desc">Home</span>
-                </a>
-        </li>
+          Nodemon in Node.js / io.js projects with ES6 / ES7
         
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-categories"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                    <span class="sidebar-button-desc">Categories</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-tags"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                    <span class="sidebar-button-desc">Tags</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-archives"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                    <span class="sidebar-button-desc">Archives</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link st-search-show-outputs"
-                         href="#search"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
-                    <span class="sidebar-button-desc">Search</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="#about"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                    <span class="sidebar-button-desc">About</span>
-                </a>
-        </li>
-        
-    </ul>
-    
-        <ul class="sidebar-buttons">
-        
-    </ul>
-    
-        <ul class="sidebar-buttons">
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/atom.xml"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-                    <span class="sidebar-button-desc">RSS</span>
-                </a>
-        </li>
-        
-    </ul>
-    
+      </div>
+    </a>
+  
+  
+    <a href="/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Building Rackspace Cloud Monitoring Agent on FreeBSD 10&nbsp;<span>&gt;</span></div>
+    </a>
+  
 </nav>
 
-            
-            <div id="main" data-behavior="4"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-    
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            Basic WordPress Multisite Network config for nginx with php-fpm
-        </h1>
-    
-    <div class="post-meta">
-    <time itemprop="datePublished" datetime="2014-10-25T12:41:58+03:00">
-	
-		    Oct 25, 2014
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
-
-
-    
-</div>
-
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <p>A starter working config combined from nginx and WordPress sites to provide initial configuration starting point</p>
-<pre>
-user  www www;
-worker_processes  1;
-
-events {
-  #worker_connections  1024;
-}
-
-error_log  /var/log/nginx-error.log;
-
-http {
-  include       mime.types;
-  default_type  application/octet-stream;
-
-  server_names_hash_bucket_size  64;
-
-  sendfile        on;
-  #tcp_nopush     on;
-
-  keepalive_timeout  65;
-
-  gzip  on;
-  gzip_types       text/plain application/xml text/css text/js text/xml application/x-javascript text/javascript application/json application/xml+rss;
-
-  upstream php {
-      server 127.0.0.1:9000;
-  }
-
-  map $http_host $blogid {
-    default       -999;
-
-    #Ref: http://wordpress.org/extend/plugins/nginx-helper/
-    #include /var/www/wordpress/wp-content/plugins/nginx-helper/map.conf ;
-
-  }
-
-  server {
-    server_name example.net *.example.net ;
-
-    access_log  /var/log/wordpress.log;
-
-    root /home/www/wordpress;
-    index index.php;
-
-    location = /favicon.ico {
-      log_not_found off;
-      access_log off;
-    }
-
-    location = /robots.txt {
-      allow all;
-      log_not_found off;
-      access_log off;
-    }
-
-    location / {
-      try_files $uri $uri/ /index.php?$args ;
-    }
-
-    location ~ \.php$ {
-      try_files $uri =404;
-      include fastcgi_params;
-      fastcgi_pass php;
-      fastcgi_param SCRIPT_FILENAME /home/www/wordpress$fastcgi_script_name;
-    }
-
-    #WPMU Files
-    location ~ ^/files/(.*)$ {
-      try_files /wp-content/blogs.dir/$blogid/$uri /wp-includes/ms-files.php?file=$1 ;
-      access_log off; log_not_found off;      expires max;
-    }
-
-    #WPMU x-sendfile to avoid php readfile()
-    location ^~ /blogs.dir {
-      internal;
-      alias /home/www/wordpress/wp-content/blogs.dir;
-      access_log off; log_not_found off;      expires max;
-    }
-
-    #XML Sitemaps - Yoast WordPress SEO
-    rewrite ^/sitemap_index\.xml$ /index.php?sitemap=1 last;
-    rewrite ^/([^/]+?)-sitemap([0-9]+)?\.xml$ /index.php?sitemap=$1&sitemap_n=$2 last;
-
-    #add some rules for static content expiry-headers here
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-      expires max;
-      log_not_found off;
-    }
-  }
-}
-</pre>
-            
-        </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
-        
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/nginx/">nginx</a> <a class="tag tag--primary tag--small t-link" href="/tags/php-fpm/">php-fpm</a> <a class="tag tag--primary tag--small t-link" href="/tags/wordpress/">wordpress</a>
-
-            </div>
-        
-        <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/02/01/es6-es7-node-js-io-js-nodemon/"  data-tooltip="Nodemon in Node.js / io.js projects with ES6 / ES7">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/" data-tooltip="Building Rackspace Cloud Monitoring Agent on FreeBSD 10">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-        
-            
-        
-    </div>
+  
 </article>
 
 
 
-                <footer id="footer" class="main-content-wrap">
-    <span class="copyrights">
-        Copyrights &copy; 2016 John Doe. All Rights Reserved.
-    </span>
-</footer>
 
-            </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/02/01/es6-es7-node-js-io-js-nodemon/"  data-tooltip="Nodemon in Node.js / io.js projects with ES6 / ES7">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/" data-tooltip="Building Rackspace Cloud Monitoring Agent on FreeBSD 10">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
+<div class="share_addthis">
+  <div class="sharing addthis_toolbox share">
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
 </div>
 
 
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <ul class="share-options">
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
-                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-            
-        </div>
-        
 
 
-<div id="about">
-    <div id="about-card">
-        <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
-        </div>
-        
-            <h4 id="about-card-name">John Doe</h4>
-        
-            <h5 id="about-card-bio"><p>author.bio</p>
-</h5>
-        
-        
-            <h5 id="about-card-job">
-                <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>author.job</p>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
-            </h5>
-        
-        
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sergiy Kyrylkov&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
     </div>
-</div>
-
-        
-<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
-    </body>
-    <!--SCRIPTS-->
-<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
-<!--SCRIPTS END-->
-
+  </div>
+</footer>
     
+<script>
+  var disqus_shortname = 'kyrylkov';
+  
+  var disqus_url = 'https://kyrylkov.com/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
+<script src="/js/jquery.min.js"></script>
 
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
 </html>

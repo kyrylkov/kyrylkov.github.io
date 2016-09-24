@@ -1,387 +1,170 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hexo">
-    <title>Tag: sata controller - Hexo</title>
-    <meta name="author" content="John Doe">
-    
-    
-    
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/sata-controller/index.html">
-<meta property="og:site_name" content="Hexo">
+  <meta charset="utf-8">
+  
+  <title>Tag: sata controller - Blog of Sergiy Kyrylkov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mostly Technical Blog and Other Stuff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog of Sergiy Kyrylkov">
+<meta property="og:url" content="https://kyrylkov.com/tags/sata-controller/index.html">
+<meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
+<meta property="og:description" content="Mostly Technical Blog and Other Stuff">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-    
-    
-        
-    
-    
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
-    <!--STYLES END-->
-    
-    
+<meta name="twitter:title" content="Blog of Sergiy Kyrylkov">
+<meta name="twitter:description" content="Mostly Technical Blog and Other Stuff">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-339047-5', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
 </head>
 
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
-
-
-    
-
-<header id="header" data-behavior="2">
-    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-    <h1 class="header-title">
-        <a class="header-title-link" href="/ ">Hexo</a>
-    </h1>
-    
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
         
-            <a  class="header-right-picture "
-                href="#about">
+          <a class="main-nav-link" href="/">Home</a>
         
+          <a class="main-nav-link" href="/archives">Archives</a>
         
-        </a>
-    
-</header>
-
-            <!-- Define author's picture -->
-
-
-<nav id="sidebar" data-behavior="2">
-    
-    
-        <ul class="sidebar-buttons">
+          <a class="main-nav-link" href="/categories">Categories</a>
         
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/ "
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                    <span class="sidebar-button-desc">Home</span>
-                </a>
-        </li>
+          <a class="main-nav-link" href="/tags">Tags</a>
         
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-categories"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                    <span class="sidebar-button-desc">Categories</span>
-                </a>
-        </li>
+          <a class="main-nav-link" href="/about">About</a>
         
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-tags"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                    <span class="sidebar-button-desc">Tags</span>
-                </a>
-        </li>
+          <a class="main-nav-link" href="/atom.xml">Rss</a>
         
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/all-archives"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                    <span class="sidebar-button-desc">Archives</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link st-search-show-outputs"
-                         href="#search"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
-                    <span class="sidebar-button-desc">Search</span>
-                </a>
-        </li>
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="#about"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                    <span class="sidebar-button-desc">About</span>
-                </a>
-        </li>
-        
-    </ul>
-    
-        <ul class="sidebar-buttons">
-        
-    </ul>
-    
-        <ul class="sidebar-buttons">
-        
-            <li class="sidebar-button">
-                
-                    <a  class="sidebar-button-link "
-                         href="/atom.xml"
-                        
-                    >
-                
-                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-                    <span class="sidebar-button-desc">RSS</span>
-                </a>
-        </li>
-        
-    </ul>
-    
-</nav>
-
-            
-            <div id="main" data-behavior="2"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-    
-
-<section class="postShorten-group main-content-wrap">
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/">
-                            Promise SATA300 TX4 on Linux (2.6.x)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2005-11-20T03:08:00+02:00">
-	
-		    Nov 20, 2005
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>If you are having problems with Promise SATA300 TX4 on Linux (2.6.x) and don’t want to <a href="http://sergiy.kyrylkov.name/2005/08/14/promise-sata300-tx4-on-fedora-core-4/" target="_blank" rel="external">rebuild </a> kernel, get Linux kernel 2.6.14 or later, where Promise SATA300 TX4 is supported out of the box.</p>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kyrylkov.com"></form>
         </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/">
-                            Promise SATA300 TX4 on Fedora Core 4
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2005-08-14T13:59:00+03:00">
-	
-		    Aug 14, 2005
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and <a>here</a>. Basically you need to add one line to file sata_promise.c and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
-<ol>
-<li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
-<li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
-<li>Download the latest kernel sources<pre>wget <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm" target="_blank" rel="external">http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm</a> </pre></li>
-<li>Install it<pre>rpm -ivh &lt;kernel-name&gt;.src.rpm</pre></li>
-<li>Patch the kernel with Fedora patches:<pre>cd ~/rpmbuild/SPECS/<br>rpmbuild -bp –target=&lt;your_arch&gt; kernel-2.6.spec</pre></li>
-<li>Patch _sata<em>promise.c</em><pre>cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;<br>vi drivers/scsi/sata_promise.c</pre></li>
-<li>Add the following code:<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>between<pre>{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>and<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre></li>
-<li>Build the new kernel<pre>make menuconfig<br>make rpm</pre></li>
-<li>Install the new kernel<pre>cd ~/rpmbuild/RPMS/<br>rpm -ivh &lt;kernel-name&gt;.rpm</pre></li>
-<li>Step 9: Check Grub configuration<pre>sudo vi /boot/grub/grub.conf</pre>If the new kernel is not there, <em>edit grub.conf</em> to add it manually</li>
-<li>Reboot into the new kernel<pre>sudo /sbin/reboot</pre></li>
-</ol>
-<p>Enjoy!</p>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/">
-                            HighPoint Rocket Raid 1640 and fakeraids
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2005-07-27T05:13:00+03:00">
-	
-		    Jul 27, 2005
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <p>I just found some interesting <a href="http://linuxmafia.com/faq/Hardware/sata.html" target="_blank" rel="external">info</a> about RAID’s. It appears to be that almost all cheap (below $300) RAID controllers are so called fakeraids. Meaning they don’t have any RAID hardware onboard. They are just plain PATA/SATA disk controllers that have no RAID features plus some proprietary software that does all the RAID-related calculations. Because the software is proprietary, it is usually hard to make these things work in Linux.</p>
-<p>My friend has HighPoint Rocket Raid 1640. He paid around $100 for that, which was more than some other offerings. He believed he is getting something better by paying more, but it appears it was not the case at all.</p>
-<p>Real RAID controllers usually have their own processors (some are old and slow but some are modern and fast) and (upgradeable) memory, which makes them expensive.</p>
-<p>The conclusion is that if you want a cheap RAID in Linux, just use plain PATA/SATA controllers and <a href="http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html" target="_blank" rel="external">open-source software RAID</a>.  If you want real hardware RAID, prepare to pay several hundred dollars.</p>
-
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
-        
-        
-        <li class="pagination-number">page 1 of 1</li>
-    </ul>
-</div>
-
-</section>
-
-
-                <footer id="footer" class="main-content-wrap">
-    <span class="copyrights">
-        Copyrights &copy; 2016 John Doe. All Rights Reserved.
-    </span>
-</footer>
-
-            </div>
-            
-        </div>
-        
-
-
-<div id="about">
-    <div id="about-card">
-        <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
-        </div>
-        
-            <h4 id="about-card-name">John Doe</h4>
-        
-            <h5 id="about-card-bio"><p>author.bio</p>
-</h5>
-        
-        
-            <h5 id="about-card-job">
-                <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>author.job</p>
-
-            </h5>
-        
-        
+      </nav>
     </div>
-</div>
+  </div>
+</header>
+    <section id="main" class="outer">
+    <section class="archives-wrap">
+    <div class="archive-tag-wrap">
+      <span class="archive-tag">#sata controller</span>
+    </div>
+    <div class="archives">
+    
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      
+        <a href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/" class="archive-article-date">
+  <time datetime="2005-11-20T01:08:00.000Z" itemprop="datePublished">2005 Nov 20</time>
+</a>
+      
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/">Promise SATA300 TX4 on Linux (2.6.x)</a>
+    </h1>
+  
 
-        
-<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
-    </body>
-    <!--SCRIPTS-->
-<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
-<!--SCRIPTS END-->
+    </header>
+  </div>
+</article>
+    
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      
+        <a href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/" class="archive-article-date">
+  <time datetime="2005-08-14T10:59:00.000Z" itemprop="datePublished">2005 Aug 14</time>
+</a>
+      
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/">Promise SATA300 TX4 on Fedora Core 4</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+    
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      
+        <a href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/" class="archive-article-date">
+  <time datetime="2005-07-27T02:13:00.000Z" itemprop="datePublished">2005 Jul 27</time>
+</a>
+      
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/">HighPoint Rocket Raid 1640 and fakeraids</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+    
+    </div></section>
+    </section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sergiy Kyrylkov&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+<script>
+  var disqus_shortname = 'kyrylkov';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
+<script src="/js/jquery.min.js"></script>
 
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
 </html>
