@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Tag: jikes rvm - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/jikes-rvm/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/03/13/jvmxm008-workaround/">
+                            JVMXM008 workaround
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-03-13T21:14:00+02:00">
+	
+		    Mar 13, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p><a href="http://carlstrom.com/" target="_blank" rel="external">Brian D. Carlstrom</a> wrote:</p>
+<blockquote>
+<p>At Stanford I have my own automated regression infrastructure that runs processor simulations remotely via ssh. One problem that has existed for months is this error from jbuild.linkImage:</p>
+<p>JVMXM008: Error occured while initialising System ClassException in thread “main” Could not create the Java virtual machine.</p>
+<p>I noticed that Sergiy Kyrylkov had posted in his blog about a similar issue when running JikesRVM regressions from cron:</p>
+<p><a href="http://sergiy.kyrylkov.name/blog/Jikes%20RVM" target="_blank" rel="external">http://sergiy.kyrylkov.name/blog/Jikes%20RVM</a>/</p>
+<p>I found that if I forced the ssh remote bash to be a login shell, I did not get the error. Eventually I narrowed it down to the fact that /etc/profile was sourcing /etc/profile.d/lang.sh which was setting the LANG environment variable. I found that if I my remote command set LANG explicitly, I can build jikesrvm over ssh without the JVMXM008 error.</p>
+<p>I just wanted to post the workaround to the list in case it helps someone else. I don’t know if it is needed for later SDKs, but my version of JikesRVM seems to only work with 1.4.1, nothing earlier, nothing later.</p>
+<p>For the record, this is on Fedora Core 4 on G5 machines running IBM’s SDK 1.4.1-SR2 with a jikesrvm source tree from last updated at “2005-12-09 03:00:00”. We are frozen until after some paper deadlines this month…<br>I hope I’ll have time soon to try this workaround on UNM machines.</p>
+</blockquote>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/03/13/jvmxm008-workaround/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/">
+                            More on Jikes RVM on Linux PPC64
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-09-22T11:27:00+03:00">
+	
+		    Sep 22, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Finally we got Fedora Core 4 installed on one of our G5 at UNM. Alas it didn’t solve a problem with host IBM Java crashing. CVS HEAD build still crashes on Linux PPC64 with all latest IBM Java Development Kits including 1.4.1, 1.4.2 and 1.4.2 64-bit. I don’t really see when and how this can be solved. Seems like IBM’s Java is just too buggy.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/">
+                            Linux PPC64 regression tests of Jikes RVM CVS head
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-07-20T00:17:00+03:00">
+	
+		    Jul 20, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>For the time being Linux PPC64 regression tests of Jikes RVM CVS head will<br>be started manually. I plan on doing this at least once a week.</p>
+<p>The need for this arises from the fact that for some reason the host IBM Java SDK crashes during the build process if regression tests start as a cron job:</p>
+<pre>(built utility_kludge.jar) \
+/opt/IBMJava2-ppc-141/bin/java \
+   -Xbootclasspath/p:/opt/regression/powerpc... -Xbootclasspath/a:/opt/regression/powerpc64-... \
+        -Xmx400M \
+   -classpath /opt/regression/powerpc64-unkn... \
+   -Djava.security.policy=rvm.security \
+     \
+   BootImageWriter\
+   -classpath /opt/regression/powerpc64-unkn... \
+   -n /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.primordials \
+   -o /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.image \
+    \
+   -demographics  -m /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.map \
+   -ia 0x31000000
+JVMXM008: Error occured while initialising System ClassException in thread "main" Could not create the Java virtual machine.
+make: *** [/opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.image] Error 1
+make: Leaving directory `/opt/regression/powerpc64-unknown-linux-gnu/nightShadow/rvm/src/tools/bootImageWriter'
+jbuild.linkImage: Exiting unexpectedly with status 2.
+jbuild.linkImage: Cleaning up...
+jbuild.linkImage: ...cleaned up.
+69 s
+jbuild: Trouble while running "./jbuild.linkImage -demographics"
+     (exit status 2); aborting execution
+</pre>
+
+<p>I’ve tried changing environmental variables of the cron job so they look exactly like those of a regular account, but it didn’t help.</p><p></p><p>The problem may have something to do with the 64-bit version of PPC Linux we have. It is one of the first pre-releases of 64-bit Yellow Dog Linux, which has a bunch of custom workarounds and kludges, including a custom-patched kernel 2.6.1</p>
+<p>The long term solution I’d like to try is installing the latest Fedora Core 4, which does have 64-bit PPC kernel, and running the regression tests on top of that.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

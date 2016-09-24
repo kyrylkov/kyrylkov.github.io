@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Tag: apache - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/apache/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2013/08/20/magento-with-apache-httpd-2-4-and-php-fpm/">
+                            Magento with apache httpd 2.4 and php-fpm
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2013-08-20T13:50:59+03:00">
+	
+		    Aug 20, 2013
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>After struggling for several hours our being  unable to access admin section of our Magento installation when using  apache httpd 2.4 configured with php-fpm, we finally found the problem.</p>
+<p>Coming from <a href="http://wiki.apache.org/httpd/PHP-FPM" target="_blank" rel="external">here</a>, we used incorrect <strong>ProxyPassMatch</strong>, specifically:</p>
+<p><code>ProxyPassMatch ^/(.*\.php)$ fcgi://127.0.0.1:9000/var/www/$1</code></p>
+<p>instead of</p>
+<p><code>ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/var/www/$1</code></p>
+<p>Using the 2nd option solved all problems with Magento admin section access.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2013/08/20/magento-with-apache-httpd-2-4-and-php-fpm/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2012/02/26/phusion-passenger-with-apache-on-rhel-6-centos-6-sl-6-with-selinux/">
+                            Phusion Passenger with Apache on RHEL 6 / CentOS 6 / SL 6 with SELinux
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2012-02-26T15:01:48+02:00">
+	
+		    Feb 26, 2012
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>A brief guide:</p>
+<ol>
+<li><p>Install ruby and passenger dependencies</p>
+<pre>yum -y install ruby zlib-devel curl-devel openssl-devel httpd-devel apr-devel apr-util-devel mysql-devel</pre>
+</li>
+<li><p>Install gem</p>
+<pre>wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.17.tgz
+tar zxvf rubygems-1.8.17.tgz
+cd rubygems-1.8.17
+ruby setup.rb</pre>
+</li>
+<li><p>Install and build a Passenger for Apache</p>
+<pre>gem install passenger
+passenger-install-apache2-module</pre>
+</li>
+<li><p>Create <code>passenger.conf</code> file in <code>/etc/httpd/conf.d</code></p>
+<pre>LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-3.0.11/ext/apache2/mod_passenger.so
+PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-3.0.11
+PassengerRuby /usr/bin/ruby</pre>
+</li>
+<li><p>Create <code>conf</code> file for your Rails application</p>
+</li>
+<li><p>Temporarily go into SELinux permissive mode</p>
+<pre>setenforce 0</pre>
+</li>
+<li><p>Restart Apache</p>
+<pre>/sbin/service httpd restart</pre>
+</li>
+<li><p>Start using your Rails application</p>
+</li>
+<li><p>Walk through SELinux log and generate new SELinux policy module</p>
+<pre>grep httpd /var/log/audit/audit.log | audit2allow -M passenger</pre>
+</li>
+<li><p>Install newly created SELinux module</p>
+<pre>semodule -i passenger.pp</pre>
+</li>
+<li><p>Switch SELinux back into enforcing mode</p>
+<pre>setenforce 1</pre></li>
+</ol>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2012/02/26/phusion-passenger-with-apache-on-rhel-6-centos-6-sl-6-with-selinux/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/05/15/13permission-denied-httpd-could-not-open-error-log-file/">
+                            (13) Permission denied: httpd: could not open error log file
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-05-15T05:55:00+03:00">
+	
+		    May 15, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Those who have later versions of Fedora Core installed and trying to set up virtual hosts in Apache may encounter the following error:</p>
+<pre>(13)Permission denied: httpd: could not open error log file</pre>
+As a result Apache refuses to start.
+
+This problem should be easy to fix if it has to do with SELinux. Check what kind of security attributes you have in your _/var/log/httpd_ , _/var/www_ and other related directories using
+<pre>ls -lZ</pre>
+command and be sure to set the same attributes for the directories where you have you virtual hosts html files, logs, etc
+
+For example if you have your virtual host html files in _/server/1/html_ and your log files in _/server/1/log_ you should issue the following commands to set the right attributes:
+<pre>chcon -R system_u:object_r:httpd_sys_content_t /server/1/html</pre>
+and
+<pre>chcon -R system_u:object_r:httpd_log_t /server/1/log</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/05/15/13permission-denied-httpd-could-not-open-error-log-file/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/">
+                            Blojsom short URL&#39;s with Apache httpd and Tomcat
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-01-10T23:09:00+02:00">
+	
+		    Jan 10, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Probably there are not many people who like the way default Blojsom URLs look:</p>
+<pre>http://localhost/blojsom/blog/default</pre>
+
+<p>The easiest way to remedy this situation is to use standard Apache HTTP proxy by adding the following lines into your Apache conf file (be it <em>httpd.conf</em> or<br>something else):</p>
+<pre>ProxyPass /blog http://localhost:8082/blojsom/blog/default/
+ProxyPassReverse /blog http://localhost:8082/blojsom/blog/default/&lt;
+
+ProxyPass /blojsom http://localhost:8082/blojsom
+ProxyPassReverse /blojsom http://localhost:8082/blojsom</pre>
+
+<p>The only thing that needs to be adjusted in Blojsom itself in order for this to work is Blog URL in <em>Weblog Setttings-&gt;Properties</em></p>
+<pre>Blog URL: http://localhost/blog/</pre>
+
+<p>Also be sure that your Proxied HTTP/1.1 Connector on port 8082 is enabled in your Tomcat in <em>server.xml</em> (Tomcat 5.5.x in the excerpt below):</p>
+<pre>&lt;Connector port="8082"
+  maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+  enableLookups="false" acceptCount="100" connectionTimeout="20000"
+  proxyPort="80" disableUploadTimeout="true"
+  proxyName="localhost" /&gt;</pre>
+
+<p>After these changes you can use:</p>
+<pre>http://localhost/blog</pre>
+
+<p>as the address of your blog.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/">
+                            Making Apache 2.x with custom-built PHP 4.x happy on FC3 with no original PHP RPMs installed
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-06T00:32:00+03:00">
+	
+		    May 06, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p></p><p>After uninstalling original PHP 4.x RPMs on FC3 and install a custom-built version, I’ve discovered that our PHP applications don’t work when I try to use them, instead a directory listing or the contents of the PHP files are displayed. This probably has to do with the fact that <em>httpd.conf</em> was updated after removing native FC3 PHP 4.x RPMs to not recognize php files in general and index.php in particular. Adding <em>php.conf</em> to <em>/etc/httpd/conf.d</em> with the following contents solves the problem:<pre>LoadModule php4_module  /usr/lib/httpd/modules/libphp4.so</pre></p>
+<p>AddType application/x-httpd-php .php .phtml<br>AddType application/x-httpd-php-source .phps<br>DirectoryIndex index.php</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Archives: 2005 - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2005/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/12/04/cant-write-to-a-readonly-object-with-hibernate-read-only-second-level-cache/">
+                            Can&#39;t write to a readonly object with Hibernate read-only second-level cache
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-12-04T21:24:00+02:00">
+	
+		    Dec 04, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>If you enabled read-only second-level cache in Hibernate and have the following error:</p>
+<p><pre>Stack Trace:</pre></p>
+<ul>
+<li>org.hibernate.cache.ReadOnlyCache.lock(ReadOnlyCache.java:43)</li>
+<li>org.hibernate.action.EntityUpdateAction.execute(EntityUpdateAction.java:69)</li>
+<li>org.hibernate.engine.ActionQueue.execute(ActionQueue.java:239)</li>
+<li>org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:223)</li>
+<li>org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:137)</li>
+<li>org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:274)</li>
+<li>org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:27)</li>
+<li>org.hibernate.impl.SessionImpl.flush(SessionImpl.java:730)</li>
+<li>org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:324)</li>
+<li>org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:86)<br>which also shows up in Eclipse like this:<br><pre>ERROR org.hibernate.cache.ReadOnlyCache : Application attempted to edit read only item</pre><br>Check that your Hibernate class mapping has <em>mutable=”false”</em>, which prevents Hibernate from issuing updates for already existing instances. Here is a <a href="http://forums.hibernate.org/viewtopic.php?t=950646&amp;sid=4bf6cda18b8fc4bdc5133009d644cdb8" target="_blank" rel="external">link</a> to my Hibernate Forums thread about this problem.</li>
+</ul>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/12/04/cant-write-to-a-readonly-object-with-hibernate-read-only-second-level-cache/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/">
+                            Promise SATA300 TX4 on Linux (2.6.x)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-11-20T03:08:00+02:00">
+	
+		    Nov 20, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>If you are having problems with Promise SATA300 TX4 on Linux (2.6.x) and don’t want to <a href="http://sergiy.kyrylkov.name/2005/08/14/promise-sata300-tx4-on-fedora-core-4/" target="_blank" rel="external">rebuild </a> kernel, get Linux kernel 2.6.14 or later, where Promise SATA300 TX4 is supported out of the box.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/10/zen-cart-vs-oscommerce/">
+                            Zen Cart vs osCommerce
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-10T07:06:00+03:00">
+	
+		    Oct 10, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Uncategorized/">Uncategorized</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Obviously I should have looked at SourceForge statistics before deciding which<br>software to use instead of basing my decision exclusively on Google<br>page count so here we go:</p>
+<p><strong>Zen Cart</strong></p>
+<ul>
+<li>Development Status: 5 - Production/Stable</li>
+<li>Developers: 5</li>
+<li>Activity Percentile (last week): 99.85</li>
+<li>Latest Release: August 21, 2005</li>
+<li>Google Hits: 2,110,000</li>
+</ul>
+<p><strong>osCommerce</strong></p>
+<ul>
+<li>Development Status: 4 - Beta</li>
+<li>Developers: 3</li>
+<li>Activity Percentile (last week): 92.80</li>
+<li>Latest Release: July 12, 2003</li>
+<li>Google Hits: 13,500,000<p>Initially, based on pure Google hit count I decided to try osCommerce first, however after having lots of troubles with PHP5 and internationalization and also checking out SourceForge statistics I decided to abandon osCommerce in favor of Zen Cart.  In addition, Zen Cart seems to be actively developed unlike osCommerce, whose development seems to be completely frozen right now.</p></li>
+</ul>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/10/zen-cart-vs-oscommerce/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/">
+                            oscommerce SQL errors on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-07T02:12:00+03:00">
+	
+		    Oct 07, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Several parts of admin section shouldn’t not work in oscommerce-2.2ms2 installation on Fedora Core 4 due to some <a href="http://forums.oscommerce.com/index.php?showtopic=144095" target="_blank" rel="external">issues</a> with MySQL 4.1  In order to fix them the following lines in _admin/includes/classes/split_page<em>results.php</em>:</p>
+<pre>$offset = ($max_rows_per_page * ($current_page_number - 1));
+$sql_query .= " limit " . $offset . ", " . $max_rows_per_page;</pre>
+
+<p>should be changed to:</p>
+<pre>$offset = ($max_rows_per_page * ($current_page_number - 1));
+if ($offset &lt; 0)
+{
+$offset = 0 ;
+}
+$sql_query .= " limit " . $offset . ", " . $max_rows_per_page;</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/">
+                            Blank admin screen in oscommerce on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-07T01:49:00+03:00">
+	
+		    Oct 07, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>This issue is a bug with oscommerce-2.2ms2 and PHP5. To fix it, replace</p>
+<p><pre>$this = null;</pre><br>with</p>
+<p><pre>unset($this);</pre><br>in <em>catalog/admin/includes/classes/upload.php</em></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/07/oscommerce-on-fedora-core-4/">
+                            oscommerce on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-07T00:54:00+03:00">
+	
+		    Oct 07, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>For those having problem with Step 2 installing oscommerce-2.2ms2 on Fedora Core 4 here is the solution:</p>
+<ol>
+<li><p>Edit _/etc/httpd/conf/httpd.conf _replacing:</p>
+<pre>&lt;Directory "/var/www/html"&gt;
+...
+AllowOverride None
+...
+&lt;/Directory&gt;</pre>
+with
+<pre>&lt;Directory "/var/www/html"&gt;
+...
+AllowOverride Options
+...
+&lt;/Directory&gt;</pre>
+</li>
+<li><p>Create <em>.htaccess</em> file in _/var/www/html_with the following contents:</p>
+<pre>php_flag register_globals on
+php_flag register_long_arrays on</pre></li>
+</ol>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/07/oscommerce-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/">
+                            New IMAP stunnel configuration (stunnel3 vs stunnel)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-09-29T22:14:00+03:00">
+	
+		    Sep 29, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p><strong>Old stunnel</strong><br>(stunnel3 from <a href="http://www.doorbot.com/guides/sendmail/securemail/" target="_blank" rel="external">Doorbot Gaming: Secure Email Using Cyrus IMAP, Sendmail, and SASLv2</a>):</p>
+<pre>/usr/sbin/stunnel3 -c -d localhost:143 -r localhost:993</pre>
+
+<p><strong>New stunnel</strong><br>Create a conf file with the following contents:</p>
+<pre>client = yes
+[imap]
+accept = localhost:143
+connect = localhost:993</pre>
+
+<p>Run</p>
+<pre>/usr/sbin/stunnel &lt;filename&gt;</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/">
+                            More on Jikes RVM on Linux PPC64
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-09-22T11:27:00+03:00">
+	
+		    Sep 22, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Finally we got Fedora Core 4 installed on one of our G5 at UNM. Alas it didn’t solve a problem with host IBM Java crashing. CVS HEAD build still crashes on Linux PPC64 with all latest IBM Java Development Kits including 1.4.1, 1.4.2 and 1.4.2 64-bit. I don’t really see when and how this can be solved. Seems like IBM’s Java is just too buggy.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/">
+                            Blojsom on Tomcat 5.5.9 with mod_jk
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-08-20T09:59:00+03:00">
+	
+		    Aug 20, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>It looks like it is impossible to have permalinks (and comment and who knows what else) working in Blojsom, which runs on port 80 through mod_jk on Tomcat 5.5.9 (in my case).</p>
+<p>All permalinks work from localhost only when they look like this: <pre><a href="http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html" target="_blank" rel="external">http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</a></pre> instead of <pre><a href="http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html" target="_blank" rel="external">http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</a></pre> In this second case I end up with “File not found” Apache error.</p>
+<p>I tried to play with a number of things, including changing host name in Tomcat <em>server.xml</em>, but nothing helped. It looks like either Apache or Tomcat (or mod_jk) fail to pick up the right virtual host name for some reason and settle for localhost instead.</p>
+<p>Anyway, in the end I settled for mod_proxy and left mod_jk problem be. Of course the question is why would I want mod_jk in the first place…</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/">
+                            Promise SATA300 TX4 on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-08-14T13:59:00+03:00">
+	
+		    Aug 14, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and <a>here</a>. Basically you need to add one line to file sata_promise.c and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
+<ol>
+<li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
+<li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
+<li>Download the latest kernel sources<pre>wget <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm" target="_blank" rel="external">http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm</a> </pre></li>
+<li>Install it<pre>rpm -ivh &lt;kernel-name&gt;.src.rpm</pre></li>
+<li>Patch the kernel with Fedora patches:<pre>cd ~/rpmbuild/SPECS/<br>rpmbuild -bp –target=&lt;your_arch&gt; kernel-2.6.spec</pre></li>
+<li>Patch _sata<em>promise.c</em><pre>cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;<br>vi drivers/scsi/sata_promise.c</pre></li>
+<li>Add the following code:<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>between<pre>{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>and<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre></li>
+<li>Build the new kernel<pre>make menuconfig<br>make rpm</pre></li>
+<li>Install the new kernel<pre>cd ~/rpmbuild/RPMS/<br>rpm -ivh &lt;kernel-name&gt;.rpm</pre></li>
+<li>Step 9: Check Grub configuration<pre>sudo vi /boot/grub/grub.conf</pre>If the new kernel is not there, <em>edit grub.conf</em> to add it manually</li>
+<li>Reboot into the new kernel<pre>sudo /sbin/reboot</pre></li>
+</ol>
+<p>Enjoy!</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="/archives/2005/page/2/">
+                    <span>OLDER POSTS</span>
+                <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+        </li>
+        
+        <li class="pagination-number">page 1 of 4</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

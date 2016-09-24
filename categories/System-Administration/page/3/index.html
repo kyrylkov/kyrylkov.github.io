@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Category: System Administration - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/categories/System-Administration/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/">
+                            Blojsom short URL&#39;s with Apache httpd and Tomcat
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-01-10T23:09:00+02:00">
+	
+		    Jan 10, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Probably there are not many people who like the way default Blojsom URLs look:</p>
+<pre>http://localhost/blojsom/blog/default</pre>
+
+<p>The easiest way to remedy this situation is to use standard Apache HTTP proxy by adding the following lines into your Apache conf file (be it <em>httpd.conf</em> or<br>something else):</p>
+<pre>ProxyPass /blog http://localhost:8082/blojsom/blog/default/
+ProxyPassReverse /blog http://localhost:8082/blojsom/blog/default/&lt;
+
+ProxyPass /blojsom http://localhost:8082/blojsom
+ProxyPassReverse /blojsom http://localhost:8082/blojsom</pre>
+
+<p>The only thing that needs to be adjusted in Blojsom itself in order for this to work is Blog URL in <em>Weblog Setttings-&gt;Properties</em></p>
+<pre>Blog URL: http://localhost/blog/</pre>
+
+<p>Also be sure that your Proxied HTTP/1.1 Connector on port 8082 is enabled in your Tomcat in <em>server.xml</em> (Tomcat 5.5.x in the excerpt below):</p>
+<pre>&lt;Connector port="8082"
+  maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+  enableLookups="false" acceptCount="100" connectionTimeout="20000"
+  proxyPort="80" disableUploadTimeout="true"
+  proxyName="localhost" /&gt;</pre>
+
+<p>After these changes you can use:</p>
+<pre>http://localhost/blog</pre>
+
+<p>as the address of your blog.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/">
+                            Promise SATA300 TX4 on Linux (2.6.x)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-11-20T03:08:00+02:00">
+	
+		    Nov 20, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>If you are having problems with Promise SATA300 TX4 on Linux (2.6.x) and don’t want to <a href="http://sergiy.kyrylkov.name/2005/08/14/promise-sata300-tx4-on-fedora-core-4/" target="_blank" rel="external">rebuild </a> kernel, get Linux kernel 2.6.14 or later, where Promise SATA300 TX4 is supported out of the box.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/">
+                            oscommerce SQL errors on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-07T02:12:00+03:00">
+	
+		    Oct 07, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Several parts of admin section shouldn’t not work in oscommerce-2.2ms2 installation on Fedora Core 4 due to some <a href="http://forums.oscommerce.com/index.php?showtopic=144095" target="_blank" rel="external">issues</a> with MySQL 4.1  In order to fix them the following lines in _admin/includes/classes/split_page<em>results.php</em>:</p>
+<pre>$offset = ($max_rows_per_page * ($current_page_number - 1));
+$sql_query .= " limit " . $offset . ", " . $max_rows_per_page;</pre>
+
+<p>should be changed to:</p>
+<pre>$offset = ($max_rows_per_page * ($current_page_number - 1));
+if ($offset &lt; 0)
+{
+$offset = 0 ;
+}
+$sql_query .= " limit " . $offset . ", " . $max_rows_per_page;</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/">
+                            Blank admin screen in oscommerce on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-07T01:49:00+03:00">
+	
+		    Oct 07, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>This issue is a bug with oscommerce-2.2ms2 and PHP5. To fix it, replace</p>
+<p><pre>$this = null;</pre><br>with</p>
+<p><pre>unset($this);</pre><br>in <em>catalog/admin/includes/classes/upload.php</em></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/10/07/oscommerce-on-fedora-core-4/">
+                            oscommerce on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-10-07T00:54:00+03:00">
+	
+		    Oct 07, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>For those having problem with Step 2 installing oscommerce-2.2ms2 on Fedora Core 4 here is the solution:</p>
+<ol>
+<li><p>Edit _/etc/httpd/conf/httpd.conf _replacing:</p>
+<pre>&lt;Directory "/var/www/html"&gt;
+...
+AllowOverride None
+...
+&lt;/Directory&gt;</pre>
+with
+<pre>&lt;Directory "/var/www/html"&gt;
+...
+AllowOverride Options
+...
+&lt;/Directory&gt;</pre>
+</li>
+<li><p>Create <em>.htaccess</em> file in _/var/www/html_with the following contents:</p>
+<pre>php_flag register_globals on
+php_flag register_long_arrays on</pre></li>
+</ol>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/10/07/oscommerce-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/">
+                            New IMAP stunnel configuration (stunnel3 vs stunnel)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-09-29T22:14:00+03:00">
+	
+		    Sep 29, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p><strong>Old stunnel</strong><br>(stunnel3 from <a href="http://www.doorbot.com/guides/sendmail/securemail/" target="_blank" rel="external">Doorbot Gaming: Secure Email Using Cyrus IMAP, Sendmail, and SASLv2</a>):</p>
+<pre>/usr/sbin/stunnel3 -c -d localhost:143 -r localhost:993</pre>
+
+<p><strong>New stunnel</strong><br>Create a conf file with the following contents:</p>
+<pre>client = yes
+[imap]
+accept = localhost:143
+connect = localhost:993</pre>
+
+<p>Run</p>
+<pre>/usr/sbin/stunnel &lt;filename&gt;</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/">
+                            Promise SATA300 TX4 on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-08-14T13:59:00+03:00">
+	
+		    Aug 14, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and <a>here</a>. Basically you need to add one line to file sata_promise.c and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
+<ol>
+<li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
+<li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
+<li>Download the latest kernel sources<pre>wget <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm" target="_blank" rel="external">http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm</a> </pre></li>
+<li>Install it<pre>rpm -ivh &lt;kernel-name&gt;.src.rpm</pre></li>
+<li>Patch the kernel with Fedora patches:<pre>cd ~/rpmbuild/SPECS/<br>rpmbuild -bp –target=&lt;your_arch&gt; kernel-2.6.spec</pre></li>
+<li>Patch _sata<em>promise.c</em><pre>cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;<br>vi drivers/scsi/sata_promise.c</pre></li>
+<li>Add the following code:<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>between<pre>{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>and<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre></li>
+<li>Build the new kernel<pre>make menuconfig<br>make rpm</pre></li>
+<li>Install the new kernel<pre>cd ~/rpmbuild/RPMS/<br>rpm -ivh &lt;kernel-name&gt;.rpm</pre></li>
+<li>Step 9: Check Grub configuration<pre>sudo vi /boot/grub/grub.conf</pre>If the new kernel is not there, <em>edit grub.conf</em> to add it manually</li>
+<li>Reboot into the new kernel<pre>sudo /sbin/reboot</pre></li>
+</ol>
+<p>Enjoy!</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/">
+                            HighPoint Rocket Raid 1640 and fakeraids
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-07-27T05:13:00+03:00">
+	
+		    Jul 27, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>I just found some interesting <a href="http://linuxmafia.com/faq/Hardware/sata.html" target="_blank" rel="external">info</a> about RAID’s. It appears to be that almost all cheap (below $300) RAID controllers are so called fakeraids. Meaning they don’t have any RAID hardware onboard. They are just plain PATA/SATA disk controllers that have no RAID features plus some proprietary software that does all the RAID-related calculations. Because the software is proprietary, it is usually hard to make these things work in Linux.</p>
+<p>My friend has HighPoint Rocket Raid 1640. He paid around $100 for that, which was more than some other offerings. He believed he is getting something better by paying more, but it appears it was not the case at all.</p>
+<p>Real RAID controllers usually have their own processors (some are old and slow but some are modern and fast) and (upgradeable) memory, which makes them expensive.</p>
+<p>The conclusion is that if you want a cheap RAID in Linux, just use plain PATA/SATA controllers and <a href="http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html" target="_blank" rel="external">open-source software RAID</a>.  If you want real hardware RAID, prepare to pay several hundred dollars.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/07/26/32-bit-pci-64-bit-pci-and-pci-x-compatibility/">
+                            32-bit PCI, 64-bit PCI, and PCI-X compatibility
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-07-26T13:37:00+03:00">
+	
+		    Jul 26, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>For a couple of last days I was trying to figure out whether PCI-X is, at least theoretically, backward compatible with plain PCI standard (both 32- and 64-bit). Finally I’ve found an <a href="http://www.soundonsound.com/sos/dec04/articles/pcnotes.htm" target="_blank" rel="external">article</a> that provides a good description and answers the question.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/07/26/32-bit-pci-64-bit-pci-and-pci-x-compatibility/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/07/25/propfind-302-found-error-in-subversion/">
+                            Propfind 302 found error in Subversion
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-07-25T12:07:00+03:00">
+	
+		    Jul 25, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:</p>
+<pre>ErrorDocument 404 http://www.blah.com</pre>
+
+<p>Basically what it adds up to is that Subversion refuses to add any new files to a repository and shows propfind 302 found error if <em>ErrorDocument 404</em> handler is enabled.</p>
+<p>The solution is to disable special 404 error handling for Subversion directories with <em>ErrorDocument 404 default</em>:</p>
+<pre>&lt;Location /repos&gt;
+  DAV svn
+  SVNParentPath /var/www/svn
+  SVNIndexXSLT /svnindex.xsl
+
+  # Limit access to list of valid users.
+  # Require SSL connection for password protection.
+  # SSLRequireSSL
+
+  AuthType Basic
+  AuthName "Multiplex Systems Subversion Repository"
+  AuthUserFile /var/www/auth-file
+  Require valid-user
+  ErrorDocument 404 default
+&lt;/Location&gt;</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/07/25/propfind-302-found-error-in-subversion/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        <li class="pagination-prev">
+            
+                <a class="btn btn--default btn--small" href="/categories/System-Administration/page/2/">
+            
+                <i class="fa fa-angle-left text-base icon-mr"></i>
+                    <span>NEWER POSTS</span>
+            </a>
+        </li>
+        
+        
+        <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="/categories/System-Administration/page/4/">
+                    <span>OLDER POSTS</span>
+                <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+        </li>
+        
+        <li class="pagination-number">page 3 of 5</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

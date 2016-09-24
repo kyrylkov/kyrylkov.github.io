@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Archives: 2005 - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2005/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/">
+                            Liferay Portal on Tomcat 5.5.x and Tomcat 5.0.x
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-22T23:56:00+03:00">
+	
+		    May 22, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>I don’t know what kind of support policy Liferay advocates, but we are<br>not going to use their product for the following reasons:</p>
+<ul>
+<li>It seems impossible to find out how or whether it is possible to run Liferay Portal with Tomcat 5.5.x I’ve checked their mailing list, forum, web site - nothing. Some people asked about Tomcat 5.5.x back in February, but their questions remained largely conveniently ignored. Is that what open-source about? I don’t think so.</li>
+<li>When I downloaded a standalone WAR and followed the instruction for installing the portal on Tomcat 5.0.x, I found out that the whole installation looks more like a nasty kludge. One has to modify Tomcat startup scripts and create additional <em>ext</em> directory in <em>common/lib</em> copying almost all Liferay JAR files there. Well this all would be fine, if it didn’t make it impossible for some other applications to work with the same copy of Tomcat. For example I have blojsom using log4j and for this purpose being deployed together with log4j JAR in its <em>lib</em> directory. Now installing (kludging) Liferay on the same Tomcat and putting Liferay log4j JAR into <em>common/lib/ext</em> breaks my blojsom. I realize that Tomcat is a pain to configure but if one cannot do it right for a product software then just don’t do it.</li>
+</ul>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/18/myeclipse-4-0-m1-finally/">
+                            MyEclipse 4.0 M1, finally...
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-18T06:46:00+03:00">
+	
+		    May 18, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>On Monday, MyEclipse 4.0M1 finally got released. Now in addition to Struts, JSF, and Hibernate, it supports Tapestry via Spindle integration and UML modeling. The next milestone should have Spring integration and graphical JSP designer. Well, let’s see how it goes.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/18/myeclipse-4-0-m1-finally/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/18/diving-into-tapestry/">
+                            Diving into Tapestry
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-18T06:36:00+03:00">
+	
+		    May 18, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Starting this week we started looking at Jakarta Tapestry. The main motivation behind this is the fact that it relies on ordinary HTML tags so we can clearly separate the roles of designer, HTML programmer, and Java developer. It’s been painful to use Struts in graphically rich Web applications and JSF didn’t make it better so far.</p>
+<p>We use Tapestry in Action to get started and somehow ToDo list application from chapter 3 didn’t seem to output the list of ToDo items. I didn’t have time to dig the problem and started looking for more examples to find the one that <a href="http://www.sandcastsoftware.com/downloads/brownbag/tapestry/" target="_blank" rel="external">works</a> from Sandcast Software.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/18/diving-into-tapestry/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/">
+                            Making Apache 2.x with custom-built PHP 4.x happy on FC3 with no original PHP RPMs installed
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-06T00:32:00+03:00">
+	
+		    May 06, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p></p><p>After uninstalling original PHP 4.x RPMs on FC3 and install a custom-built version, I’ve discovered that our PHP applications don’t work when I try to use them, instead a directory listing or the contents of the PHP files are displayed. This probably has to do with the fact that <em>httpd.conf</em> was updated after removing native FC3 PHP 4.x RPMs to not recognize php files in general and index.php in particular. Adding <em>php.conf</em> to <em>/etc/httpd/conf.d</em> with the following contents solves the problem:<pre>LoadModule php4_module  /usr/lib/httpd/modules/libphp4.so</pre></p>
+<p>AddType application/x-httpd-php .php .phtml<br>AddType application/x-httpd-php-source .phps<br>DirectoryIndex index.php</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/04/adding-cyrus-imapd-users-with-only-imaps-enabled/">
+                            Adding cyrus-imapd users with only imaps enabled
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-04T20:39:00+03:00">
+	
+		    May 04, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>The first step is to enable non-secure imap.  In order to do this, <em>/etc/cyrus.conf</em> should have:</p>
+<pre>imap cmd="imapd" listen="imap" prefork=5</pre>
+
+<p>instead of </p>
+<pre>#imap cmd="imapd" listen="imap" prefork=5</pre>
+
+<p>After this, cyrus-imapd should be restarted with:</p>
+<pre>/sbin/service cyrus-imapd restart</pre>
+
+<p>Now we can connect to non-secure imap service:</p>
+<pre>cyradm --user cyrus --server localhost --auth plain </pre>
+
+<p>and add a user:</p>
+<pre>createmailbox user.logon</pre>
+
+<p>We are done.</p>
+<p>The last thing is to disable regular non-secure imap again in <em>/etc/cyrus.conf</em>:</p>
+<pre>#imap cmd="imapd" listen="imap" prefork=5</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/04/adding-cyrus-imapd-users-with-only-imaps-enabled/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/">
+                            Installing JK Connector on Fedora Core 3 with Tomcat 5.5.x and Apache 2.0.x
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-03T23:24:00+03:00">
+	
+		    May 03, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>In order to build JK Connector on Fedora Core 3, httpd-devel package containing apxs must be installed.</p>
+<p>First, download JK Connector sources from <a href="http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/" target="_blank" rel="external">http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/</a></p>
+<p>Next, go to <em>jk/native</em> directory and execute the following commands to build the connector:</p>
+<pre>./configure --with-apxs=/usr/sbin/apxs
+make
+su -c "make install"</pre>
+
+<p>Last, go to <em>/etc/httpd/conf.d</em> and create <em>jk.conf</em> file with the following example contents:</p>
+<pre>LoadModule jk_module modules/mod_jk.so
+
+JkWorkersFile /opt/jakarta-tomcat-5.5.9/conf/workers.properties.minimal
+JkLogFile /opt/jakarta-tomcat-5.5.9/logs/mod_jk.log
+JkLogLevel debug
+
+Alias /blojsom /opt/jakarta-tomcat-5.5.9/webapps/blojsom
+JkMount /blojsom/* ajp13w
+
+&lt;Location "/blojsom/WEB-INF/"&gt;
+  AllowOverride None
+  deny from all
+&lt;/Location&gt;
+&lt;Location "/blojsom/META-INF/"&gt;
+  AllowOverride None
+  deny from all
+&lt;/Location&gt;</pre>
+
+<p>You are done!</p>
+<p>The last section of <em>jk.conf</em> defines the rules for blojsom web application and is written on per-application basis in this example.</p>
+<p>Check out the log file (_/opt/jakarta-tomcat-5.5.9/logs/mod<em>jk.log</em>) to see whether you have any problems.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
+                            More on building PHP 4.x on Fedora Core 3 (LDAP support)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-29T00:03:00+03:00">
+	
+		    Apr 29, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:</p>
+<pre>--with-ldap=/usr</pre>
+
+<p>The command line should look like this</p>
+<pre>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr
+  --with-zlib=/usr --enable-mbstring --with-ldap=/usr</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/26/severe-error-listenerstart/">
+                            SEVERE: Error listenerStart
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-26T02:59:00+03:00">
+	
+		    Apr 26, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Just found how strangely Tomcat 5.5.9 running on JDK 1.4.x reacts to the fact that a web application was compiled with JDK 5.0 Instead of showing some meaningful error the record in catalina.out looks like this:</p>
+<pre>Apr 26, 2005 6:29:52 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error listenerStart
+Apr 26, 2005 6:29:52 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/cm] startup failed due to previous errors</pre>
+
+<p>The problem becomes obvious only after looking into localhost log where the following error message can be found:</p>
+<pre>SEVERE: Error configuring application listener of class cm.common.SessionListener
+java.lang.UnsupportedClassVersionError: cm/common/SessionListener (Unsupported major.minor version 49.0)
+        at java.lang.ClassLoader.defineClass0(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java(Compiled Code))
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java(Compiled Code))
+        at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java(Compiled Code))
+        at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java(Compiled Code))
+        at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java(Compiled Code))
+        at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java(Compiled Code))
+        at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3617)
+        at org.apache.catalina.core.StandardContext.start(StandardContext.java:4104)
+        at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:759)
+        at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:739)
+        at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:524)
+        at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:894)
+        at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:857)
+        at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:475)
+        at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1165)
+        at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:293)
+        at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java(Compiled Code))
+        at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java(Compiled Code))
+        at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java(Compiled Code))
+        at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java(Compiled Code))
+        at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1557)
+        at java.lang.Thread.run(Thread.java:567)
+Apr 26, 2005 6:35:28 AM org.apache.catalina.core.StandardContext listenerStart
+SEVERE: Skipped installing application listeners due to previous error(s)</pre>
+
+<p>which makes much more sense.</p>
+<p>It took quite some time to figure out what was wrong.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/26/severe-error-listenerstart/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/23/gantt-chart-issue-completely-resolved/">
+                            Gantt chart issue completely resolved
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-23T02:38:00+03:00">
+	
+		    Apr 23, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>I finally found how to fix the Gantt chart issue completely. It IS a bug of version 2.0.1 The solution comes from <a href="http://www.dotproject.net/mantis/bug_view_advanced_page.php?bug_id=0000790" target="_blank" rel="external">here</a> and is the following (original text preserved):</p>
+<blockquote>
+<p>open modules/tasks/gantt.php an modify line 137ff. like down below for instance until I have sorted out with the concnering developer what to do:<br><code>// This configuration variable is obsolete = line 137
+$jpLocale = dPgetConfig( &#39;jpLocale&#39; );
+if ($jpLocale) {
+$graph-&amp;gt;scale-&amp;gt;SetDateLocale( $jpLocale );
+}
+//$graph-&amp;gt;scale-&amp;gt;SetDateLocale( $AppUI-&amp;gt;user_locale );</code></p>
+</blockquote>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/23/gantt-chart-issue-completely-resolved/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/22/more-on-dotproject-gantt-chart-generation-problem/">
+                            More on dotProject Gantt chart generation problem
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-22T08:48:00+03:00">
+	
+		    Apr 22, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Actually it didn’t solve the problem completely. Some Gantt charts in<br>some views are generated now, but in some views they still don’t work<br>showing the same error message. It looks like a bug in version 2.0.1 So<br>let’s wait for 2.0.2</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/22/more-on-dotproject-gantt-chart-generation-problem/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        <li class="pagination-prev">
+            
+                <a class="btn btn--default btn--small" href="/archives/2005/page/2/">
+            
+                <i class="fa fa-angle-left text-base icon-mr"></i>
+                    <span>NEWER POSTS</span>
+            </a>
+        </li>
+        
+        
+        <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="/archives/2005/page/4/">
+                    <span>OLDER POSTS</span>
+                <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+        </li>
+        
+        <li class="pagination-number">page 3 of 4</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

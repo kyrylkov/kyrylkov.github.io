@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Archives: 2014 - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2014/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/">
+                            Basic WordPress Multisite Network config for nginx with php-fpm
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2014-10-25T12:41:58+03:00">
+	
+		    Oct 25, 2014
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>A starter working config combined from nginx and WordPress sites to provide initial configuration starting point</p>
+<pre>
+user  www www;
+worker_processes  1;
+
+events {
+  #worker_connections  1024;
+}
+
+error_log  /var/log/nginx-error.log;
+
+http {
+  include       mime.types;
+  default_type  application/octet-stream;
+
+  server_names_hash_bucket_size  64;
+
+  sendfile        on;
+  #tcp_nopush     on;
+
+  keepalive_timeout  65;
+
+  gzip  on;
+  gzip_types       text/plain application/xml text/css text/js text/xml application/x-javascript text/javascript application/json application/xml+rss;
+
+  upstream php {
+      server 127.0.0.1:9000;
+  }
+
+  map $http_host $blogid {
+    default       -999;
+
+    #Ref: http://wordpress.org/extend/plugins/nginx-helper/
+    #include /var/www/wordpress/wp-content/plugins/nginx-helper/map.conf ;
+
+  }
+
+  server {
+    server_name example.net *.example.net ;
+
+    access_log  /var/log/wordpress.log;
+
+    root /home/www/wordpress;
+    index index.php;
+
+    location = /favicon.ico {
+      log_not_found off;
+      access_log off;
+    }
+
+    location = /robots.txt {
+      allow all;
+      log_not_found off;
+      access_log off;
+    }
+
+    location / {
+      try_files $uri $uri/ /index.php?$args ;
+    }
+
+    location ~ \.php$ {
+      try_files $uri =404;
+      include fastcgi_params;
+      fastcgi_pass php;
+      fastcgi_param SCRIPT_FILENAME /home/www/wordpress$fastcgi_script_name;
+    }
+
+    #WPMU Files
+    location ~ ^/files/(.*)$ {
+      try_files /wp-content/blogs.dir/$blogid/$uri /wp-includes/ms-files.php?file=$1 ;
+      access_log off; log_not_found off;      expires max;
+    }
+
+    #WPMU x-sendfile to avoid php readfile()
+    location ^~ /blogs.dir {
+      internal;
+      alias /home/www/wordpress/wp-content/blogs.dir;
+      access_log off; log_not_found off;      expires max;
+    }
+
+    #XML Sitemaps - Yoast WordPress SEO
+    rewrite ^/sitemap_index\.xml$ /index.php?sitemap=1 last;
+    rewrite ^/([^/]+?)-sitemap([0-9]+)?\.xml$ /index.php?sitemap=$1&sitemap_n=$2 last;
+
+    #add some rules for static content expiry-headers here
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+      expires max;
+      log_not_found off;
+    }
+  }
+}
+</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2014/10/25/basic-wordpress-multisite-network-config-nginx-php-fpm/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/">
+                            Building Rackspace Cloud Monitoring Agent on FreeBSD 10
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2014-03-28T00:10:54+02:00">
+	
+		    Mar 28, 2014
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <pre>pkg install git
+pkg install gcc46
+git clone https://github.com/racker/virgo
+cd virgo
+git submodule update --init --recursive
+./configure
+setenv CC gcc46
+setenv CXX g++46
+setenv CPP cpp46
+gmake -C out
+gmake install
+cp base/pkg/freebsd/rackspace-monitoring-agent.init /etc/rc.d/rackspace-monitoring-agent
+chmod 755 /etc/rc.d/rackspace-monitoring-agent</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2014/01/12/d0-b3-d1-80-d0-be-d0-bc-d0-b0-d0-b4-d1-81-d1-8c-d0-ba-d0-b0-d0-ba-d0-be-d0-bd-d1-81-d1-82-d0-b8-d1-82-d1-83-d1-86-d1-96-d0-b9-d0-bd-d0-b0-d1-96-d0-bd-d1-96-d1-86-d1-96-d0-b0-d1-82-d0-b8-d0-b2-d0-b0/">
+                            Громадська Конституційна Ініціатива
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2014-01-12T13:58:37+02:00">
+	
+		    Jan 12, 2014
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Activism/">Activism</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Політичні кризи, що призвели до Євромайдану та Помаранчевої революції, відбуваються як реакція суспільства на фактичну узурпацію державної влади президентами України.</p>
+<p>Можливості для такої узурпації є наслідком недосконалості чинної Конституції України від 1996 р, згідно якої Україна є змішаною президентсько-парламентською республікою з президентом, що має надзвичайно широкі повноваження. Так президент:</p>
+<ul>
+<li>обирається на 5 років і практично не може бути достроково відсторонений від влади шляхом імпічменту</li>
+<li><span style="line-height: 1.5;">контролює виконавчу гілку влади, включно з призначенням та звільненням Прем’єр-міністра України, членів Кабінету Міністрів України та голів місцевих державних адміністрацій</span></li>
+<li><span style="line-height: 1.5;">призначає за згодою Верховної Ради генерального прокурора</span><br>Враховуючи необхідність реформ в найкоротший термін після обрання нового президента, першочерговим завданням є запровадження механізму, який унеможливить в майбутньому подібну узурпацію влади однією особою.</li>
+</ul>
+<p>Аналізуючи сучасні політичні устрої успішних європейських країн, ми можемо запозичити їхній досвід для створення вдосконаленої системи влади в Україні.</p>
+<p>Одним з фундаментів такої системи є парламентська форма правління, яка успішно існує у більшості країн Європи. Ця форма правління являє собою універсальний та діючий механізм врахування інтересів громадян і забезпечення принципу стримування та противаги. За парламентської форми правління виконавча гілка влади (Кабінет Міністрів) призначається та відправляється у відставку парламентом, а не президентом. Таким чином повноваження президента - суттєво обмежені, що значно ускладнює узурпацію влади однією особою.</p>
+<p>Надзвичайно важливою є пряма демократія у вигляді референдумів за ініціативою громадян, що повністю відповідає сьогоднішньому духу Євромайдану. Така система успішно діє протягом майже двох сторіч у Швейцарії. За цією системою громадяни можуть як ініціювати зміни до діючою конституції, так і безпосередньо скасувати закони, які були прийняті парламентом. Водночас, державні посадові особи не мають повноважень, що можуть привести до блокування таких референдумів або спотворення їхніх цілей.</p>
+<p>Враховуючи все вище викладене, з метою запобігання подальшій узурпації державної влади та беручи до уваги інші недоліки у системі державної влади в Україні, пропоную створити робочу групу для розробки проекту змін до Конституції України з розглядом наступних питань:</p>
+<ol>
+<li>запровадження парламентської форми правління</li>
+<li><span style="line-height: 1.5;">децентралізації влади шляхом ліквідації інституту місцевих державних адміністрацій і передачі їхніх повноважень місцевим радам</span></li>
+<li><span style="line-height: 1.5;">розширення механізму прямої демократії шляхом запровадження референдумів, що ініціюються громадянами України</span></li>
+<li><span style="line-height: 1.5;">перегляду системи виборів депутатів у парламент (Верховну Раду)</span><br>Окремим завданням робочої групи буде залучення якомога більшої кількості активних і кваліфікованих громадян по всій Україні. Їхньою метою буде як внесення пропозицій до проекту змін до Конституції, так і популяризація ідеї необхідності внесення таких змін.</li>
+</ol>
+<p>Такий проект змін до Конституції, після схвалення широким колом активістів Євромайдану та інших громадян України, може бути висунутий як офіційна вимога громадянського суспільства до політиків для негайного втілення після обрання нового президента.</p>
+<p>P.S.</p>
+<p>Всіх бажаючих долучитися, запрошую підписатися на мою сторінку у Facebook для подальшої координації <a href="https://www.facebook.com/sergiy.kyrylkov" target="_blank" rel="external">https://www.facebook.com/sergiy.kyrylkov</a></p>
+<p>Сторінка Facebook групи <a href="https://www.facebook.com/groups/pciua" target="_blank" rel="external">https://www.facebook.com/groups/pciua</a></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2014/01/12/d0-b3-d1-80-d0-be-d0-bc-d0-b0-d0-b4-d1-81-d1-8c-d0-ba-d0-b0-d0-ba-d0-be-d0-bd-d1-81-d1-82-d0-b8-d1-82-d1-83-d1-86-d1-96-d0-b9-d0-bd-d0-b0-d1-96-d0-bd-d1-96-d1-86-d1-96-d0-b0-d1-82-d0-b8-d0-b2-d0-b0/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

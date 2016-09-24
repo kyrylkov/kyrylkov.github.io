@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Category: Software Development - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/categories/Software-Development/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2015/02/01/es6-es7-node-js-io-js-nodemon/">
+                            Nodemon in Node.js / io.js projects with ES6 / ES7
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2015-02-01T13:12:45+02:00">
+	
+		    Feb 01, 2015
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>If for some reason you don’t want to use <code>[Grunt](http://gruntjs.com/ &quot;Grunt&quot;)</code> or <code>[Gulp](http://gulpjs.com/ &quot;Gulp&quot;)</code> in your <code>[Node.js](http://nodejs.org/ &quot;Node.js&quot;)</code> / <code>[io.js](https://iojs.org/ &quot;io.js&quot;)</code> project utilizing ES6 and ES7 (ECMAScript 6 and 7) features, you can configure automatic <code>[Traceur](https://github.com/google/traceur-compiler &quot;Traceur&quot;)</code> compilation with <code>[nodemon](http://nodemon.io/ &quot;nodemon&quot;)</code>:</p>
+<p>Now it is possible to develop and run <code>Node.js</code> / <code>io.js</code> projects utilizing ES6 / ES7 features using <code>nodemon</code> with automatic <code>traceur</code> JavaScript.next-to-JavaScript-of-today compilation on the fly.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2015/02/01/es6-es7-node-js-io-js-nodemon/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2012/11/20/no-administrator-rights-in-gerrit/">
+                            No administrator rights in Gerrit
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2012-11-20T17:42:52+02:00">
+	
+		    Nov 20, 2012
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>After spending lots of time trying to make Gerrit work we agree with a conclusion that “<a href="http://www.mediawiki.org/wiki/Git/Gerrit_evaluation#The_case_against_Gerrit" target="_blank" rel="external">Gerrit is ugly, intimidating, and inhumane</a>“ and buggy.  At least for us and Ubuntu 12.04.1.</p>
+<p>According to Gerrit <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html#_registering_your_key_in_gerrit" target="_blank" rel="external">documentation</a>:</p>
+<blockquote>
+<p>The first user to sign-in and register an account will be automatically placed into the fully privileged Administrators group, permitting server management over the web and over SSH.<br>But here is our 5 attempts to make it work:</p>
+</blockquote>
+<ol>
+<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html" target="_blank" rel="external">installing Gerrit 2.5 with H2</a> (aka Quick Installation in 10 Minutes) with stock Ubuntu Apache as <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/config-reverseproxy.html" target="_blank" rel="external">reverse proxy</a>, installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong></li>
+<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install.html" target="_blank" rel="external">installing Gerrit 2.5 with MySQL</a> with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
+<li>installing Gerrit 2.4.2 (maybe it’s a problem with 2.5 only?) with H2 with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
+<li>installing Gerrit 2.4.2 with MySQL with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID,<strong> no administrator rights</strong></li>
+<li>installing Gerrit 2.5 with MySQL (no Apache and reverse proxy this time), installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong><br>Thus whatever path we chose, Gerrit failed to properly grant administrator rights to the first user as it clearly indicated in the docs.</li>
+</ol>
+<p>There is a solution of course which is to <a href="https://groups.google.com/forum/#!msg/repo-discuss/FkIPsL28OXM/OBJvKaMh-wgJ" target="_blank" rel="external">edit database directly</a>.  However it makes one wonder what other nice “features” Gerrit is hiding.</p>
+<p>And off we go to <a href="http://phabricator.org/" target="_blank" rel="external">Phabricator</a>.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2012/11/20/no-administrator-rights-in-gerrit/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2010/06/27/python-twitter-0-6-followers-bug/">
+                            Python Twitter 0.6 followers bug
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2010-06-27T08:37:07+03:00">
+	
+		    Jun 27, 2010
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>If you want to use Python with Twitter API, skip <a href="http://code.google.com/p/python-twitter" target="_blank" rel="external">Python Twitter library</a> for now.  <a href="http://code.google.com/p/python-twitter/issues/detail?id=47" target="_blank" rel="external">Get followers for any user bug</a> makes version 0.6 pretty much useless.  In addition to this, both next_cursor and previous_cursor are not supported.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2010/06/27/python-twitter-0-6-followers-bug/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/06/16/jbuilder-is-not-dead/">
+                            JBuilder is not dead
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-06-16T10:29:00+03:00">
+	
+		    Jun 16, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Borland posted JBuilder roadmap outlining future development of JBuilder including previously announced JBuilder 2007 codenamed “Peloton”. It is expected to be released in Q4 of 2006 and will be based on Eclipse for its core IDE features. Features will include: </p>
+<ul>
+<li>Support for new Java standards including Java SE 6 and the latest JSRs</li>
+<li>Visual GUI development for Swing and SWT</li>
+<li>Certified Eclipse bundle, updated regularly with the latest plug-ins</li>
+<li>Visual Web Services development using a familiar GUI, full round-trip development of web services and web service clients</li>
+<li>Virtual Peer-to-Peer Collaboration allowing distributed teams to work together with live co-editing and co-debugging (first introduced for JBuilder 2006 as a separate product) </li>
+</ul>
+<p>For more information check the full <a href="http://bdn.borland.com/article/33519" target="_blank" rel="external">product roadmap</a> at Borland’s web site.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/06/16/jbuilder-is-not-dead/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/">
+                            Blojsom 3.0 with Hibernate back-end is coming up
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-03-23T14:19:00+02:00">
+	
+		    Mar 23, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Blojsom 3.0 employing Hibernate and Spring has been <a href="http://www.blojsom.com/blog/blojsom/2006/03/23/blojsom-3-0.html" target="_blank" rel="external">announced</a>. That’s great news for everybody who was concerned about Blojsom performance and scalability related to using plain text to store blog entries instead of employing some kind of database backend.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/03/13/jvmxm008-workaround/">
+                            JVMXM008 workaround
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-03-13T21:14:00+02:00">
+	
+		    Mar 13, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p><a href="http://carlstrom.com/" target="_blank" rel="external">Brian D. Carlstrom</a> wrote:</p>
+<blockquote>
+<p>At Stanford I have my own automated regression infrastructure that runs processor simulations remotely via ssh. One problem that has existed for months is this error from jbuild.linkImage:</p>
+<p>JVMXM008: Error occured while initialising System ClassException in thread “main” Could not create the Java virtual machine.</p>
+<p>I noticed that Sergiy Kyrylkov had posted in his blog about a similar issue when running JikesRVM regressions from cron:</p>
+<p><a href="http://sergiy.kyrylkov.name/blog/Jikes%20RVM" target="_blank" rel="external">http://sergiy.kyrylkov.name/blog/Jikes%20RVM</a>/</p>
+<p>I found that if I forced the ssh remote bash to be a login shell, I did not get the error. Eventually I narrowed it down to the fact that /etc/profile was sourcing /etc/profile.d/lang.sh which was setting the LANG environment variable. I found that if I my remote command set LANG explicitly, I can build jikesrvm over ssh without the JVMXM008 error.</p>
+<p>I just wanted to post the workaround to the list in case it helps someone else. I don’t know if it is needed for later SDKs, but my version of JikesRVM seems to only work with 1.4.1, nothing earlier, nothing later.</p>
+<p>For the record, this is on Fedora Core 4 on G5 machines running IBM’s SDK 1.4.1-SR2 with a jikesrvm source tree from last updated at “2005-12-09 03:00:00”. We are frozen until after some paper deadlines this month…<br>I hope I’ll have time soon to try this workaround on UNM machines.</p>
+</blockquote>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/03/13/jvmxm008-workaround/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/01/25/java-se-6-update/">
+                            Java SE 6 update
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-01-25T05:40:00+02:00">
+	
+		    Jan 25, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Planned release of Java SE 6, known as Mustang, slips to Autumn 2006 as indicated in <a href="http://weblogs.java.net/blog/ray_gans/archive/2006/01/where_we_are_wi.html" target="_blank" rel="external">this blog</a>.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/01/25/java-se-6-update/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/">
+                            org.hibernate.HibernateException: Wrong column type
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-01-18T08:04:00+02:00">
+	
+		    Jan 18, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>If you are getting the following exception:</p>
+<pre>org.hibernate.HibernateException: Wrong column type...</pre>
+when Hibernate 3.1 validates your MySQL 4.1 database schema using
+<pre>&lt;property name="hbm2ddl.auto"&gt;validate&lt;/property&gt;</pre>
+in your _hibernate.cfg.xml_ check whether you have custom sql-type in your Hibernate mappings and whether it is written in lower case as in example below (**sql-type="mediumblob"**):
+<pre>&lt;component name="photo" class="com.mpxsys.sample.model.user.BinaryData"&gt;
+  &lt;property name="data" type="binary"&gt;
+    &lt;column name="PHOTO_DATA" sql-type="mediumblob"/&gt;
+  &lt;/property&gt;
+  &lt;property name="name" column="PHOTO_NAME" type="string" /&gt;
+  &lt;property name="contentType" column="PHOTO_CONTENT_TYPE" type="string" /&gt;
+&lt;/component&gt;</pre>
+The exception
+
+`org.hibernate.HibernateException: Wrong column type: PHOTO_DATA, expected: MEDIUMBLOB
+at org.hibernate.mapping.Table.validateColumns(Table.java:219)
+at org.hibernate.cfg.Configuration.validateSchema(Configuration.java:964)
+at org.hibernate.tool.hbm2ddl.SchemaValidator.validate(SchemaValidator.java:116)
+at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:296)
+at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1154)
+at com.sac.ta.util.HibernateUtil.<init>(HibernateUtil.java:91)
+at com.sac.ta.util.HibernateListener.contextInitialized(HibernateListener.java:32)
+at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:3692)
+at org.apache.catalina.core.StandardContext.start(StandardContext.java:4127)
+at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:759)
+at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:739)
+at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:524)
+at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:910)
+at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:873)
+at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1118)
+at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:310)
+at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
+at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1020)
+at org.apache.catalina.core.StandardHost.start(StandardHost.java:718)
+at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1012)
+at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:442)
+at org.apache.catalina.core.StandardService.start(StandardService.java:450)
+at org.apache.catalina.core.StandardServer.start(StandardServer.java:680)
+at org.apache.catalina.startup.Catalina.start(Catalina.java:536)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+at java.lang.reflect.Method.invoke(Method.java:585)
+at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:275)
+at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)`
+
+happens if you use upper case instead of (**sql-type="MEDIUMBLOB"**):
+<pre>&lt;component name="photo" class="com.mpxsys.sample.model.user.BinaryData"&gt;
+  &lt;property name="data" type="binary"&gt;
+    &lt;column name="PHOTO_DATA" sql-type="MEDIUMBLOB"/&gt;
+  &lt;/property&gt;
+  &lt;property name="name" column="PHOTO_NAME" type="string" /&gt;
+  &lt;property name="contentType" column="PHOTO_CONTENT_TYPE" type="string" /&gt;
+&lt;/component&gt;</pre></init></init>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/01/17/java-lang-nosuchmethoderror-gethibernatelazyinitializer/">
+                            java.lang.NoSuchMethodError getHibernateLazyInitializer()
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-01-17T03:50:00+02:00">
+	
+		    Jan 17, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>We seem to be affected by <em>java.lang.NoSuchMethodError</em> problem described more in <a href="http://forum.hibernate.org/viewtopic.php?t=940119&amp;postdays=0&amp;postorder=asc&amp;start=0" target="_blank" rel="external">Hibernate forum</a> and <a href="http://opensource2.atlassian.com/projects/hibernate/browse/HHH-1293" target="_blank" rel="external">Hibernate Jira</a>.</p>
+<p>The solution that works for us is switching to the server VM using <em>-server</em> switch while starting Tomcat. It works for our production VM, which is:<br><code>java version &quot;1.5.0_06&quot;
+Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_06-b05)
+Java HotSpot(TM) Server VM (build 1.5.0_06-b05, mixed mode)</code></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/01/17/java-lang-nosuchmethoderror-gethibernatelazyinitializer/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/">
+                            Hibernate lazy fetching with Tapestry 3.x
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2006-01-10T23:36:00+02:00">
+	
+		    Jan 10, 2006
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>The best references for Hibernate lazy fetching with Tapestry are <a href="http://hibernate.org/43.html" target="_blank" rel="external">Open Session in View</a> pattern and, if you use Hibernate 3.1, <a href="http://hibernate.org/328.html" target="_blank" rel="external">generic DAO</a> pattern with the latest <a href="http://caveatemptor.hibernate.org/" target="_blank" rel="external">Caveat Emptor</a> constantly updated for Hibernate in Action 2nd edition, covering Hibernate 3.0 and 3.1</p>
+<p>It is up to you to choose between <em>session-per-request</em> and <em>session-per-conversation</em> approach, but with a single servlet filter and generic DAO pattern you’ll have Hibernate transparently working with as few lines of code as possible, as far as I know.</p>
+<p>For example, the only thing you’ll have to handle manually in case of <em>session-per-request</em>(which you want to do anyway to minimize the possibility of stale data) is (re)loading objects by IDs on every request, which can be achieved with pageBeginRender listener:</p>
+<pre>public abstract class PublicationViewPage extends BasePage implements
+  PageRenderListener {
+    ...
+    public abstract void setPublicationID(long publicationID);
+    public abstract void setPublication(Publication publication);
+    ...
+    public void pageBeginRender(PageEvent event) {
+      if (!event.getRequestCycle().isRewinding()) {
+        PublicationDAO publicationDAO = DAOFactory.DEFAULT.getPublicationDAO();
+        Publication publication = publicationDAO.findById(getPublicationID(), false);
+        setPublication(publication);
+      }
+    }
+    ...
+  }
+</pre>
+
+<p>assuming the ID of the data item to be displayed (Publication in my example) was set in the previous page:</p>
+<pre>public abstract class PublicationListPage extends BasePage implements
+  PageRenderListener {
+    ...
+    public void selectPublication(IRequestCycle requestCycle) {
+      Object[] parameters = requestCycle.getServiceParameters();
+      Long publicationID = (Long)parameters[0];
+      PublicationViewPage publicationViewPage = (PublicationViewPage)requestCycle.getPage("PublicationView");
+      publicationViewPage.setPublicationID(publicationID);
+      requestCycle.activate(publicationViewPage);
+    }
+    ...
+  }
+</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="/categories/Software-Development/page/2/">
+                    <span>OLDER POSTS</span>
+                <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+        </li>
+        
+        <li class="pagination-number">page 1 of 2</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

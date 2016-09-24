@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Tag: fedora - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/fedora/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/">
+                            Promise SATA300 TX4 on Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-08-14T13:59:00+03:00">
+	
+		    Aug 14, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and <a>here</a>. Basically you need to add one line to file sata_promise.c and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
+<ol>
+<li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
+<li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
+<li>Download the latest kernel sources<pre>wget <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm" target="_blank" rel="external">http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm</a> </pre></li>
+<li>Install it<pre>rpm -ivh &lt;kernel-name&gt;.src.rpm</pre></li>
+<li>Patch the kernel with Fedora patches:<pre>cd ~/rpmbuild/SPECS/<br>rpmbuild -bp –target=&lt;your_arch&gt; kernel-2.6.spec</pre></li>
+<li>Patch _sata<em>promise.c</em><pre>cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;<br>vi drivers/scsi/sata_promise.c</pre></li>
+<li>Add the following code:<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>between<pre>{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>and<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre></li>
+<li>Build the new kernel<pre>make menuconfig<br>make rpm</pre></li>
+<li>Install the new kernel<pre>cd ~/rpmbuild/RPMS/<br>rpm -ivh &lt;kernel-name&gt;.rpm</pre></li>
+<li>Step 9: Check Grub configuration<pre>sudo vi /boot/grub/grub.conf</pre>If the new kernel is not there, <em>edit grub.conf</em> to add it manually</li>
+<li>Reboot into the new kernel<pre>sudo /sbin/reboot</pre></li>
+</ol>
+<p>Enjoy!</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/">
+                            Trac problem after upgrading to Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-06-27T20:21:00+03:00">
+	
+		    Jun 27, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>We’ve finally solved the last problem connected to Fedora Core upgrade from version 3 to version 4. After the upgrade our <a href="http://trac.edgewall.com/" target="_blank" rel="external">Trac</a> stopped working completely with the following error message:</p>
+<pre>Oops...
+
+Trac detected an internal error:
+file is encrypted or is not a database
+
+Traceback (most recent call last):
+  File "/usr/lib/python2.4/site-packages/trac/core.py", line 531, in cgi_start
+    real_cgi_start()
+  File "/usr/lib/python2.4/site-packages/trac/core.py", line 513, in real_cgi_start
+    env = open_environment()
+  File "/usr/lib/python2.4/site-packages/trac/core.py", line 190, in open_environment
+    version = env.get_version()
+  File "/usr/lib/python2.4/site-packages/trac/Environment.py", line 162, in get_version
+    cursor.execute("SELECT value FROM system WHERE name='database_version'")
+  File "/usr/src/build/539311-i386/install//usr/lib/python2.4/site-packages/sqlite/main.py", line 244, in execute
+DatabaseError: file is encrypted or is not a database</pre>
+
+<p>We’ve finally tracked the problem to SQLite version 2.x vs 3.x</p>
+<p>On Fedora Core 4, Trac uses SQLite 3.x although the <em>trac.db</em> database in <em>conf</em> directory is in version 2.x format. The <a href="http://www.sqlite.org/version3.html" target="_blank" rel="external">solution</a> is to manually upgrade all the Trac environment databases to version 3.x:</p>
+<pre>mv trac.db trac2.db
+sqlite trac2.db .dump | sqlite3 trac.db</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/06/26/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/">
+                            Cyrus IMAP server problem after upgrading to Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-06-26T07:13:00+03:00">
+	
+		    Jun 26, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>The problem of Berkley DB 4.3 in Fedora Core 4 vs Berkley DB 4.2 in Fedora Core 3 hits Cyrus IMAP server also. Basically the server stops working showing mulptiple errors in the log:</p>
+<pre>Jun 26 20:01:44 mail imaps[3581]: DBERROR: critical database situation
+Jun 26 20:01:44 mail master[3582]: about to exec /usr/lib/cyrus-imapd/lmtpd
+Jun 26 20:01:44 mail lmtpunix[3582]: DBERROR ´ : db4
+Jun 26 20:01:44 mail lmtpunix[3582]: DBERROR: critical database situation
+</pre>
+
+<p>The problem can be solved stopping the daemon and removing <em>deliver.db</em> and _tls<em>sessions.db</em> from <em>/var/lib/imap</em> and also erasing everything from <em>/var/lib/imapd/db/</em></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/06/26/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/">
+                            Subversion problem after upgrading to Fedora Core 4
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-06-26T04:32:00+03:00">
+	
+		    Jun 26, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>The first problem we faced after upgrading from Fedora Core 3 to Fedora Core 4 was that Subversion repositories completely stopped working. The error message you get while trying to do something is the following: </p>
+<pre>svn: PROPFIND request failed on '/repos/ta2'
+svn: PROPFIND of '/repos/ta2': 500 Internal Server Error (http://xxx.sac.com.ua)</pre>
+
+<p>Apache logs show some more useful info:</p>
+<pre>[Sun Jun 26 17:21:32 2005] [error] [client xxx.xxx.xxx.217]
+(20014)Error string not specified yet: Berkeley DB error
+while opening environment for filesystem
+/var/www/svn/admin/db:\nDB_VERSION_MISMATCH: Database environment version mismatch</pre>
+
+<p>The problem lies in the fact that Fedora Core 3 shipped with Berkley DB version 4.2, while the newest Fedora Core 4 utilizes version 4.3 The solution is described <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=160669" target="_blank" rel="external">here</a> and basically requires you to manually upgrade your Subversion Berkley DB repositories with _db42<em>upgrade</em> command:</p>
+<pre>db42_upgrade changes copies nodes representations revisions strings transactions uuids</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/">
+                            Upgrading Fedora Core 3 to Fedora Core 4 with yum
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-06-22T20:09:00+03:00">
+	
+		    Jun 22, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Here is a <a href="http://fedoranews.org/mediawiki/index.php/Upgrading_Fedora_Core_3_to_Fedora_Core_4" target="_blank" rel="external">link</a> describing upgrading from FC3 to FC4 using yum only. I’ve never done this before in this fashion, but hopefully it will work smoothly.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/">
+                            Making Apache 2.x with custom-built PHP 4.x happy on FC3 with no original PHP RPMs installed
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-06T00:32:00+03:00">
+	
+		    May 06, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p></p><p>After uninstalling original PHP 4.x RPMs on FC3 and install a custom-built version, I’ve discovered that our PHP applications don’t work when I try to use them, instead a directory listing or the contents of the PHP files are displayed. This probably has to do with the fact that <em>httpd.conf</em> was updated after removing native FC3 PHP 4.x RPMs to not recognize php files in general and index.php in particular. Adding <em>php.conf</em> to <em>/etc/httpd/conf.d</em> with the following contents solves the problem:<pre>LoadModule php4_module  /usr/lib/httpd/modules/libphp4.so</pre></p>
+<p>AddType application/x-httpd-php .php .phtml<br>AddType application/x-httpd-php-source .phps<br>DirectoryIndex index.php</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/">
+                            Installing JK Connector on Fedora Core 3 with Tomcat 5.5.x and Apache 2.0.x
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-03T23:24:00+03:00">
+	
+		    May 03, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>In order to build JK Connector on Fedora Core 3, httpd-devel package containing apxs must be installed.</p>
+<p>First, download JK Connector sources from <a href="http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/" target="_blank" rel="external">http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/</a></p>
+<p>Next, go to <em>jk/native</em> directory and execute the following commands to build the connector:</p>
+<pre>./configure --with-apxs=/usr/sbin/apxs
+make
+su -c "make install"</pre>
+
+<p>Last, go to <em>/etc/httpd/conf.d</em> and create <em>jk.conf</em> file with the following example contents:</p>
+<pre>LoadModule jk_module modules/mod_jk.so
+
+JkWorkersFile /opt/jakarta-tomcat-5.5.9/conf/workers.properties.minimal
+JkLogFile /opt/jakarta-tomcat-5.5.9/logs/mod_jk.log
+JkLogLevel debug
+
+Alias /blojsom /opt/jakarta-tomcat-5.5.9/webapps/blojsom
+JkMount /blojsom/* ajp13w
+
+&lt;Location "/blojsom/WEB-INF/"&gt;
+  AllowOverride None
+  deny from all
+&lt;/Location&gt;
+&lt;Location "/blojsom/META-INF/"&gt;
+  AllowOverride None
+  deny from all
+&lt;/Location&gt;</pre>
+
+<p>You are done!</p>
+<p>The last section of <em>jk.conf</em> defines the rules for blojsom web application and is written on per-application basis in this example.</p>
+<p>Check out the log file (_/opt/jakarta-tomcat-5.5.9/logs/mod<em>jk.log</em>) to see whether you have any problems.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/">
+                            More on building PHP 4.x on Fedora Core 3 (LDAP support)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-29T00:03:00+03:00">
+	
+		    Apr 29, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>To make LABE (LDAP address book editor) work with PHP, one needs to recompile PHP with LDAP support:</p>
+<pre>--with-ldap=/usr</pre>
+
+<p>The command line should look like this</p>
+<pre>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr
+  --with-zlib=/usr --enable-mbstring --with-ldap=/usr</pre>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/21/more-on-building-php-4-x-on-fedora-core-3/">
+                            More on building PHP 4.x on Fedora Core 3
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-21T23:21:00+03:00">
+	
+		    Apr 21, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>There is one more parameter that should be used during configure step of building PHP to make phpMyAdmin happy</p>
+<p><code>--enable-mbstring</code></p>
+<p>so the final configuration string looks like this</p>
+<p><code>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr --enable-mbstring</code></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/21/more-on-building-php-4-x-on-fedora-core-3/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/04/21/building-php-4-x-on-fedora-core-3/">
+                            Building PHP 4.x on Fedora Core 3
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-04-21T11:10:00+03:00">
+	
+		    Apr 21, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>I just finished building PHP 4.x to make it work with MySQL 4.1.x on Fedora Core 3. It is needed by dotProject, which I want to try out. This is the configuration line that makes dotProject happy:</p>
+<p><code>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr</code></p>
+<p>The reason for suffering is that Fedora Core 3 comes with MySQL 3.x Installing MySQL 4.x prevents PHP from working with MySQL correctly since php-mysql RPM file is compiled to work with MySQL 3.x Thus the way out is to build PHP completely from scratch with support for MySQL 4.x</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/04/21/building-php-4-x-on-fedora-core-3/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        <li class="pagination-prev">
+            
+                <a class="btn btn--default btn--small" href="/ ">
+            
+                <i class="fa fa-angle-left text-base icon-mr"></i>
+                    <span>NEWER POSTS</span>
+            </a>
+        </li>
+        
+        
+        <li class="pagination-number">page 2 of 2</li>
+    </ul>
+</div>
+
+</section>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>

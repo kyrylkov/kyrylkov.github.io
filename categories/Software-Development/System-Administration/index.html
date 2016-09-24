@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hexo">
+    <title>Category: System Administration - Hexo</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/categories/Software-Development/System-Administration/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-vw63imbxdmppuwtd7ajquolsd0r1jsvp8qcdg9cnq8ncgvt1jeslm0h03cep.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">Hexo</a>
+    </h1>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="2">
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archives</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    
+
+<section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2012/11/20/no-administrator-rights-in-gerrit/">
+                            No administrator rights in Gerrit
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2012-11-20T17:42:52+02:00">
+	
+		    Nov 20, 2012
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>After spending lots of time trying to make Gerrit work we agree with a conclusion that “<a href="http://www.mediawiki.org/wiki/Git/Gerrit_evaluation#The_case_against_Gerrit" target="_blank" rel="external">Gerrit is ugly, intimidating, and inhumane</a>“ and buggy.  At least for us and Ubuntu 12.04.1.</p>
+<p>According to Gerrit <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html#_registering_your_key_in_gerrit" target="_blank" rel="external">documentation</a>:</p>
+<blockquote>
+<p>The first user to sign-in and register an account will be automatically placed into the fully privileged Administrators group, permitting server management over the web and over SSH.<br>But here is our 5 attempts to make it work:</p>
+</blockquote>
+<ol>
+<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html" target="_blank" rel="external">installing Gerrit 2.5 with H2</a> (aka Quick Installation in 10 Minutes) with stock Ubuntu Apache as <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/config-reverseproxy.html" target="_blank" rel="external">reverse proxy</a>, installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong></li>
+<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install.html" target="_blank" rel="external">installing Gerrit 2.5 with MySQL</a> with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
+<li>installing Gerrit 2.4.2 (maybe it’s a problem with 2.5 only?) with H2 with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
+<li>installing Gerrit 2.4.2 with MySQL with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID,<strong> no administrator rights</strong></li>
+<li>installing Gerrit 2.5 with MySQL (no Apache and reverse proxy this time), installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong><br>Thus whatever path we chose, Gerrit failed to properly grant administrator rights to the first user as it clearly indicated in the docs.</li>
+</ol>
+<p>There is a solution of course which is to <a href="https://groups.google.com/forum/#!msg/repo-discuss/FkIPsL28OXM/OBJvKaMh-wgJ" target="_blank" rel="external">edit database directly</a>.  However it makes one wonder what other nice “features” Gerrit is hiding.</p>
+<p>And off we go to <a href="http://phabricator.org/" target="_blank" rel="external">Phabricator</a>.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2012/11/20/no-administrator-rights-in-gerrit/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/">
+                            Blojsom on Tomcat 5.5.9 with mod_jk
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-08-20T09:59:00+03:00">
+	
+		    Aug 20, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>It looks like it is impossible to have permalinks (and comment and who knows what else) working in Blojsom, which runs on port 80 through mod_jk on Tomcat 5.5.9 (in my case).</p>
+<p>All permalinks work from localhost only when they look like this: <pre><a href="http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html" target="_blank" rel="external">http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</a></pre> instead of <pre><a href="http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html" target="_blank" rel="external">http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</a></pre> In this second case I end up with “File not found” Apache error.</p>
+<p>I tried to play with a number of things, including changing host name in Tomcat <em>server.xml</em>, but nothing helped. It looks like either Apache or Tomcat (or mod_jk) fail to pick up the right virtual host name for some reason and settle for localhost instead.</p>
+<p>Anyway, in the end I settled for mod_proxy and left mod_jk problem be. Of course the question is why would I want mod_jk in the first place…</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/">
+                            Liferay Portal on Tomcat 5.5.x and Tomcat 5.0.x
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-22T23:56:00+03:00">
+	
+		    May 22, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>I don’t know what kind of support policy Liferay advocates, but we are<br>not going to use their product for the following reasons:</p>
+<ul>
+<li>It seems impossible to find out how or whether it is possible to run Liferay Portal with Tomcat 5.5.x I’ve checked their mailing list, forum, web site - nothing. Some people asked about Tomcat 5.5.x back in February, but their questions remained largely conveniently ignored. Is that what open-source about? I don’t think so.</li>
+<li>When I downloaded a standalone WAR and followed the instruction for installing the portal on Tomcat 5.0.x, I found out that the whole installation looks more like a nasty kludge. One has to modify Tomcat startup scripts and create additional <em>ext</em> directory in <em>common/lib</em> copying almost all Liferay JAR files there. Well this all would be fine, if it didn’t make it impossible for some other applications to work with the same copy of Tomcat. For example I have blojsom using log4j and for this purpose being deployed together with log4j JAR in its <em>lib</em> directory. Now installing (kludging) Liferay on the same Tomcat and putting Liferay log4j JAR into <em>common/lib/ext</em> breaks my blojsom. I realize that Tomcat is a pain to configure but if one cannot do it right for a product software then just don’t do it.</li>
+</ul>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/">
+                            Installing JK Connector on Fedora Core 3 with Tomcat 5.5.x and Apache 2.0.x
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2005-05-03T23:24:00+03:00">
+	
+		    May 03, 2005
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Software-Development/">Software Development</a>, <a class="category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>In order to build JK Connector on Fedora Core 3, httpd-devel package containing apxs must be installed.</p>
+<p>First, download JK Connector sources from <a href="http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/" target="_blank" rel="external">http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/</a></p>
+<p>Next, go to <em>jk/native</em> directory and execute the following commands to build the connector:</p>
+<pre>./configure --with-apxs=/usr/sbin/apxs
+make
+su -c "make install"</pre>
+
+<p>Last, go to <em>/etc/httpd/conf.d</em> and create <em>jk.conf</em> file with the following example contents:</p>
+<pre>LoadModule jk_module modules/mod_jk.so
+
+JkWorkersFile /opt/jakarta-tomcat-5.5.9/conf/workers.properties.minimal
+JkLogFile /opt/jakarta-tomcat-5.5.9/logs/mod_jk.log
+JkLogLevel debug
+
+Alias /blojsom /opt/jakarta-tomcat-5.5.9/webapps/blojsom
+JkMount /blojsom/* ajp13w
+
+&lt;Location "/blojsom/WEB-INF/"&gt;
+  AllowOverride None
+  deny from all
+&lt;/Location&gt;
+&lt;Location "/blojsom/META-INF/"&gt;
+  AllowOverride None
+  deny from all
+&lt;/Location&gt;</pre>
+
+<p>You are done!</p>
+<p>The last section of <em>jk.conf</em> defines the rules for blojsom web application and is written on per-application basis in this example.</p>
+<p>Check out the log file (_/opt/jakarta-tomcat-5.5.9/logs/mod<em>jk.log</em>) to see whether you have any problems.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2016 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script-iq7yhbqlxnc8wvt28qyacokvggqtlqhahb6sgzocgxgbvwe7shblzmiebp1j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+
+</html>
