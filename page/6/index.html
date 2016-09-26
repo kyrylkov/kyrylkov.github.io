@@ -511,12 +511,31 @@ while opening environment for filesystem
 <p>Here are the steps one need to take in order to fix this problem:</p>
 <ol>
 <li>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</li>
-<li>stop Apache:<pre>/sbin/service httpd stop</pre></li>
-<li>check whether it actually stopped:<pre> ps axu | grep http</pre></li>
-<li>if you see something like this:<pre>apache    5420  0.0  2.0 17320 4556 ?        S    13:25   0:00 /usr/sbin/httpd<br>apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd</pre>be sure to kill the remaining processes:<pre>kill -9 5420 5423</pre></li>
-<li>fix the repository with <em>svnadmin recover</em> command:<pre>svnadmin recover /var/www/svn/cp</pre></li>
-<li>change repository owner/group back to apache:<pre>chown -R apache:apache /var/www/svn/cp</pre></li>
-<li>start Apache:<pre>/sbin/service httpd start</pre></li>
+<li>stop Apache: <pre>
+/sbin/service httpd stop
+</pre></li>
+<li>check whether it actually stopped:<pre>
+ps axu | grep http
+</pre></li>
+<li>if you see something like this:<pre>
+apache    5420  0.0  2.0 17320 4556 ?        S    13:25   0:00 /usr/sbin/httpd
+apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd
+</pre>
+be sure to kill the remaining processes:
+<pre>
+kill -9 5420 5423
+</pre></li>
+<li>fix the repository with <code>svnadmin recover</code> command:<pre>
+svnadmin recover /var/www/svn/cp
+</pre></li>
+<li>change repository owner/group back to apache:<pre>
+chown -R apache:apache /var/www/svn/cp
+</pre></li>
+<li>start Apache:<pre>
+/sbin/service httpd start
+</pre>
+
+</li>
 </ol>
 <p>Everything should work fine now.</p>
 
