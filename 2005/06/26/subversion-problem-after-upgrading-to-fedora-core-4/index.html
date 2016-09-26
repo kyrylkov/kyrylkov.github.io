@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="The first problem we faced after upgrading from Fedora Core 3 to Fedora Core 4 was that Subversion repositories completely stopped working. The error message you get while trying to do something is th">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.899Z">
+<meta property="og:updated_time" content="2016-09-26T12:30:33.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Subversion problem after upgrading to Fedora Core 4">
 <meta name="twitter:description" content="The first problem we faced after upgrading from Fedora Core 3 to Fedora Core 4 was that Subversion repositories completely stopped working. The error message you get while trying to do something is th">
@@ -93,17 +93,21 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>The first problem we faced after upgrading from Fedora Core 3 to Fedora Core 4 was that Subversion repositories completely stopped working. The error message you get while trying to do something is the following: </p>
-<pre>svn: PROPFIND request failed on '/repos/ta2'
-svn: PROPFIND of '/repos/ta2': 500 Internal Server Error (http://xxx.sac.com.ua)</pre>
+<pre>
+svn: PROPFIND request failed on '/repos/ta2'
+svn: PROPFIND of '/repos/ta2': 500 Internal Server Error (http://example.com)
+</pre>
 
 <p>Apache logs show some more useful info:</p>
-<pre>[Sun Jun 26 17:21:32 2005] [error] [client xxx.xxx.xxx.217]
-(20014)Error string not specified yet: Berkeley DB error
-while opening environment for filesystem
-/var/www/svn/admin/db:\nDB_VERSION_MISMATCH: Database environment version mismatch</pre>
+<pre>
+[Sun Jun 26 17:21:32 2005] [error] [client xxx.xxx.xxx.217]
+(20014)Error string not specified yet: Berkeley DB error while opening environment for filesystem /var/www/svn/admin/db: DB_VERSION_MISMATCH: Database environment version mismatch
+</pre>
 
-<p>The problem lies in the fact that Fedora Core 3 shipped with Berkley DB version 4.2, while the newest Fedora Core 4 utilizes version 4.3 The solution is described <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=160669" target="_blank" rel="external">here</a> and basically requires you to manually upgrade your Subversion Berkley DB repositories with _db42<em>upgrade</em> command:</p>
-<pre>db42_upgrade changes copies nodes representations revisions strings transactions uuids</pre>
+<p>The problem lies in the fact that Fedora Core 3 shipped with Berkley DB version 4.2, while the newest Fedora Core 4 utilizes version 4.3 The solution is described <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=160669" target="_blank" rel="external">here</a> and basically requires you to manually upgrade your Subversion Berkley DB repositories with <code>db42_upgrade</code> command:</p>
+<pre>
+db42_upgrade changes copies nodes representations revisions strings transactions uuids
+</pre>
       
     </div>
     
