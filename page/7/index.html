@@ -69,6 +69,174 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
+      <article id="post-repairing-broken-subversion-repository" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/31/repairing-broken-subversion-repository/">Repairing broken Subversion repository</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/31/repairing-broken-subversion-repository/" class="article-date">
+  <time datetime="2005-05-30T21:42:00.000Z" itemprop="datePublished">2005-05-31</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn, etc) stops responding for no reason or you cannot browse any sources using Trac “Browse” link. </p>
+<p>Here are the steps one need to take in order to fix this problem:</p>
+<ol>
+<li>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</li>
+<li>stop Apache:<pre>/sbin/service httpd stop</pre></li>
+<li>check whether it actually stopped:<pre> ps axu | grep http</pre></li>
+<li>if you see something like this:<pre>apache    5420  0.0  2.0 17320 4556 ?        S    13:25   0:00 /usr/sbin/httpd<br>apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd</pre>be sure to kill the remaining processes:<pre>kill -9 5420 5423</pre></li>
+<li>fix the repository with <em>svnadmin recover</em> command:<pre>svnadmin recover /var/www/svn/cp</pre></li>
+<li>change repository owner/group back to apache:<pre>chown -R apache:apache /var/www/svn/cp</pre></li>
+<li>start Apache:<pre>/sbin/service httpd start</pre></li>
+</ol>
+<p>Everything should work fine now.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/subversion/">subversion</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/">Liferay Portal on Tomcat 5.5.x and Tomcat 5.0.x</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/" class="article-date">
+  <time datetime="2005-05-22T20:56:00.000Z" itemprop="datePublished">2005-05-22</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a><span>></span><a class="article-category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I don’t know what kind of support policy Liferay advocates, but we are<br>not going to use their product for the following reasons:</p>
+<ul>
+<li>It seems impossible to find out how or whether it is possible to run Liferay Portal with Tomcat 5.5.x I’ve checked their mailing list, forum, web site - nothing. Some people asked about Tomcat 5.5.x back in February, but their questions remained largely conveniently ignored. Is that what open-source about? I don’t think so.</li>
+<li>When I downloaded a standalone WAR and followed the instruction for installing the portal on Tomcat 5.0.x, I found out that the whole installation looks more like a nasty kludge. One has to modify Tomcat startup scripts and create additional <em>ext</em> directory in <em>common/lib</em> copying almost all Liferay JAR files there. Well this all would be fine, if it didn’t make it impossible for some other applications to work with the same copy of Tomcat. For example I have blojsom using log4j and for this purpose being deployed together with log4j JAR in its <em>lib</em> directory. Now installing (kludging) Liferay on the same Tomcat and putting Liferay log4j JAR into <em>common/lib/ext</em> breaks my blojsom. I realize that Tomcat is a pain to configure but if one cannot do it right for a product software then just don’t do it.</li>
+</ul>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/liferay/">liferay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tomcat/">tomcat</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-myeclipse-4-0-m1-finally" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/18/myeclipse-4-0-m1-finally/">MyEclipse 4.0 M1, finally...</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/18/myeclipse-4-0-m1-finally/" class="article-date">
+  <time datetime="2005-05-18T03:46:00.000Z" itemprop="datePublished">2005-05-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>On Monday, MyEclipse 4.0M1 finally got released. Now in addition to Struts, JSF, and Hibernate, it supports Tapestry via Spindle integration and UML modeling. The next milestone should have Spring integration and graphical JSP designer. Well, let’s see how it goes.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/myeclipse/">myeclipse</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
       <article id="post-diving-into-tapestry" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -505,165 +673,6 @@ $graph-&amp;gt;scale-&amp;gt;SetDateLocale( $jpLocale );
       <footer class="article-footer">
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dotproject/">dotproject</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-more-on-dotproject-gantt-chart-generation-problem" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/04/22/more-on-dotproject-gantt-chart-generation-problem/">More on dotProject Gantt chart generation problem</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/04/22/more-on-dotproject-gantt-chart-generation-problem/" class="article-date">
-  <time datetime="2005-04-22T05:48:00.000Z" itemprop="datePublished">2005-04-22</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Actually it didn’t solve the problem completely. Some Gantt charts in<br>some views are generated now, but in some views they still don’t work<br>showing the same error message. It looks like a bug in version 2.0.1 So<br>let’s wait for 2.0.2</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dotproject/">dotproject</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-dotproject-gantt-chart-generation-problem" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/04/22/dotproject-gantt-chart-generation-problem/">dotProject Gantt chart generation problem</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/04/22/dotproject-gantt-chart-generation-problem/" class="article-date">
-  <time datetime="2005-04-22T03:45:00.000Z" itemprop="datePublished">2005-04-22</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>JpGraph Error. You are trying to use locale (en) which your php installation does not support. Hint: Try to use ‘ ‘ to indicate default locale for this geographic region.</p>
-</blockquote>
-<p>This can be solved by setting up the JPGraph Locale in ‘System Admin’&gt; ‘System Configuration’. One needs to wait a little bit, maybe log out from dotProject for the settings to take effect. The thing killed several hours of my time.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dotproject/">dotproject</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-more-on-building-php-4-x-on-fedora-core-3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/04/21/more-on-building-php-4-x-on-fedora-core-3/">More on building PHP 4.x on Fedora Core 3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/04/21/more-on-building-php-4-x-on-fedora-core-3/" class="article-date">
-  <time datetime="2005-04-21T20:21:00.000Z" itemprop="datePublished">2005-04-21</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>There is one more parameter that should be used during configure step of building PHP to make phpMyAdmin happy</p>
-<p><code>--enable-mbstring</code></p>
-<p>so the final configuration string looks like this</p>
-<p><code>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr --enable-mbstring</code></p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
 
       </footer>
     

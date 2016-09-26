@@ -9,6 +9,27 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2016/09/26/tags/index/</loc>
+    
+    <lastmod>2016-09-24T14:18:28.947Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2016/09/26/categories/index/</loc>
+    
+    <lastmod>2016-09-24T14:18:28.943Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2016/09/26/about/index/</loc>
+    
+    <lastmod>2016-09-24T14:18:28.938Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2012/02/26/phusion-passenger-with-apache-on-rhel-6-centos-6-sl-6-with-selinux/</loc>
     
     <lastmod>2016-07-03T19:38:09.772Z</lastmod>
@@ -191,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
@@ -219,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/</loc>
+    <loc>https://kyrylkov.com/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.923Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/</loc>
     
     <lastmod>2016-07-03T17:59:20.923Z</lastmod>
     
@@ -268,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -282,16 +303,9 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
@@ -304,6 +318,13 @@
   
   <url>
     <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -324,6 +345,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.912Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
@@ -332,13 +360,6 @@
   
   <url>
     <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.912Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
@@ -366,6 +387,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.905Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
@@ -374,13 +402,6 @@
   
   <url>
     <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.905Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     
