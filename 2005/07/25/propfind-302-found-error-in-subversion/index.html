@@ -6,24 +6,30 @@
   <title>Propfind 302 found error in Subversion - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:
+
 ErrorDocument 404 http://www.blah.com
 
-Basically what it adds up to is that S">
+
+Basically what it adds up to is that">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Propfind 302 found error in Subversion">
 <meta property="og:url" content="https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:
+
 ErrorDocument 404 http://www.blah.com
 
-Basically what it adds up to is that S">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.912Z">
+
+Basically what it adds up to is that">
+<meta property="og:updated_time" content="2016-09-26T12:19:36.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Propfind 302 found error in Subversion">
 <meta name="twitter:description" content="I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:
+
 ErrorDocument 404 http://www.blah.com
 
-Basically what it adds up to is that S">
+
+Basically what it adds up to is that">
   
   
     <link rel="icon" href="/favicon.png">
@@ -102,25 +108,13 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:</p>
-<pre>ErrorDocument 404 http://www.blah.com</pre>
+<pre>
+ErrorDocument 404 http://www.blah.com
+</pre>
 
-<p>Basically what it adds up to is that Subversion refuses to add any new files to a repository and shows propfind 302 found error if <em>ErrorDocument 404</em> handler is enabled.</p>
-<p>The solution is to disable special 404 error handling for Subversion directories with <em>ErrorDocument 404 default</em>:</p>
-<pre>&lt;Location /repos&gt;
-  DAV svn
-  SVNParentPath /var/www/svn
-  SVNIndexXSLT /svnindex.xsl
-
-  # Limit access to list of valid users.
-  # Require SSL connection for password protection.
-  # SSLRequireSSL
-
-  AuthType Basic
-  AuthName "Multiplex Systems Subversion Repository"
-  AuthUserFile /var/www/auth-file
-  Require valid-user
-  ErrorDocument 404 default
-&lt;/Location&gt;</pre>
+<p>Basically what it adds up to is that Subversion refuses to add any new files to a repository and shows propfind 302 found error if <code>ErrorDocument 404</code> handler is enabled.</p>
+<p>The solution is to disable special 404 error handling for Subversion directories with <code>ErrorDocument 404 default</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;Location /repos&gt;</div><div class="line">  DAV svn</div><div class="line">  SVNParentPath /var/www/svn</div><div class="line">  SVNIndexXSLT /svnindex.xsl</div><div class="line"></div><div class="line">  # Limit access to list of valid users.</div><div class="line">  # Require SSL connection for password protection.</div><div class="line">  # SSLRequireSSL</div><div class="line"></div><div class="line">  AuthType Basic</div><div class="line">  AuthName &quot;Multiplex Systems Subversion Repository&quot;</div><div class="line">  AuthUserFile /var/www/auth-file</div><div class="line">  Require valid-user</div><div class="line">  ErrorDocument 404 default</div><div class="line">&lt;/Location&gt;</div></pre></td></tr></table></figure>
       
     </div>
     

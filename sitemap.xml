@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
+    
+    <lastmod>2016-09-26T12:19:36.291Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2008/03/23/d1-83-d1-81-d1-82-d0-b0-d0-bd-d0-be-d0-b2-d0-ba-d0-b0-1-d1-81-d0-bf-d1-80-d0-b5-d0-b4-d0-bf-d1-80-d0-b8-d1-8f-d1-82-d0-b8-d1-8f-8-1-d0-bd-d0-b0-red-hat-enterprise-linux-5-rhel-5-centos-5/</loc>
     
     <lastmod>2016-09-26T12:17:51.231Z</lastmod>
@@ -296,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
@@ -338,14 +345,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -359,7 +366,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
+    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -373,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -404,13 +411,6 @@
     <loc>https://kyrylkov.com/2005/10/07/oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.913Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
   </url>
   
