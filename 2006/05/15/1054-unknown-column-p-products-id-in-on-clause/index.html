@@ -5,25 +5,19 @@
   
   <title>1054 Unknown column &#39;p.products_id&#39; in &#39;on clause - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="If you have Zen Cart 1.2.x with Ultimate SEO contribution running on MySQL 5.0.x, you will probably very soon run into the following error:
-1054 Unknown column &apos;p.products_id&apos; in &apos;on clause&apos;
-
-preventi">
+  <meta name="description" content="If you have Zen Cart 1.2.x with Ultimate SEO contribution running on MySQL 5.0.x, you will probably very soon run into the following error, preventing even your front page from opening:
+1054 Unknown c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1054 Unknown column 'p.products_id' in 'on clause">
 <meta property="og:url" content="https://kyrylkov.com/2006/05/15/1054-unknown-column-p-products-id-in-on-clause/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="If you have Zen Cart 1.2.x with Ultimate SEO contribution running on MySQL 5.0.x, you will probably very soon run into the following error:
-1054 Unknown column &apos;p.products_id&apos; in &apos;on clause&apos;
-
-preventi">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.927Z">
+<meta property="og:description" content="If you have Zen Cart 1.2.x with Ultimate SEO contribution running on MySQL 5.0.x, you will probably very soon run into the following error, preventing even your front page from opening:
+1054 Unknown c">
+<meta property="og:updated_time" content="2016-09-26T08:08:02.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1054 Unknown column 'p.products_id' in 'on clause">
-<meta name="twitter:description" content="If you have Zen Cart 1.2.x with Ultimate SEO contribution running on MySQL 5.0.x, you will probably very soon run into the following error:
-1054 Unknown column &apos;p.products_id&apos; in &apos;on clause&apos;
-
-preventi">
+<meta name="twitter:description" content="If you have Zen Cart 1.2.x with Ultimate SEO contribution running on MySQL 5.0.x, you will probably very soon run into the following error, preventing even your front page from opening:
+1054 Unknown c">
   
   
     <link rel="icon" href="/favicon.png">
@@ -105,16 +99,16 @@ ga('send', 'pageview');
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>If you have Zen Cart 1.2.x with <a href="http://www.dream-scape.com/pub/zencart/Ultimate_SEO_URLs/" target="_blank" rel="external">Ultimate SEO contribution</a> running on MySQL 5.0.x, you will probably very soon run into the following error:</p>
+        <p>If you have Zen Cart 1.2.x with <a href="http://www.dream-scape.com/pub/zencart/Ultimate_SEO_URLs/" target="_blank" rel="external">Ultimate SEO contribution</a> running on MySQL 5.0.x, you will probably very soon run into the following error, preventing even your front page from opening:</p>
 <pre>1054 Unknown column 'p.products_id' in 'on clause'</pre>
 
-<p>preventing even your front page from opening.</p><p>This is a bug of Ultimate SEO contribution and to fix it you will need to replace two occurrences of the following two lines:</p>
+<p>This is a bug of Ultimate SEO contribution.  To fix it you will need to replace two occurrences of the following two lines:</p>
 <pre>FROM ".TABLE_CATEGORIES." c, ".TABLE_CATEGORIES_DESCRIPTION." cd</pre>
 
-<p>in <em>includes/classes/seo.url.php</em> with these lines:</p>
+<p>in <code>includes/classes/seo.url.php</code> with these lines:</p>
 <pre>FROM ".TABLE_CATEGORIES_DESCRIPTION." cd, ".TABLE_CATEGORIES." c </pre>
 
-<p>as pointed out in this <a href="http://www.zen-cart.com/forum/showpost.php?p=172698&amp;postcount=71" target="_blank" rel="external">post</a> on Zen Cart forum.</p>
+<p>as pointed out in <a href="http://www.zen-cart.com/forum/showpost.php?p=172698&amp;postcount=71" target="_blank" rel="external">this post on Zen Cart forum</a>.</p>
 
       
     </div>

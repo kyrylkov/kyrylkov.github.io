@@ -371,16 +371,16 @@ perl-TermReadKey-2.30-1.2.2</pre>
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>If you have Zen Cart 1.2.x with <a href="http://www.dream-scape.com/pub/zencart/Ultimate_SEO_URLs/" target="_blank" rel="external">Ultimate SEO contribution</a> running on MySQL 5.0.x, you will probably very soon run into the following error:</p>
+        <p>If you have Zen Cart 1.2.x with <a href="http://www.dream-scape.com/pub/zencart/Ultimate_SEO_URLs/" target="_blank" rel="external">Ultimate SEO contribution</a> running on MySQL 5.0.x, you will probably very soon run into the following error, preventing even your front page from opening:</p>
 <pre>1054 Unknown column 'p.products_id' in 'on clause'</pre>
 
-<p>preventing even your front page from opening.</p><p>This is a bug of Ultimate SEO contribution and to fix it you will need to replace two occurrences of the following two lines:</p>
+<p>This is a bug of Ultimate SEO contribution.  To fix it you will need to replace two occurrences of the following two lines:</p>
 <pre>FROM ".TABLE_CATEGORIES." c, ".TABLE_CATEGORIES_DESCRIPTION." cd</pre>
 
-<p>in <em>includes/classes/seo.url.php</em> with these lines:</p>
+<p>in <code>includes/classes/seo.url.php</code> with these lines:</p>
 <pre>FROM ".TABLE_CATEGORIES_DESCRIPTION." cd, ".TABLE_CATEGORIES." c </pre>
 
-<p>as pointed out in this <a href="http://www.zen-cart.com/forum/showpost.php?p=172698&amp;postcount=71" target="_blank" rel="external">post</a> on Zen Cart forum.</p>
+<p>as pointed out in <a href="http://www.zen-cart.com/forum/showpost.php?p=172698&amp;postcount=71" target="_blank" rel="external">this post on Zen Cart forum</a>.</p>
 
       
     </div>
