@@ -510,8 +510,10 @@ while opening environment for filesystem
         <p>Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn, etc) stops responding for no reason or you cannot browse any sources using Trac “Browse” link. </p>
 <p>Here are the steps one need to take in order to fix this problem:</p>
 <ol>
-<li>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</li>
-<li>stop Apache: <pre>
+<li><p>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</p>
+</li>
+<li><p>stop Apache: </p>
+<pre>
 /sbin/service httpd stop
 </pre></li>
 <li>check whether it actually stopped:<pre>
