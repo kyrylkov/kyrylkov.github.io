@@ -493,7 +493,8 @@ and
 </pre>
 </li>
 <li><p>Build the new kernel</p>
-<pre>make menuconfig
+<pre>
+make menuconfig
 make rpm
 </pre>
 </li>
@@ -503,7 +504,7 @@ cd ~/rpmbuild/RPMS/
 rpm -ivh &lt;kernel-name&gt;.rpm
 </pre>
 </li>
-<li><p>Step 9: Check Grub configuration<br><pre><br>sudo vi /boot/grub/grub.conf<br></pre><br>If the new kernel is not there, <code>edit grub.conf</code> to add it manually</p>
+<li><p>Check Grub configuration<br><pre><br>sudo vi /boot/grub/grub.conf<br></pre><br>If the new kernel is not there, <code>edit grub.conf</code> to add it manually</p>
 </li>
 <li><p>Reboot into the new kernel</p>
 <pre>
