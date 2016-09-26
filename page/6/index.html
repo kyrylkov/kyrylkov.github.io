@@ -591,17 +591,17 @@ while opening environment for filesystem
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a><span>></span><a class="article-category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
   </div>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>I don’t know what kind of support policy Liferay advocates, but we are<br>not going to use their product for the following reasons:</p>
+        <p>I don’t know what kind of support policy Liferay advocates, but we are not going to use their product for the following reasons:</p>
 <ul>
 <li>It seems impossible to find out how or whether it is possible to run Liferay Portal with Tomcat 5.5.x I’ve checked their mailing list, forum, web site - nothing. Some people asked about Tomcat 5.5.x back in February, but their questions remained largely conveniently ignored. Is that what open-source about? I don’t think so.</li>
-<li>When I downloaded a standalone WAR and followed the instruction for installing the portal on Tomcat 5.0.x, I found out that the whole installation looks more like a nasty kludge. One has to modify Tomcat startup scripts and create additional <em>ext</em> directory in <em>common/lib</em> copying almost all Liferay JAR files there. Well this all would be fine, if it didn’t make it impossible for some other applications to work with the same copy of Tomcat. For example I have blojsom using log4j and for this purpose being deployed together with log4j JAR in its <em>lib</em> directory. Now installing (kludging) Liferay on the same Tomcat and putting Liferay log4j JAR into <em>common/lib/ext</em> breaks my blojsom. I realize that Tomcat is a pain to configure but if one cannot do it right for a product software then just don’t do it.</li>
+<li>When I downloaded a standalone WAR and followed the instruction for installing the portal on Tomcat 5.0.x, I found out that the whole installation looks more like a nasty kludge. One has to modify Tomcat startup scripts and create additional <code>ext</code> directory in <code>common/lib</code> copying almost all Liferay JAR files there. Well this all would be fine, if it didn’t make it impossible for some other applications to work with the same copy of Tomcat. For example I have blojsom using log4j and for this purpose being deployed together with log4j JAR in its <code>lib</code> directory. Now installing (kludging) Liferay on the same Tomcat and putting Liferay log4j JAR into <code>common/lib/ext</code> breaks my blojsom. I realize that Tomcat is a pain to configure but if one cannot do it right for a product software then just don’t do it.</li>
 </ul>
 
       

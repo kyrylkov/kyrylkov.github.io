@@ -260,7 +260,7 @@ ga('send', 'pageview');
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a><span>></span><a class="article-category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
   </div>
 
       
@@ -269,12 +269,12 @@ ga('send', 'pageview');
       
         <p>In order to build JK Connector on Fedora Core 3, httpd-devel package containing apxs must be installed.</p>
 <p>First, download JK Connector sources from <a href="http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/" target="_blank" rel="external">http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/</a></p>
-<p>Next, go to <em>jk/native</em> directory and execute the following commands to build the connector:</p>
+<p>Next, go to <code>jk/native</code> directory and execute the following commands to build the connector:</p>
 <pre>./configure --with-apxs=/usr/sbin/apxs
 make
 su -c "make install"</pre>
 
-<p>Last, go to <em>/etc/httpd/conf.d</em> and create <em>jk.conf</em> file with the following example contents:</p>
+<p>Last, go to <code>/etc/httpd/conf.d</code> and create <code>jk.conf</code> file with the following example contents:</p>
 <pre>LoadModule jk_module modules/mod_jk.so
 
 JkWorkersFile /opt/jakarta-tomcat-5.5.9/conf/workers.properties.minimal
@@ -294,8 +294,8 @@ JkMount /blojsom/* ajp13w
 &lt;/Location&gt;</pre>
 
 <p>You are done!</p>
-<p>The last section of <em>jk.conf</em> defines the rules for blojsom web application and is written on per-application basis in this example.</p>
-<p>Check out the log file (_/opt/jakarta-tomcat-5.5.9/logs/mod<em>jk.log</em>) to see whether you have any problems.</p>
+<p>The last section of <code>jk.conf</code> defines the rules for blojsom web application and is written on per-application basis in this example.</p>
+<p>Check out the log file (<code>/opt/jakarta-tomcat-5.5.9/logs/mod_jk.log</code>) to see whether you have any problems.</p>
 
       
     </div>
