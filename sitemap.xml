@@ -275,13 +275,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.932Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
@@ -338,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -359,14 +352,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -387,6 +380,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
@@ -395,13 +395,6 @@
   
   <url>
     <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     

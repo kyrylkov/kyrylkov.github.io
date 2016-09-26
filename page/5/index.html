@@ -63,73 +63,6 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
-      <article id="post-zen-cart-vs-oscommerce" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/10/10/zen-cart-vs-oscommerce/">Zen Cart vs osCommerce</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/10/10/zen-cart-vs-oscommerce/" class="article-date">
-  <time datetime="2005-10-10T04:06:00.000Z" itemprop="datePublished">2005-10-10</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Uncategorized/">Uncategorized</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Obviously I should have looked at SourceForge statistics before deciding which<br>software to use instead of basing my decision exclusively on Google<br>page count so here we go:</p>
-<p><strong>Zen Cart</strong></p>
-<ul>
-<li>Development Status: 5 - Production/Stable</li>
-<li>Developers: 5</li>
-<li>Activity Percentile (last week): 99.85</li>
-<li>Latest Release: August 21, 2005</li>
-<li>Google Hits: 2,110,000</li>
-</ul>
-<p><strong>osCommerce</strong></p>
-<ul>
-<li>Development Status: 4 - Beta</li>
-<li>Developers: 3</li>
-<li>Activity Percentile (last week): 92.80</li>
-<li>Latest Release: July 12, 2003</li>
-<li>Google Hits: 13,500,000<p>Initially, based on pure Google hit count I decided to try osCommerce first, however after having lots of troubles with PHP5 and internationalization and also checking out SourceForge statistics I decided to abandon osCommerce in favor of Zen Cart.  In addition, Zen Cart seems to be actively developed unlike osCommerce, whose development seems to be completely frozen right now.</p></li>
-</ul>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oscommerce/">oscommerce</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zen-cart/">zen cart</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
       <article id="post-oscommerce-sql-errors-on-fedora-core-4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -653,8 +586,77 @@ connect = localhost:993</pre>
 
 
     
+      <article id="post-propfind-302-found-error-in-subversion" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/07/25/propfind-302-found-error-in-subversion/">Propfind 302 found error in Subversion</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/07/25/propfind-302-found-error-in-subversion/" class="article-date">
+  <time datetime="2005-07-25T09:07:00.000Z" itemprop="datePublished">2005-07-25</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:</p>
+<pre>ErrorDocument 404 http://www.blah.com</pre>
+
+<p>Basically what it adds up to is that Subversion refuses to add any new files to a repository and shows propfind 302 found error if <em>ErrorDocument 404</em> handler is enabled.</p>
+<p>The solution is to disable special 404 error handling for Subversion directories with <em>ErrorDocument 404 default</em>:</p>
+<pre>&lt;Location /repos&gt;
+  DAV svn
+  SVNParentPath /var/www/svn
+  SVNIndexXSLT /svnindex.xsl
+
+  # Limit access to list of valid users.
+  # Require SSL connection for password protection.
+  # SSLRequireSSL
+
+  AuthType Basic
+  AuthName "Multiplex Systems Subversion Repository"
+  AuthUserFile /var/www/auth-file
+  Require valid-user
+  ErrorDocument 404 default
+&lt;/Location&gt;</pre>
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/subversion/">subversion</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
       </nav>
     </section>
     <footer id="footer">

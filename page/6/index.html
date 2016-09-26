@@ -63,75 +63,6 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
-      <article id="post-propfind-302-found-error-in-subversion" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/07/25/propfind-302-found-error-in-subversion/">Propfind 302 found error in Subversion</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/07/25/propfind-302-found-error-in-subversion/" class="article-date">
-  <time datetime="2005-07-25T09:07:00.000Z" itemprop="datePublished">2005-07-25</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>I just found a very ugly problem that appears in Subversion when ErrorDocument 404 handler is enabled in Apache like this:</p>
-<pre>ErrorDocument 404 http://www.blah.com</pre>
-
-<p>Basically what it adds up to is that Subversion refuses to add any new files to a repository and shows propfind 302 found error if <em>ErrorDocument 404</em> handler is enabled.</p>
-<p>The solution is to disable special 404 error handling for Subversion directories with <em>ErrorDocument 404 default</em>:</p>
-<pre>&lt;Location /repos&gt;
-  DAV svn
-  SVNParentPath /var/www/svn
-  SVNIndexXSLT /svnindex.xsl
-
-  # Limit access to list of valid users.
-  # Require SSL connection for password protection.
-  # SSLRequireSSL
-
-  AuthType Basic
-  AuthName "Multiplex Systems Subversion Repository"
-  AuthUserFile /var/www/auth-file
-  Require valid-user
-  ErrorDocument 404 default
-&lt;/Location&gt;</pre>
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/subversion/">subversion</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
       <article id="post-linux-ppc64-regression-tests-of-jikes-rvm-cvs-head" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -679,8 +610,60 @@ chown -R apache:apache /var/www/svn/cp
 
 
     
+      <article id="post-diving-into-tapestry" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/18/diving-into-tapestry/">Diving into Tapestry</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/18/diving-into-tapestry/" class="article-date">
+  <time datetime="2005-05-18T03:36:00.000Z" itemprop="datePublished">2005-05-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Starting this week we started looking at Jakarta Tapestry. The main motivation behind this is the fact that it relies on ordinary HTML tags so we can clearly separate the roles of designer, HTML programmer, and Java developer. It’s been painful to use Struts in graphically rich Web applications and JSF didn’t make it better so far.</p>
+<p>We use Tapestry in Action to get started and somehow ToDo list application from chapter 3 didn’t seem to output the list of ToDo items. I didn’t have time to dig the problem and started looking for more examples to find the one that <a href="http://www.sandcastsoftware.com/downloads/brownbag/tapestry/" target="_blank" rel="external">works</a> from Sandcast Software.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tapestry/">tapestry</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
       </nav>
     </section>
     <footer id="footer">
