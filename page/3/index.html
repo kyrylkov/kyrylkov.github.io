@@ -433,15 +433,16 @@ perl-TermReadKey-2.30-1.2.2</pre>
       
         <p>Those who have later versions of Fedora Core installed and trying to set up virtual hosts in Apache may encounter the following error:</p>
 <pre>(13)Permission denied: httpd: could not open error log file</pre>
-As a result Apache refuses to start.
 
-This problem should be easy to fix if it has to do with SELinux. Check what kind of security attributes you have in your _/var/log/httpd_ , _/var/www_ and other related directories using
+<p>As a result Apache refuses to start.</p>
+<p>This problem should be easy to fix if it has to do with SELinux. Check what kind of security attributes you have in your <code>/var/log/httpd</code> , <code>/var/www</code> and other related directories using</p>
 <pre>ls -lZ</pre>
-command and be sure to set the same attributes for the directories where you have you virtual hosts html files, logs, etc
 
-For example if you have your virtual host html files in _/server/1/html_ and your log files in _/server/1/log_ you should issue the following commands to set the right attributes:
+<p>command and be sure to set the same attributes for the directories where you have you virtual hosts html files, logs, etc</p>
+<p>For example if you have your virtual host html files in <code>/server/1/html</code> and your log files in <code>/server/1/log</code> you should issue the following commands to set the right attributes:</p>
 <pre>chcon -R system_u:object_r:httpd_sys_content_t /server/1/html</pre>
-and
+
+<p>and</p>
 <pre>chcon -R system_u:object_r:httpd_log_t /server/1/log</pre>
       
     </div>

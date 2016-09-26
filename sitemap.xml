@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2006/05/15/13permission-denied-httpd-could-not-open-error-log-file/</loc>
+    
+    <lastmod>2016-09-26T09:53:59.833Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2010/05/21/payment-problems-in-magento-paypal-standard-with-ipn-after-upgrade-from-1-3-x-to-1-4-0-1/</loc>
     
     <lastmod>2016-09-26T09:52:10.519Z</lastmod>
@@ -205,13 +212,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/15/13permission-denied-httpd-could-not-open-error-log-file/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.934Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/06/16/jbuilder-is-not-dead/</loc>
     
     <lastmod>2016-07-03T17:59:20.933Z</lastmod>
@@ -240,13 +240,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.929Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
@@ -254,14 +247,21 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
@@ -324,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -338,16 +338,9 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
@@ -359,14 +352,21 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -415,14 +415,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
+    <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     
@@ -443,14 +443,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/06/20/jbuilder-2006/</loc>
     
     <lastmod>2016-07-03T17:59:20.899Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/20/jbuilder-2006/</loc>
+    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.899Z</lastmod>
     
@@ -464,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
