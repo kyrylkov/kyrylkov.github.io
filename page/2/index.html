@@ -538,11 +538,15 @@ chcon -t system_u:object_r:samba_share_t /opt
 
 <p>or, in order to survive relabel: </p>
 <ul>
-<li>add these lines to _/etc/selinux/targeted/contexts/files/file<em>contexts.local</em> file (if you are using <em>targeted</em> policy):<pre>
+<li><p>add these lines to <code>/etc/selinux/targeted/contexts/files/file_contexts.local</code> file (if you are using <em>targeted</em> policy):</p>
+<pre>
 /opt(/.*)?  system_u:object_r:samba_share_t:s0
-</pre></li>
-<li><em>probably</em>, reboot</li>
-<li>execute:<pre>
+</pre>
+</li>
+<li><p><em>probably</em>, reboot</p>
+</li>
+<li><p>execute:</p>
+<pre>
 restorecon -R /opt/
 </pre>
 
