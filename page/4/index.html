@@ -619,19 +619,26 @@ ProxyPassReverse /blojsom http://localhost:8082/blojsom</pre>
     <div class="article-entry" itemprop="articleBody">
       
         <p>If you enabled read-only second-level cache in Hibernate and have the following error:</p>
-<p><pre>Stack Trace:</pre></p>
-<ul>
-<li>org.hibernate.cache.ReadOnlyCache.lock(ReadOnlyCache.java:43)</li>
-<li>org.hibernate.action.EntityUpdateAction.execute(EntityUpdateAction.java:69)</li>
-<li>org.hibernate.engine.ActionQueue.execute(ActionQueue.java:239)</li>
-<li>org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:223)</li>
-<li>org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:137)</li>
-<li>org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:274)</li>
-<li>org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:27)</li>
-<li>org.hibernate.impl.SessionImpl.flush(SessionImpl.java:730)</li>
-<li>org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:324)</li>
-<li>org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:86)<br>which also shows up in Eclipse like this:<br><pre>ERROR org.hibernate.cache.ReadOnlyCache : Application attempted to edit read only item</pre><br>Check that your Hibernate class mapping has <em>mutable=”false”</em>, which prevents Hibernate from issuing updates for already existing instances. Here is a <a href="http://forums.hibernate.org/viewtopic.php?t=950646&amp;sid=4bf6cda18b8fc4bdc5133009d644cdb8" target="_blank" rel="external">link</a> to my Hibernate Forums thread about this problem.</li>
-</ul>
+<pre>
+Stack Trace:
+* org.hibernate.cache.ReadOnlyCache.lock(ReadOnlyCache.java:43)
+* org.hibernate.action.EntityUpdateAction.execute(EntityUpdateAction.java:69)
+* org.hibernate.engine.ActionQueue.execute(ActionQueue.java:239)
+* org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:223)
+* org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:137)
+* org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:274)
+* org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:27)
+* org.hibernate.impl.SessionImpl.flush(SessionImpl.java:730)
+* org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:324)
+* org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:86)
+</pre>
+
+<p>which also shows up in Eclipse like this:</p>
+<pre>
+ERROR org.hibernate.cache.ReadOnlyCache : Application attempted to edit read only item
+</pre>
+
+<p>Check that your Hibernate class mapping has <code>mutable=&quot;false&quot;</code>, which prevents Hibernate from issuing updates for already existing instances. Here is a <a href="http://forums.hibernate.org/viewtopic.php?t=950646&amp;sid=4bf6cda18b8fc4bdc5133009d644cdb8" target="_blank" rel="external">link</a> to my Hibernate Forums thread about this problem.</p>
 
       
     </div>
