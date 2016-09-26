@@ -13,7 +13,7 @@ According to Gerrit">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="After spending lots of time trying to make Gerrit work we agree with a conclusion that “Gerrit is ugly, intimidating, and inhumane“ and buggy.  At least for us and Ubuntu 12.04.1.
 According to Gerrit">
-<meta property="og:updated_time" content="2016-09-26T08:19:51.013Z">
+<meta property="og:updated_time" content="2016-09-26T08:24:50.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="No administrator rights in Gerrit">
 <meta name="twitter:description" content="After spending lots of time trying to make Gerrit work we agree with a conclusion that “Gerrit is ugly, intimidating, and inhumane“ and buggy.  At least for us and Ubuntu 12.04.1.
@@ -101,9 +101,8 @@ ga('send', 'pageview');
       
         <p>After spending lots of time trying to make Gerrit work we agree with a conclusion that “<a href="http://www.mediawiki.org/wiki/Git/Gerrit_evaluation#The_case_against_Gerrit" target="_blank" rel="external">Gerrit is ugly, intimidating, and inhumane</a>“ and buggy.  At least for us and Ubuntu 12.04.1.</p>
 <p>According to Gerrit <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html#_registering_your_key_in_gerrit" target="_blank" rel="external">documentation</a>:</p>
-<blockquote>
-<p>The first user to sign-in and register an account will be automatically placed into the fully privileged Administrators group, permitting server management over the web and over SSH.</p>
-</blockquote>
+<pre>The first user to sign-in and register an account will be automatically placed into the fully privileged Administrators group, permitting server management over the web and over SSH.</pre>
+
 <p>But here is our 5 attempts to make it work:</p>
 <ol>
 <li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html" target="_blank" rel="external">installing Gerrit 2.5 with H2</a> (aka Quick Installation in 10 Minutes) with stock Ubuntu Apache as <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/config-reverseproxy.html" target="_blank" rel="external">reverse proxy</a>, installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong></li>

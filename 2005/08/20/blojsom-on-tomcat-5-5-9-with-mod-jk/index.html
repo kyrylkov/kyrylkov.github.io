@@ -13,7 +13,7 @@ All permalinks work from">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="It looks like it is impossible to have permalinks (and comment and who knows what else) working in Blojsom, which runs on port 80 through mod_jk on Tomcat 5.5.9 (in my case).
 All permalinks work from">
-<meta property="og:updated_time" content="2016-09-26T08:22:05.730Z">
+<meta property="og:updated_time" content="2016-09-26T08:24:20.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blojsom on Tomcat 5.5.9 with mod_jk">
 <meta name="twitter:description" content="It looks like it is impossible to have permalinks (and comment and who knows what else) working in Blojsom, which runs on port 80 through mod_jk on Tomcat 5.5.9 (in my case).
@@ -108,7 +108,7 @@ ga('send', 'pageview');
 
 <p>In this second case I end up with “File not found” Apache error.</p>
 <p>I tried to play with a number of things, including changing host name in Tomcat <code>server.xml</code>, but nothing helped. It looks like either Apache or Tomcat (or mod_jk) fail to pick up the right virtual host name for some reason and settle for localhost instead.</p>
-<p>Anyway, in the end I settled for mod_proxy and left mod_jk problem be. Of course the question is why would I want mod_jk in the first place…</p>
+<p>Anyway, in the end I settled for <code>mod_proxy</code> and left <code>mod_jk</code> problem be. Of course the question is why would I want mod_jk in the first place…</p>
 
       
     </div>
