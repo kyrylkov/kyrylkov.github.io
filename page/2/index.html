@@ -69,202 +69,6 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
-      <article id="post-quickbooks-error-code-20888-41171-creating-viewing-invoices" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/02/21/quickbooks-error-code-20888-41171-creating-viewing-invoices/">QuickBooks Error Code 20888 41171 creating / viewing invoices</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2013/02/21/quickbooks-error-code-20888-41171-creating-viewing-invoices/" class="article-date">
-  <time datetime="2013-02-21T06:29:09.000Z" itemprop="datePublished">2013-02-21</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After switching to QuickBooks 2013 / 13 we started having various problems including crashes with error code 20888 41171 preventing us from creating new or viewing old sales orders or invoices.</p>
-<p>It looks like many people experience the same problem, so here is what worked for us: <a href="http://support.quickbooks.intuit.com/support/Articles/HOW12420" target="_blank" rel="external">http://support.quickbooks.intuit.com/support/Articles/HOW12420</a></p>
-<p>After running reboot.bat on our accountant’s Windows XP workstation and rebooting crashes with error code 20888 41171 were gone.  Hopefully forever.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QuickBooks/">QuickBooks</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-freebsd-vs-linux-size-matters" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/11/22/freebsd-vs-linux-size-matters/">FreeBSD vs Linux - size matters</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2012/11/22/freebsd-vs-linux-size-matters/" class="article-date">
-  <time datetime="2012-11-22T15:23:49.000Z" itemprop="datePublished">2012-11-22</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>As we recently migrated most of our servers from CentOS to FreeBSD, here is a difference between minimum system requirements of Ubuntu Server CLI Installation and FreeBSD 9:</p>
-<table>
-<thead>
-<tr>
-<th>OS</th>
-<th><a href="http://www.freebsd.org/doc/handbook/bsdinstall-hardware.html" target="_blank" rel="external">FreeBSD 9</a></th>
-<th><a href="https://help.ubuntu.com/community/Installation/SystemRequirements" target="_blank" rel="external">Ubuntu Server (CLI) Installation</a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Processor</td>
-<td>a 486 or better processor</td>
-<td>300 MHz x86 processor</td>
-</tr>
-<tr>
-<td>System memory (RAM)</td>
-<td>64 MB</td>
-<td>128 MB</td>
-</tr>
-<tr>
-<td>Disk space</td>
-<td>1.1 GB</td>
-<td>1 GB</td>
-</tr>
-</tbody>
-</table>
-<p>The major difference though between FreeBSD and Linux distros comes from the concept of FreeBSD “base system” which is <a href="http://www.over-yonder.net/~fullermd/rants/bsd4linux/03" target="_blank" rel="external">clearly described by Matt Fuller</a>.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/freebsd/">freebsd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-no-administrator-rights-in-gerrit" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/11/20/no-administrator-rights-in-gerrit/">No administrator rights in Gerrit</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2012/11/20/no-administrator-rights-in-gerrit/" class="article-date">
-  <time datetime="2012-11-20T15:42:52.000Z" itemprop="datePublished">2012-11-20</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a><span>></span><a class="article-category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After spending lots of time trying to make Gerrit work we agree with a conclusion that “<a href="http://www.mediawiki.org/wiki/Git/Gerrit_evaluation#The_case_against_Gerrit" target="_blank" rel="external">Gerrit is ugly, intimidating, and inhumane</a>“ and buggy.  At least for us and Ubuntu 12.04.1.</p>
-<p>According to Gerrit <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html#_registering_your_key_in_gerrit" target="_blank" rel="external">documentation</a>:</p>
-<blockquote>
-<p>The first user to sign-in and register an account will be automatically placed into the fully privileged Administrators group, permitting server management over the web and over SSH.</p>
-</blockquote>
-<p>But here is our 5 attempts to make it work:</p>
-<ol>
-<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html" target="_blank" rel="external">installing Gerrit 2.5 with H2</a> (aka Quick Installation in 10 Minutes) with stock Ubuntu Apache as <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/config-reverseproxy.html" target="_blank" rel="external">reverse proxy</a>, installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong></li>
-<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install.html" target="_blank" rel="external">installing Gerrit 2.5 with MySQL</a> with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
-<li>installing Gerrit 2.4.2 (maybe it’s a problem with 2.5 only?) with H2 with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
-<li>installing Gerrit 2.4.2 with MySQL with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID,<strong> no administrator rights</strong></li>
-<li>installing Gerrit 2.5 with MySQL (no Apache and reverse proxy this time), installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong><br>Thus whatever path we chose, Gerrit failed to properly grant administrator rights to the first user as it clearly indicated in the docs.</li>
-</ol>
-<p>There is a solution of course which is to <a href="https://groups.google.com/forum/#!msg/repo-discuss/FkIPsL28OXM/OBJvKaMh-wgJ" target="_blank" rel="external">edit database directly</a>.  However it makes one wonder what other nice “features” Gerrit is hiding.</p>
-<p>And off we go to <a href="http://phabricator.org/" target="_blank" rel="external">Phabricator</a>.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-review/">code review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gerrit/">gerrit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
       <article id="post-picasa-for-raw-images-why-lightroom-is-better-for-raw" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -746,6 +550,155 @@ and add the following line immediately after it:
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rhel/">rhel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/samba/">samba</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selinux/">selinux</a></li></ul>
 
       </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-fedora-legacy-shutdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/03/01/fedora-legacy-shutdown/">Fedora Legacy Shutdown</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2007/03/01/fedora-legacy-shutdown/" class="article-date">
+  <time datetime="2007-03-01T18:42:00.000Z" itemprop="datePublished">2007-03-01</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Fedora Legacy project <a href="http://www.fedoralegacy.org/" target="_blank" rel="external">announced shutdown</a> on February 9th, 2007.  It is definitely bad news for Fedora unless Fedora people understand what they do and do this on purpose.  They just dropped Server spin from Fedora 7 release and now there is no way to get security updates beyond 18 month period for older Fedora releases.</p>
+<p>We have several servers running Fedora and this means that now we must be thinking about either upgrading them to the most recent release of Fedora every 18 months or consider changing the Linux distribution we rely on.  An upgrade every 18 months may not sound that bad for a workstation, but for a fully configured server it is definitely a hassle, taking into account many issues that can arise.</p>
+<p>I do hope Fedora guys reconsider their support policy for maintenance distributions.  However it is quite possible that Red Hat endorsed Fedora Legacy shutdown to drive more people toward Red Hat Enterprise Linux, in which case the chances for reconsideration are quite low.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-fedora-7-test-2-no-server-spin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/03/01/fedora-7-test-2-no-server-spin/">Fedora 7 Test 2 - no Server spin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2007/03/01/fedora-7-test-2-no-server-spin/" class="article-date">
+  <time datetime="2007-03-01T17:28:00.000Z" itemprop="datePublished">2007-03-01</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.redhat.com/archives/fedora-announce-list/2007-March/msg00000.html" target="_blank" rel="external">Fedora 7 Test 2</a> has been released today, however it doesn’t provide a separate Server spin.  It turns out this feature <a href="http://fedoraproject.org/wiki/Releases/FeatureFedoraServer" target="_blank" rel="external">has been cancelled</a>, which is too bad, however understandable, taking into account how much Fedora people intend accomplish with Fedora 7.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-gps-navigators-web-site-launched" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/09/02/gps-navigators-web-site-launched/">GPS navigators web site launched</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2006/09/02/gps-navigators-web-site-launched/" class="article-date">
+  <time datetime="2006-09-02T13:25:00.000Z" itemprop="datePublished">2006-09-02</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Uncategorized/">Uncategorized</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Finally, after spending many days preparing, organizing and verifying information about Garmin GPS devices, we’ve launched <a href="http://www.gps-navigator.com.ua/" target="_blank" rel="external">GPS Navigator</a> web site in Ukraine.</p>
+
+      
+    </div>
+    
     
   </div>
   

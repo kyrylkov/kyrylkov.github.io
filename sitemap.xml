@@ -9,21 +9,21 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2016/09/26/tags/index/</loc>
+    <loc>https://kyrylkov.com/tags/index.html</loc>
     
     <lastmod>2016-09-24T14:18:28.947Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2016/09/26/categories/index/</loc>
+    <loc>https://kyrylkov.com/categories/index.html</loc>
     
     <lastmod>2016-09-24T14:18:28.943Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2016/09/26/about/index/</loc>
+    <loc>https://kyrylkov.com/about/index.html</loc>
     
     <lastmod>2016-09-24T14:18:28.938Z</lastmod>
     
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
+    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
+    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
     
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
@@ -240,6 +240,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.923Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.923Z</lastmod>
@@ -247,9 +254,9 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/</loc>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
-    <lastmod>2016-07-03T17:59:20.923Z</lastmod>
+    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
   </url>
   
@@ -262,13 +269,6 @@
   
   <url>
     <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -289,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -303,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -331,7 +331,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -345,7 +345,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
+    <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
@@ -359,7 +359,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
+    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
@@ -394,14 +394,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/</loc>
+    <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     

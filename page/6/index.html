@@ -69,176 +69,6 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
-      <article id="post-promise-sata300-tx4-on-fedora-core-4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/">Promise SATA300 TX4 on Fedora Core 4</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/08/14/promise-sata300-tx4-on-fedora-core-4/" class="article-date">
-  <time datetime="2005-08-14T10:59:00.000Z" itemprop="datePublished">2005-08-14</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and <a>here</a>. Basically you need to add one line to file sata_promise.c and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
-<ol>
-<li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
-<li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
-<li>Download the latest kernel sources<pre>wget <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm" target="_blank" rel="external">http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm</a> </pre></li>
-<li>Install it<pre>rpm -ivh &lt;kernel-name&gt;.src.rpm</pre></li>
-<li>Patch the kernel with Fedora patches:<pre>cd ~/rpmbuild/SPECS/<br>rpmbuild -bp –target=&lt;your_arch&gt; kernel-2.6.spec</pre></li>
-<li>Patch _sata<em>promise.c</em><pre>cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;<br>vi drivers/scsi/sata_promise.c</pre></li>
-<li>Add the following code:<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>between<pre>{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>and<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre></li>
-<li>Build the new kernel<pre>make menuconfig<br>make rpm</pre></li>
-<li>Install the new kernel<pre>cd ~/rpmbuild/RPMS/<br>rpm -ivh &lt;kernel-name&gt;.rpm</pre></li>
-<li>Step 9: Check Grub configuration<pre>sudo vi /boot/grub/grub.conf</pre>If the new kernel is not there, <em>edit grub.conf</em> to add it manually</li>
-<li>Reboot into the new kernel<pre>sudo /sbin/reboot</pre></li>
-</ol>
-<p>Enjoy!</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hardware/">hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sata-controller/">sata controller</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-highpoint-rocket-raid-1640-and-fakeraids" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/">HighPoint Rocket Raid 1640 and fakeraids</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/" class="article-date">
-  <time datetime="2005-07-27T02:13:00.000Z" itemprop="datePublished">2005-07-27</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>I just found some interesting <a href="http://linuxmafia.com/faq/Hardware/sata.html" target="_blank" rel="external">info</a> about RAID’s. It appears to be that almost all cheap (below $300) RAID controllers are so called fakeraids. Meaning they don’t have any RAID hardware onboard. They are just plain PATA/SATA disk controllers that have no RAID features plus some proprietary software that does all the RAID-related calculations. Because the software is proprietary, it is usually hard to make these things work in Linux.</p>
-<p>My friend has HighPoint Rocket Raid 1640. He paid around $100 for that, which was more than some other offerings. He believed he is getting something better by paying more, but it appears it was not the case at all.</p>
-<p>Real RAID controllers usually have their own processors (some are old and slow but some are modern and fast) and (upgradeable) memory, which makes them expensive.</p>
-<p>The conclusion is that if you want a cheap RAID in Linux, just use plain PATA/SATA controllers and <a href="http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html" target="_blank" rel="external">open-source software RAID</a>.  If you want real hardware RAID, prepare to pay several hundred dollars.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hardware/">hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sata-controller/">sata controller</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-32-bit-pci-64-bit-pci-and-pci-x-compatibility" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2005/07/26/32-bit-pci-64-bit-pci-and-pci-x-compatibility/">32-bit PCI, 64-bit PCI, and PCI-X compatibility</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2005/07/26/32-bit-pci-64-bit-pci-and-pci-x-compatibility/" class="article-date">
-  <time datetime="2005-07-26T10:37:00.000Z" itemprop="datePublished">2005-07-26</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>For a couple of last days I was trying to figure out whether PCI-X is, at least theoretically, backward compatible with plain PCI standard (both 32- and 64-bit). Finally I’ve found an <a href="http://www.soundonsound.com/sos/dec04/articles/pcnotes.htm" target="_blank" rel="external">article</a> that provides a good description and answers the question.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hardware/">hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pci-card/">pci card</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
       <article id="post-propfind-302-found-error-in-subversion" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -664,6 +494,174 @@ while opening environment for filesystem
       <footer class="article-footer">
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jbuilder/">jbuilder</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-repairing-broken-subversion-repository" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/31/repairing-broken-subversion-repository/">Repairing broken Subversion repository</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/31/repairing-broken-subversion-repository/" class="article-date">
+  <time datetime="2005-05-30T21:42:00.000Z" itemprop="datePublished">2005-05-31</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn, etc) stops responding for no reason or you cannot browse any sources using Trac “Browse” link. </p>
+<p>Here are the steps one need to take in order to fix this problem:</p>
+<ol>
+<li>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</li>
+<li>stop Apache:<pre>/sbin/service httpd stop</pre></li>
+<li>check whether it actually stopped:<pre> ps axu | grep http</pre></li>
+<li>if you see something like this:<pre>apache    5420  0.0  2.0 17320 4556 ?        S    13:25   0:00 /usr/sbin/httpd<br>apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd</pre>be sure to kill the remaining processes:<pre>kill -9 5420 5423</pre></li>
+<li>fix the repository with <em>svnadmin recover</em> command:<pre>svnadmin recover /var/www/svn/cp</pre></li>
+<li>change repository owner/group back to apache:<pre>chown -R apache:apache /var/www/svn/cp</pre></li>
+<li>start Apache:<pre>/sbin/service httpd start</pre></li>
+</ol>
+<p>Everything should work fine now.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/subversion/">subversion</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/">Liferay Portal on Tomcat 5.5.x and Tomcat 5.0.x</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/" class="article-date">
+  <time datetime="2005-05-22T20:56:00.000Z" itemprop="datePublished">2005-05-22</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a><span>></span><a class="article-category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I don’t know what kind of support policy Liferay advocates, but we are<br>not going to use their product for the following reasons:</p>
+<ul>
+<li>It seems impossible to find out how or whether it is possible to run Liferay Portal with Tomcat 5.5.x I’ve checked their mailing list, forum, web site - nothing. Some people asked about Tomcat 5.5.x back in February, but their questions remained largely conveniently ignored. Is that what open-source about? I don’t think so.</li>
+<li>When I downloaded a standalone WAR and followed the instruction for installing the portal on Tomcat 5.0.x, I found out that the whole installation looks more like a nasty kludge. One has to modify Tomcat startup scripts and create additional <em>ext</em> directory in <em>common/lib</em> copying almost all Liferay JAR files there. Well this all would be fine, if it didn’t make it impossible for some other applications to work with the same copy of Tomcat. For example I have blojsom using log4j and for this purpose being deployed together with log4j JAR in its <em>lib</em> directory. Now installing (kludging) Liferay on the same Tomcat and putting Liferay log4j JAR into <em>common/lib/ext</em> breaks my blojsom. I realize that Tomcat is a pain to configure but if one cannot do it right for a product software then just don’t do it.</li>
+</ul>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/liferay/">liferay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tomcat/">tomcat</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-myeclipse-4-0-m1-finally" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/05/18/myeclipse-4-0-m1-finally/">MyEclipse 4.0 M1, finally...</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/05/18/myeclipse-4-0-m1-finally/" class="article-date">
+  <time datetime="2005-05-18T03:46:00.000Z" itemprop="datePublished">2005-05-18</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>On Monday, MyEclipse 4.0M1 finally got released. Now in addition to Struts, JSF, and Hibernate, it supports Tapestry via Spindle integration and UML modeling. The next milestone should have Spring integration and graphical JSP designer. Well, let’s see how it goes.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/myeclipse/">myeclipse</a></li></ul>
 
       </footer>
     

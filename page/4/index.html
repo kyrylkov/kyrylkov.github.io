@@ -69,167 +69,6 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
-      <article id="post-yum-problem-upgrading-to-fedora-core-5-fc5" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/">yum problem upgrading to Fedora Core 5 (FC5)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/" class="article-date">
-  <time datetime="2006-05-10T03:08:00.000Z" itemprop="datePublished">2006-05-10</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>To prevent yum from breaking when upgrading Fedora Core 4 (or possibly earlier version of Fedora) to Fedora Core 5, it is necessary to install <strong>sqlite-3.3.3-1.2.i386.rpm</strong> and <strong>python-sqlite-1.1.7-1.2.i386.rpm</strong> or later versions of these packages.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-sugarcrm-4-2-0-with-cyrillic-support" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/">SugarCRM 4.2.0 with Cyrillic support</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/" class="article-date">
-  <time datetime="2006-05-10T03:00:00.000Z" itemprop="datePublished">2006-05-10</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>If you need SugarCRM 4.2.0 to correctly support Cyrillic without installing Russian language pack, change:</p>
-<pre>'LBL_CHARSET' =&gt; 'ISO-8859-1'</pre>
-
-<p>to</p>
-<pre>'LBL_CHARSET' =&gt; 'Windows-1251'</pre>
-
-<p>in _include/language/en<em>us.lang.php</em></p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sugarcrm/">sugarcrm</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/">Migrating from Cyrus IMAP to Dovecot on Fedora Core 4</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/" class="article-date">
-  <time datetime="2006-03-23T12:30:00.000Z" itemprop="datePublished">2006-03-23</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>We have decided to migrate one of our mail servers to use Dovecot instead of Cyrus IMAP.</p>
-<p>It appeared that moving existing messages from Cyrus IMAP 2.2.x format to Dovecot Maildir is not as straightforward as described in <a href="http://wiki.dovecot.org/Migration" target="_blank" rel="external">Dovecot Migration Wiki</a>. Neither cyrus2courier nor cyrus2maildir.py appeared to work correctly on our Fedora Core 4 throwing different kinds of errors.</p>
-<p>We will probably have to postpone this migration until later, when we find some time to try some IMAP to IMAP migration tool.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cyrus-imap/">cyrus imap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dovecot/">dovecot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
       <article id="post-blojsom-3-0-with-hibernate-back-end-is-coming-up" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -669,6 +508,195 @@ Java HotSpot(TM) Server VM (build 1.5.0_06-b05, mixed mode)</code></p>
       <footer class="article-footer">
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hibernate/">hibernate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tapestry/">tapestry</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-blojsom-short-urls-with-apache-httpd-and-tomcat" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/">Blojsom short URL&#39;s with Apache httpd and Tomcat</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/" class="article-date">
+  <time datetime="2006-01-10T21:09:00.000Z" itemprop="datePublished">2006-01-10</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Probably there are not many people who like the way default Blojsom URLs look:</p>
+<pre>http://localhost/blojsom/blog/default</pre>
+
+<p>The easiest way to remedy this situation is to use standard Apache HTTP proxy by adding the following lines into your Apache conf file (be it <em>httpd.conf</em> or<br>something else):</p>
+<pre>ProxyPass /blog http://localhost:8082/blojsom/blog/default/
+ProxyPassReverse /blog http://localhost:8082/blojsom/blog/default/&lt;
+
+ProxyPass /blojsom http://localhost:8082/blojsom
+ProxyPassReverse /blojsom http://localhost:8082/blojsom</pre>
+
+<p>The only thing that needs to be adjusted in Blojsom itself in order for this to work is Blog URL in <em>Weblog Setttings-&gt;Properties</em></p>
+<pre>Blog URL: http://localhost/blog/</pre>
+
+<p>Also be sure that your Proxied HTTP/1.1 Connector on port 8082 is enabled in your Tomcat in <em>server.xml</em> (Tomcat 5.5.x in the excerpt below):</p>
+<pre>&lt;Connector port="8082"
+  maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+  enableLookups="false" acceptCount="100" connectionTimeout="20000"
+  proxyPort="80" disableUploadTimeout="true"
+  proxyName="localhost" /&gt;</pre>
+
+<p>After these changes you can use:</p>
+<pre>http://localhost/blog</pre>
+
+<p>as the address of your blog.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apache/">apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blojsom/">blojsom</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tomcat/">tomcat</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-cant-write-to-a-readonly-object-with-hibernate-read-only-second-level-cache" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/12/04/cant-write-to-a-readonly-object-with-hibernate-read-only-second-level-cache/">Can&#39;t write to a readonly object with Hibernate read-only second-level cache</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/12/04/cant-write-to-a-readonly-object-with-hibernate-read-only-second-level-cache/" class="article-date">
+  <time datetime="2005-12-04T19:24:00.000Z" itemprop="datePublished">2005-12-04</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>If you enabled read-only second-level cache in Hibernate and have the following error:</p>
+<p><pre>Stack Trace:</pre></p>
+<ul>
+<li>org.hibernate.cache.ReadOnlyCache.lock(ReadOnlyCache.java:43)</li>
+<li>org.hibernate.action.EntityUpdateAction.execute(EntityUpdateAction.java:69)</li>
+<li>org.hibernate.engine.ActionQueue.execute(ActionQueue.java:239)</li>
+<li>org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:223)</li>
+<li>org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:137)</li>
+<li>org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:274)</li>
+<li>org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:27)</li>
+<li>org.hibernate.impl.SessionImpl.flush(SessionImpl.java:730)</li>
+<li>org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:324)</li>
+<li>org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:86)<br>which also shows up in Eclipse like this:<br><pre>ERROR org.hibernate.cache.ReadOnlyCache : Application attempted to edit read only item</pre><br>Check that your Hibernate class mapping has <em>mutable=”false”</em>, which prevents Hibernate from issuing updates for already existing instances. Here is a <a href="http://forums.hibernate.org/viewtopic.php?t=950646&amp;sid=4bf6cda18b8fc4bdc5133009d644cdb8" target="_blank" rel="external">link</a> to my Hibernate Forums thread about this problem.</li>
+</ul>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hibernate/">hibernate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
+      <article id="post-promise-sata300-tx4-on-linux-2-6-x" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/">Promise SATA300 TX4 on Linux (2.6.x)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/" class="article-date">
+  <time datetime="2005-11-20T01:08:00.000Z" itemprop="datePublished">2005-11-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>If you are having problems with Promise SATA300 TX4 on Linux (2.6.x) and don’t want to <a href="http://sergiy.kyrylkov.name/2005/08/14/promise-sata300-tx4-on-fedora-core-4/" target="_blank" rel="external">rebuild </a> kernel, get Linux kernel 2.6.14 or later, where Promise SATA300 TX4 is supported out of the box.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hardware/">hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sata-controller/">sata controller</a></li></ul>
 
       </footer>
     
