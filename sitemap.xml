@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/</loc>
+    
+    <lastmod>2016-09-26T10:10:05.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
+    
+    <lastmod>2016-09-26T10:09:21.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2013/08/20/magento-with-apache-httpd-2-4-and-php-fpm/</loc>
+    
+    <lastmod>2016-09-26T10:08:41.993Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/04/22/more-on-dotproject-gantt-chart-generation-problem/</loc>
     
     <lastmod>2016-09-26T10:07:47.112Z</lastmod>
@@ -79,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/03/installing-jk-connector-on-fedora-core-3-with-tomcat-5-5-x-and-apache-2-0-x/</loc>
-    
-    <lastmod>2016-09-26T08:31:18.429Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2005/05/22/liferay-portal-on-tomcat-5-5-x-and-tomcat-5-0-x/</loc>
     
     <lastmod>2016-09-26T08:29:09.054Z</lastmod>
@@ -145,13 +159,6 @@
     <loc>https://kyrylkov.com/2012/11/22/freebsd-vs-linux-size-matters/</loc>
     
     <lastmod>2016-07-03T19:24:38.535Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2013/08/20/magento-with-apache-httpd-2-4-and-php-fpm/</loc>
-    
-    <lastmod>2016-07-03T19:05:32.466Z</lastmod>
     
   </url>
   
@@ -247,14 +254,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
+    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
+    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
     
@@ -310,13 +317,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
@@ -325,6 +325,13 @@
   
   <url>
     <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -359,13 +366,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
@@ -374,6 +374,13 @@
   
   <url>
     <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -429,13 +436,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.905Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2005/05/31/repairing-broken-subversion-repository/</loc>
     
     <lastmod>2016-07-03T17:59:20.904Z</lastmod>
@@ -471,14 +471,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     

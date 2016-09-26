@@ -13,7 +13,7 @@ Coming from">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="After struggling for several hours our being  unable to access admin section of our Magento installation when using  apache httpd 2.4 configured with php-fpm, we finally found the problem.
 Coming from">
-<meta property="og:updated_time" content="2016-07-03T19:05:32.466Z">
+<meta property="og:updated_time" content="2016-09-26T10:08:41.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Magento with apache httpd 2.4 and php-fpm">
 <meta name="twitter:description" content="After struggling for several hours our being  unable to access admin section of our Magento installation when using  apache httpd 2.4 configured with php-fpm, we finally found the problem.
@@ -94,7 +94,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>After struggling for several hours our being  unable to access admin section of our Magento installation when using  apache httpd 2.4 configured with php-fpm, we finally found the problem.</p>
-<p>Coming from <a href="http://wiki.apache.org/httpd/PHP-FPM" target="_blank" rel="external">here</a>, we used incorrect <strong>ProxyPassMatch</strong>, specifically:</p>
+<p>Coming from <a href="http://wiki.apache.org/httpd/PHP-FPM" target="_blank" rel="external">here</a>, we used incorrect <code>ProxyPassMatch</code>, specifically:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ProxyPassMatch ^/(.*\.php)$ fcgi://127.0.0.1:9000/var/www/$1</div></pre></td></tr></table></figure>
 <p>instead of</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://127.0.0.1:9000/var/www/$1</div></pre></td></tr></table></figure>

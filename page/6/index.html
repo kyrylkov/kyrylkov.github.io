@@ -159,34 +159,10 @@ ga('send', 'pageview');
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>For the time being Linux PPC64 regression tests of Jikes RVM CVS head will<br>be started manually. I plan on doing this at least once a week.</p>
-<p>The need for this arises from the fact that for some reason the host IBM Java SDK crashes during the build process if regression tests start as a cron job:</p>
-<pre>(built utility_kludge.jar) \
-/opt/IBMJava2-ppc-141/bin/java \
-   -Xbootclasspath/p:/opt/regression/powerpc... -Xbootclasspath/a:/opt/regression/powerpc64-... \
-        -Xmx400M \
-   -classpath /opt/regression/powerpc64-unkn... \
-   -Djava.security.policy=rvm.security \
-     \
-   BootImageWriter\
-   -classpath /opt/regression/powerpc64-unkn... \
-   -n /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.primordials \
-   -o /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.image \
-    \
-   -demographics  -m /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.map \
-   -ia 0x31000000
-JVMXM008: Error occured while initialising System ClassException in thread "main" Could not create the Java virtual machine.
-make: *** [/opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.image] Error 1
-make: Leaving directory `/opt/regression/powerpc64-unknown-linux-gnu/nightShadow/rvm/src/tools/bootImageWriter'
-jbuild.linkImage: Exiting unexpectedly with status 2.
-jbuild.linkImage: Cleaning up...
-jbuild.linkImage: ...cleaned up.
-69 s
-jbuild: Trouble while running "./jbuild.linkImage -demographics"
-     (exit status 2); aborting execution
-</pre>
-
-<p>I’ve tried changing environmental variables of the cron job so they look exactly like those of a regular account, but it didn’t help.</p><p></p><p>The problem may have something to do with the 64-bit version of PPC Linux we have. It is one of the first pre-releases of 64-bit Yellow Dog Linux, which has a bunch of custom workarounds and kludges, including a custom-patched kernel 2.6.1</p>
+        <p>For the time being Linux PPC64 regression tests of Jikes RVM CVS head will be started manually. I plan on doing this at least once a week.</p>
+<p>The need for this arises from the fact that for some reason the host IBM Java SDK crashes during the build process if regression tests start as a cron job:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">(built utility_kludge.jar) \</div><div class="line">/opt/IBMJava2-ppc-141/bin/java \</div><div class="line">   -Xbootclasspath/p:/opt/regression/powerpc... -Xbootclasspath/a:/opt/regression/powerpc64-... \</div><div class="line">        -Xmx400M \</div><div class="line">   -classpath /opt/regression/powerpc64-unkn... \</div><div class="line">   -Djava.security.policy=rvm.security \</div><div class="line">     \</div><div class="line">   BootImageWriter\</div><div class="line">   -classpath /opt/regression/powerpc64-unkn... \</div><div class="line">   -n /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.primordials \</div><div class="line">   -o /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.image \</div><div class="line">    \</div><div class="line">   -demographics  -m /opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.map \</div><div class="line">   -ia 0x31000000</div><div class="line">JVMXM008: Error occured while initialising System ClassException in thread &quot;main&quot; Could not create the Java virtual machine.</div><div class="line">make: *** [/opt/regression/powerpc64-unknown-linux-gnu/nightShadow/images/production/RVM.image] Error 1</div><div class="line">make: Leaving directory `/opt/regression/powerpc64-unknown-linux-gnu/nightShadow/rvm/src/tools/bootImageWriter&apos;</div><div class="line">jbuild.linkImage: Exiting unexpectedly with status 2.</div><div class="line">jbuild.linkImage: Cleaning up...</div><div class="line">jbuild.linkImage: ...cleaned up.</div><div class="line">69 s</div><div class="line">jbuild: Trouble while running &quot;./jbuild.linkImage -demographics&quot;</div><div class="line">     (exit status 2); aborting execution</div></pre></td></tr></table></figure></p>
+<p>I’ve tried changing environmental variables of the cron job so they look exactly like those of a regular account, but it didn’t help.</p>
+<p>The problem may have something to do with the 64-bit version of PPC Linux we have. It is one of the first pre-releases of 64-bit Yellow Dog Linux, which has a bunch of custom workarounds and kludges, including a custom-patched kernel 2.6.1</p>
 <p>The long term solution I’d like to try is installing the latest Fedora Core 4, which does have 64-bit PPC kernel, and running the regression tests on top of that.</p>
 
       
