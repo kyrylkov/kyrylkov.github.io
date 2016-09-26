@@ -443,7 +443,7 @@ connect = localhost:993</pre>
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and <a>here</a>. Basically you need to add one line to file sata_promise.c and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
+        <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and here. Basically you need to add one line to file <code>sata_promise.c</code> and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
 <ol>
 <li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
 <li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
