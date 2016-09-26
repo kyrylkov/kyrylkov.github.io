@@ -6,18 +6,21 @@
   <title>Building PHP 4.x on Fedora Core 3 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="I just finished building PHP 4.x to make it work with MySQL 4.1.x on Fedora Core 3. It is needed by dotProject, which I want to try out. This is the configuration line that makes dotProject happy:
-./c">
+
+./">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Building PHP 4.x on Fedora Core 3">
 <meta property="og:url" content="https://kyrylkov.com/2005/04/21/building-php-4-x-on-fedora-core-3/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="I just finished building PHP 4.x to make it work with MySQL 4.1.x on Fedora Core 3. It is needed by dotProject, which I want to try out. This is the configuration line that makes dotProject happy:
-./c">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.900Z">
+
+./">
+<meta property="og:updated_time" content="2016-09-26T09:44:17.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building PHP 4.x on Fedora Core 3">
 <meta name="twitter:description" content="I just finished building PHP 4.x to make it work with MySQL 4.1.x on Fedora Core 3. It is needed by dotProject, which I want to try out. This is the configuration line that makes dotProject happy:
-./c">
+
+./">
   
   
     <link rel="icon" href="/favicon.png">
@@ -100,7 +103,10 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>I just finished building PHP 4.x to make it work with MySQL 4.1.x on Fedora Core 3. It is needed by dotProject, which I want to try out. This is the configuration line that makes dotProject happy:</p>
-<p><code>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr</code></p>
+<pre>
+./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr 
+</pre>
+
 <p>The reason for suffering is that Fedora Core 3 comes with MySQL 3.x Installing MySQL 4.x prevents PHP from working with MySQL correctly since php-mysql RPM file is compiled to work with MySQL 3.x Thus the way out is to build PHP completely from scratch with support for MySQL 4.x</p>
 
       

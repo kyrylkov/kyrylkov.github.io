@@ -97,7 +97,10 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>I just finished building PHP 4.x to make it work with MySQL 4.1.x on Fedora Core 3. It is needed by dotProject, which I want to try out. This is the configuration line that makes dotProject happy:</p>
-<p><code>./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr</code></p>
+<pre>
+./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr 
+</pre>
+
 <p>The reason for suffering is that Fedora Core 3 comes with MySQL 3.x Installing MySQL 4.x prevents PHP from working with MySQL correctly since php-mysql RPM file is compiled to work with MySQL 3.x Thus the way out is to build PHP completely from scratch with support for MySQL 4.x</p>
 
       
