@@ -441,11 +441,20 @@ to:
 </ul>
 <p>Пошаговые инструкции:</p>
 <ol>
-<li><p>Устанавливаем сервер 1С:Предприятия 8.1<pre>rpm -ivh 1C_Enterprise-common-8.1.11-67.i386.rpm 1C_Enterprise-common-nls-8.1.11-67.i386.rpm 1C_Enterprise-server-8.1.11-67.i386.rpm 1C_Enterprise-server-nls-8.1.11-67.i386.rpm</pre></p>
+<li><p>Устанавливаем сервер 1С:Предприятия 8.1</p>
+<pre>
+rpm -ivh 1C_Enterprise-common-8.1.11-67.i386.rpm 1C_Enterprise-common-nls-8.1.11-67.i386.rpm 1C_Enterprise-server-8.1.11-67.i386.rpm 1C_Enterprise-server-nls-8.1.11-67.i386.rpm
+</pre>
 </li>
-<li><p>Устанавливаем PostgresSQL 8.2<pre>rpm -ivh postgresql-8.2.4-6.1C.i386.rpm postgresql-contrib-8.2.4-6.1C.i386.rpm postgresql-server-8.2.4-6.1C.i386.rpm postgresql-libs-8.2.4-6.1C.i386.rpm</pre></p>
+<li><p>Устанавливаем PostgresSQL 8.2</p>
+<pre>
+rpm -ivh postgresql-8.2.4-6.1C.i386.rpm postgresql-contrib-8.2.4-6.1C.i386.rpm postgresql-server-8.2.4-6.1C.i386.rpm postgresql-libs-8.2.4-6.1C.i386.rpm
+</pre>
 </li>
-<li><p>Инициализируем кластер PostgresSQL с локалью <code>ru_RU.utf8</code> для русского языка или <code>uk_UA.utf8</code>для украинского:<pre>su - postgres -c ‘initdb –locale=uk_UA.utf8 -D /var/lib/pgsql/data/‘</pre></p>
+<li><p>Инициализируем кластер PostgresSQL с локалью <code>ru_RU.utf8</code> для русского языка или <code>uk_UA.utf8</code>для украинского:</p>
+<pre>
+su - postgres -c 'initdb --locale=uk_UA.utf8 -D /var/lib/pgsql/data/'
+</pre>
 </li>
 <li><p>Отключаем пароли на подключение к PostgresSQL, заменяя в файле <code>/var/lib/pgsql/data/pg_hba.conf</code> строку</p>
 <pre>
@@ -456,7 +465,10 @@ host   all     all    0.0.0.0/0    md5
 host   all     all    0.0.0.0/0    trust
 </pre>
 </li>
-<li><p>Запускаем PostgresSQL<pre>/sbin/service postgresql start</pre></p>
+<li><p>Запускаем PostgresSQL</p>
+<pre>
+/sbin/service postgresql start
+</pre>
 </li>
 <li><p>Подключаемся к PostgresSQL<br><pre><br>psql -h localhost postgres postgres<br></pre><br>меняем пароль пользователя <code>postgres</code><br><pre><br>ALTER USER postgres PASSWORD ‘new_password’;<br></pre><br>и выходим <code>\q</code></p>
 </li>
