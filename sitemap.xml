@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
+    
+    <lastmod>2016-09-26T12:34:49.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
+    
+    <lastmod>2016-09-26T12:34:12.097Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/</loc>
     
     <lastmod>2016-09-26T12:33:32.851Z</lastmod>
@@ -61,13 +75,6 @@
     <loc>https://kyrylkov.com/2005/05/31/repairing-broken-subversion-repository/</loc>
     
     <lastmod>2016-09-26T10:35:05.046Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
-    
-    <lastmod>2016-09-26T10:27:27.373Z</lastmod>
     
   </url>
   
@@ -187,13 +194,6 @@
     <loc>https://kyrylkov.com/2012/11/20/no-administrator-rights-in-gerrit/</loc>
     
     <lastmod>2016-09-26T08:27:32.826Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
-    
-    <lastmod>2016-09-26T08:24:20.145Z</lastmod>
     
   </url>
   
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
@@ -373,13 +373,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.919Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
@@ -394,6 +387,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.919Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
@@ -401,14 +401,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -471,14 +471,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
