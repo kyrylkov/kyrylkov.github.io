@@ -437,40 +437,51 @@ to:
 <li>postgresql</li>
 <li>postgresql-server</li>
 <li>postgresql-contrib</li>
-<li>postgresql-libs<br>Пошаговые инструкции:</li>
+<li>postgresql-libs</li>
 </ul>
+<p>Пошаговые инструкции:</p>
 <ol>
 <li><p>Устанавливаем сервер 1С:Предприятия 8.1<pre>rpm -ivh 1C_Enterprise-common-8.1.11-67.i386.rpm 1C_Enterprise-common-nls-8.1.11-67.i386.rpm 1C_Enterprise-server-8.1.11-67.i386.rpm 1C_Enterprise-server-nls-8.1.11-67.i386.rpm</pre></p>
 </li>
 <li><p>Устанавливаем PostgresSQL 8.2<pre>rpm -ivh postgresql-8.2.4-6.1C.i386.rpm postgresql-contrib-8.2.4-6.1C.i386.rpm postgresql-server-8.2.4-6.1C.i386.rpm postgresql-libs-8.2.4-6.1C.i386.rpm</pre></p>
 </li>
-<li><p>Инициализируем кластер PostgresSQL с локалью _ru<em>RU.utf8</em> для русского языка или _uk<em>UA.utf8</em>для украинского:<pre>su - postgres -c ‘initdb –locale=uk_UA.utf8 -D /var/lib/pgsql/data/‘</pre></p>
+<li><p>Инициализируем кластер PostgresSQL с локалью <code>ru_RU.utf8</code> для русского языка или <code>uk_UA.utf8</code>для украинского:<pre>su - postgres -c ‘initdb –locale=uk_UA.utf8 -D /var/lib/pgsql/data/‘</pre></p>
 </li>
 <li><p>Отключаем пароли на подключение к PostgresSQL, заменяя в файле <code>/var/lib/pgsql/data/pg_hba.conf</code> строку</p>
-<pre>host   all     all    0.0.0.0/0    md5</pre>
+<pre>
+host   all     all    0.0.0.0/0    md5
+</pre>
 на
-<pre>host   all     all    0.0.0.0/0    trust</pre>
+<pre>
+host   all     all    0.0.0.0/0    trust
+</pre>
 </li>
 <li><p>Запускаем PostgresSQL<pre>/sbin/service postgresql start</pre></p>
 </li>
-<li><p>Подключаемся к PostgresSQL<pre>psql -h localhost postgres postgres</pre></p>
-<p>меняем пароль пользователя <code>postgres</code></p>
-<pre>ALTER USER postgres PASSWORD 'new_password';</pre>
-
-<p>и выходим <code>\q</code></p>
+<li><p>Подключаемся к PostgresSQL<br><pre><br>psql -h localhost postgres postgres<br></pre><br>меняем пароль пользователя <code>postgres</code><br><pre><br>ALTER USER postgres PASSWORD ‘new_password’;<br></pre><br>и выходим <code>\q</code></p>
 </li>
 <li><p>Включаем пароли на подключение к PostgresSQL, заменяя в файле <code>/var/lib/pgsql/data/pg_hba.conf</code>строку</p>
-<pre>host   all     all    0.0.0.0/0    trust</pre>
+<pre>
+host   all     all    0.0.0.0/0    trust
+</pre>
 на
-<pre>host   all     all    0.0.0.0/0    md5</pre>
+<pre>
+host   all     all    0.0.0.0/0    md5
+</pre>
 </li>
-<li><p>Перезапускаем PostgresSQL<pre>/sbin/service postgresql restart</pre></p>
+<li><p>Перезапускаем PostgresSQL</p>
+<pre>
+/sbin/service postgresql restart
+</pre>
+
 </li>
 </ol>
 <p>Если у Вас установлен Apache и возникают проблемы с библиотеками при замене родного системного PostgresSQL 8.1 на 8.2 - читаем <a href="http://www.westnet.com/~gsmith/content/postgresql/pgrpm.htm" target="_blank" rel="external">Installing the PostgreSQL 8.2 RPMs on RHEL 5/CentOS 5</a></p>
 <p>Вкратце, при апгрейде <code>postgresql-libs</code> с версии 8.1 до версии 8.2, библиотека <code>libpq.so.4</code> заменяется на <code>libpq.so.5</code>. Однако <code>libpq.so.4</code> необходима для системного httpd Apache и после апгрейда <code>postgresql-libs</code> с версии 8.1 до версии 8.2, httpd Apache станет не работоспособным.</p>
 <p>Для решения проблемы достаточно установить <code>compat-postgresql-libs</code> (<code>compat-postgresql-libs-4-1PGDG.rhel5.i686.rpm</code>) с опцией замены файлов</p>
-<pre>rpm -iv --replacefiles compat-postgresql-libs-4-1PGDG.rhel5.i686.rpm</pre>
+<pre>
+rpm -iv --replacefiles compat-postgresql-libs-4-1PGDG.rhel5.i686.rpm
+</pre>
 
 <p><code>compat-postgresql-libs</code> также содержит <code>libpq.so.4</code> и после его установки апгрейд <code>postgresql-libs</code> с версии 8.1 до версии 8.2 становится возможным, так как с удалением <code>postgresql-libs</code> версии 8.1, <code>libpq.so.4</code> поставляется пакетом <code>compat-postgresql-libs</code>.</p>
 <p>Скачать <code>compat-postgresql-libs</code> можно здесь: <a href="http://www.postgresql.org/ftp/binary/v8.2.7/linux/rpms/redhat/rhel-5-i386/" target="_blank" rel="external">http://www.postgresql.org/ftp/binary/v8.2.7/linux/rpms/redhat/rhel-5-i386/</a></p>
