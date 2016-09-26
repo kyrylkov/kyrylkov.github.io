@@ -5,16 +5,16 @@
   
   <title>Building Rackspace Cloud Monitoring Agent on FreeBSD 10 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213pkg install gitpkg install gcc46git clone https://github.com/racker/virgocd virgogit submodule update --init --recursive./configuresetenv CC gcc46setenv CXX g++46setenv CPP cpp46gmake">
+  <meta name="description" content="Below is how we managed to build Rackspace Cloud Monitoring Agent on FreeBSD 10:12345678910111213pkg install gitpkg install gcc46git clone https://github.com/racker/virgocd virgogit submodule update -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Building Rackspace Cloud Monitoring Agent on FreeBSD 10">
 <meta property="og:url" content="https://kyrylkov.com/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="12345678910111213pkg install gitpkg install gcc46git clone https://github.com/racker/virgocd virgogit submodule update --init --recursive./configuresetenv CC gcc46setenv CXX g++46setenv CPP cpp46gmake">
-<meta property="og:updated_time" content="2016-07-03T19:01:08.686Z">
+<meta property="og:description" content="Below is how we managed to build Rackspace Cloud Monitoring Agent on FreeBSD 10:12345678910111213pkg install gitpkg install gcc46git clone https://github.com/racker/virgocd virgogit submodule update -">
+<meta property="og:updated_time" content="2016-09-26T09:37:33.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building Rackspace Cloud Monitoring Agent on FreeBSD 10">
-<meta name="twitter:description" content="12345678910111213pkg install gitpkg install gcc46git clone https://github.com/racker/virgocd virgogit submodule update --init --recursive./configuresetenv CC gcc46setenv CXX g++46setenv CPP cpp46gmake">
+<meta name="twitter:description" content="Below is how we managed to build Rackspace Cloud Monitoring Agent on FreeBSD 10:12345678910111213pkg install gitpkg install gcc46git clone https://github.com/racker/virgocd virgogit submodule update -">
   
   
     <link rel="icon" href="/favicon.png">
@@ -96,7 +96,8 @@ ga('send', 'pageview');
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">pkg install git</div><div class="line">pkg install gcc46</div><div class="line">git clone https://github.com/racker/virgo</div><div class="line">cd virgo</div><div class="line">git submodule update --init --recursive</div><div class="line">./configure</div><div class="line">setenv CC gcc46</div><div class="line">setenv CXX g++46</div><div class="line">setenv CPP cpp46</div><div class="line">gmake -C out</div><div class="line">gmake install</div><div class="line">cp base/pkg/freebsd/rackspace-monitoring-agent.init /etc/rc.d/rackspace-monitoring-agent</div><div class="line">chmod 755 /etc/rc.d/rackspace-monitoring-agent</div></pre></td></tr></table></figure>
+        <p>Below is how we managed to build Rackspace Cloud Monitoring Agent on FreeBSD 10:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">pkg install git</div><div class="line">pkg install gcc46</div><div class="line">git clone https://github.com/racker/virgo</div><div class="line">cd virgo</div><div class="line">git submodule update --init --recursive</div><div class="line">./configure</div><div class="line">setenv CC gcc46</div><div class="line">setenv CXX g++46</div><div class="line">setenv CPP cpp46</div><div class="line">gmake -C out</div><div class="line">gmake install</div><div class="line">cp base/pkg/freebsd/rackspace-monitoring-agent.init /etc/rc.d/rackspace-monitoring-agent</div><div class="line">chmod 755 /etc/rc.d/rackspace-monitoring-agent</div></pre></td></tr></table></figure></p>
+
       
     </div>
     
