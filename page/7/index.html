@@ -275,7 +275,8 @@ make
 su -c "make install"</pre>
 
 <p>Last, go to <code>/etc/httpd/conf.d</code> and create <code>jk.conf</code> file with the following example contents:</p>
-<pre>LoadModule jk_module modules/mod_jk.so
+<pre>
+LoadModule jk_module modules/mod_jk.so
 
 JkWorkersFile /opt/jakarta-tomcat-5.5.9/conf/workers.properties.minimal
 JkLogFile /opt/jakarta-tomcat-5.5.9/logs/mod_jk.log
@@ -291,7 +292,8 @@ JkMount /blojsom/* ajp13w
 &lt;Location "/blojsom/META-INF/"&gt;
   AllowOverride None
   deny from all
-&lt;/Location&gt;</pre>
+&lt;/Location&gt;
+</pre>
 
 <p>You are done!</p>
 <p>The last section of <code>jk.conf</code> defines the rules for blojsom web application and is written on per-application basis in this example.</p>
