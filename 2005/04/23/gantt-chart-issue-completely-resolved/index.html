@@ -15,7 +15,7 @@ open modules/tasks/gantt.php an">
 <meta property="og:description" content="I finally found how to fix the Gantt chart issue completely. It IS a bug of version 2.0.1 The solution comes from here and is the following (original text preserved):
 
 open modules/tasks/gantt.php an">
-<meta property="og:updated_time" content="2016-09-26T09:56:46.106Z">
+<meta property="og:updated_time" content="2016-09-26T09:58:45.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gantt chart issue completely resolved">
 <meta name="twitter:description" content="I finally found how to fix the Gantt chart issue completely. It IS a bug of version 2.0.1 The solution comes from here and is the following (original text preserved):
@@ -104,13 +104,15 @@ ga('send', 'pageview');
       
         <p>I finally found how to fix the Gantt chart issue completely. It IS a bug of version 2.0.1 The solution comes from <a href="http://www.dotproject.net/mantis/bug_view_advanced_page.php?bug_id=0000790" target="_blank" rel="external">here</a> and is the following (original text preserved):</p>
 <blockquote>
-<p>open modules/tasks/gantt.php an modify line 137ff. like down below for instance until I have sorted out with the concnering developer what to do:<br><code>// This configuration variable is obsolete = line 137
-$jpLocale = dPgetConfig( &#39;jpLocale&#39; );
+<p>open <code>modules/tasks/gantt.php</code> an modify line 137 like down below for instance until I have sorted out with the concnering developer what to do:</p>
+<pre>
+// This configuration variable is obsolete = line 137
+$jpLocale = dPgetConfig( 'jpLocale' );
 if ($jpLocale) {
-$graph-&amp;gt;scale-&amp;gt;SetDateLocale( $jpLocale );
+$graph-&gt;scale-&gt;SetDateLocale( $jpLocale );
 }
-//$graph-&amp;gt;scale-&amp;gt;SetDateLocale( $AppUI-&amp;gt;user_locale );</code></p>
-</blockquote>
+//$graph-&gt;scale-&gt;SetDateLocale( $AppUI-&gt;user_locale );
+</pre></blockquote>
 
       
     </div>
