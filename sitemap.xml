@@ -4,7 +4,7 @@
   <url>
     <loc>https://kyrylkov.com/2010/05/21/payment-problems-in-magento-paypal-standard-with-ipn-after-upgrade-from-1-3-x-to-1-4-0-1/</loc>
     
-    <lastmod>2016-09-26T09:50:51.075Z</lastmod>
+    <lastmod>2016-09-26T09:52:10.519Z</lastmod>
     
   </url>
   
@@ -254,14 +254,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
@@ -289,13 +289,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
@@ -304,6 +297,13 @@
   
   <url>
     <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -324,6 +324,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.919Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
@@ -332,13 +339,6 @@
   
   <url>
     <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.919Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -415,14 +415,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
+    <loc>https://kyrylkov.com/2005/06/27/trac-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.905Z</lastmod>
     
@@ -464,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
@@ -485,14 +485,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/04/adding-cyrus-imapd-users-with-only-imaps-enabled/</loc>
+    <loc>https://kyrylkov.com/2005/04/22/dotproject-gantt-chart-generation-problem/</loc>
     
     <lastmod>2016-07-03T17:59:20.892Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/04/22/dotproject-gantt-chart-generation-problem/</loc>
+    <loc>https://kyrylkov.com/2005/05/04/adding-cyrus-imapd-users-with-only-imaps-enabled/</loc>
     
     <lastmod>2016-07-03T17:59:20.892Z</lastmod>
     
