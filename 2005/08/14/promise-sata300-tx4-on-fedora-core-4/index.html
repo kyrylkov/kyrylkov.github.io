@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this pro">
-<meta property="og:updated_time" content="2016-09-26T11:38:08.961Z">
+<meta property="og:updated_time" content="2016-09-26T12:06:04.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Promise SATA300 TX4 on Fedora Core 4">
 <meta name="twitter:description" content="After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this pro">
@@ -94,17 +94,70 @@ ga('send', 'pageview');
       
         <p>After installing Promise SATA300 TX4 into FC4 box, we’ve discovered that it is not supported out of the box as of kernel 2.6.12. After some research on the Internet, we’ve found a solution to this problem compiled from <a href="http://www.fedoraforum.org/forum/showthread.php?t=29434&amp;page=1&amp;pp=15" target="_blank" rel="external">here</a> and here. Basically you need to add one line to file <code>sata_promise.c</code> and recompile the kernel. After this, the kernel will be able to pick up Promise SATA300 TX4 adapter.</p>
 <ol>
-<li>Install fedora-buildrpmtree<pre>yum install fedora-buildrpmtree</pre></li>
-<li>Create rpmbuild directory<pre>fedora-buildrpmtree</pre></li>
-<li>Download the latest kernel sources<pre>wget <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm" target="_blank" rel="external">http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm</a> </pre></li>
-<li>Install it<pre>rpm -ivh &lt;kernel-name&gt;.src.rpm</pre></li>
-<li>Patch the kernel with Fedora patches:<pre>cd ~/rpmbuild/SPECS/<br>rpmbuild -bp –target=&lt;your_arch&gt; kernel-2.6.spec</pre></li>
-<li>Patch _sata<em>promise.c</em><pre>cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;<br>vi drivers/scsi/sata_promise.c</pre></li>
-<li>Add the following code:<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>between<pre>{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre>and<pre>{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0,<br>board_20319 },</pre></li>
-<li>Build the new kernel<pre>make menuconfig<br>make rpm</pre></li>
-<li>Install the new kernel<pre>cd ~/rpmbuild/RPMS/<br>rpm -ivh &lt;kernel-name&gt;.rpm</pre></li>
-<li>Step 9: Check Grub configuration<pre>sudo vi /boot/grub/grub.conf</pre>If the new kernel is not there, <em>edit grub.conf</em> to add it manually</li>
-<li>Reboot into the new kernel<pre>sudo /sbin/reboot</pre></li>
+<li><p>Install fedora-buildrpmtree</p>
+<pre>
+yum install fedora-buildrpmtree
+</pre>
+</li>
+<li><p>Create rpmbuild directory</p>
+<pre>
+fedora-buildrpmtree
+</pre>
+</li>
+<li><p>Download the latest kernel sources</p>
+<pre>
+wget http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/&lt;kernel-name&gt;.src.rpm
+</pre>
+</li>
+<li><p>Install it</p>
+<pre>
+rpm -ivh &lt;kernel-name&gt;.src.rpm
+</pre>
+</li>
+<li><p>Patch the kernel with Fedora patches:</p>
+<pre>
+cd ~/rpmbuild/SPECS/
+rpmbuild -bp --target=&lt;your_arch&gt; kernel-2.6.spec
+</pre>
+</li>
+<li><p>Patch <code>sata_promise.c</code></p>
+<pre>
+cd ~/rpmbuild/BUILD/kernel-&lt;version&gt;/linux-&lt;version&gt;
+vi drivers/scsi/sata_promise.c
+</pre>
+</li>
+<li><p>Add the following code:</p>
+<pre>
+{ PCI_VENDOR_ID_PROMISE, 0x3d17, PCI_ANY_ID, PCI_ANY_ID, 0, 0, board_20319 },
+</pre>
+between
+<pre>
+{ PCI_VENDOR_ID_PROMISE, 0x3319, PCI_ANY_ID, PCI_ANY_ID, 0, 0, board_20319 },
+</pre>
+and
+<pre>
+{ PCI_VENDOR_ID_PROMISE, 0x3d18, PCI_ANY_ID, PCI_ANY_ID, 0, 0, board_20319 },
+</pre>
+</li>
+<li><p>Build the new kernel</p>
+<pre>make menuconfig
+make rpm
+</pre>
+</li>
+<li><p>Install the new kernel</p>
+<pre>
+cd ~/rpmbuild/RPMS/
+rpm -ivh &lt;kernel-name&gt;.rpm
+</pre>
+</li>
+<li><p>Step 9: Check Grub configuration<br><pre><br>sudo vi /boot/grub/grub.conf<br></pre><br>If the new kernel is not there, <code>edit grub.conf</code> to add it manually</p>
+</li>
+<li><p>Reboot into the new kernel</p>
+<pre>
+sudo /sbin/reboot
+</pre>
+
+</li>
 </ol>
 <p>Enjoy!</p>
 
