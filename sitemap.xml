@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
+    
+    <lastmod>2016-09-26T10:27:27.373Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/04/22/dotproject-gantt-chart-generation-problem/</loc>
     
     <lastmod>2016-09-26T10:22:52.804Z</lastmod>
@@ -261,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
+    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/09/02/gps-navigators-web-site-launched/</loc>
+    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
     
     <lastmod>2016-07-03T17:59:20.932Z</lastmod>
     
@@ -282,14 +289,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
@@ -331,13 +338,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
@@ -352,7 +352,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -366,9 +366,23 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
@@ -387,20 +401,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2005/10/07/oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.913Z</lastmod>
@@ -408,14 +408,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
+    <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
+    <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
@@ -457,14 +457,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/20/jbuilder-2006/</loc>
+    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.899Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/06/20/jbuilder-2006/</loc>
     
     <lastmod>2016-07-03T17:59:20.899Z</lastmod>
     
@@ -478,14 +478,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     

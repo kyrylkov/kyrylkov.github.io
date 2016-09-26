@@ -6,24 +6,36 @@
   <title>org.hibernate.HibernateException: Wrong column type - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="If you are getting the following exception:
+
 org.hibernate.HibernateException: Wrong column type...
+
+
 when Hibernate 3.1 validates your MySQL 4.1 database schema using
-&amp;lt;property name=&quot;hbm2ddl.auto&quot;&amp;gt">
+
+&amp;lt;property name=&quot;hbm2ddl.auto">
 <meta property="og:type" content="article">
 <meta property="og:title" content="org.hibernate.HibernateException: Wrong column type">
 <meta property="og:url" content="https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="If you are getting the following exception:
+
 org.hibernate.HibernateException: Wrong column type...
+
+
 when Hibernate 3.1 validates your MySQL 4.1 database schema using
-&amp;lt;property name=&quot;hbm2ddl.auto&quot;&amp;gt">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.922Z">
+
+&amp;lt;property name=&quot;hbm2ddl.auto">
+<meta property="og:updated_time" content="2016-09-26T10:27:27.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="org.hibernate.HibernateException: Wrong column type">
 <meta name="twitter:description" content="If you are getting the following exception:
+
 org.hibernate.HibernateException: Wrong column type...
+
+
 when Hibernate 3.1 validates your MySQL 4.1 database schema using
-&amp;lt;property name=&quot;hbm2ddl.auto&quot;&amp;gt">
+
+&amp;lt;property name=&quot;hbm2ddl.auto">
   
   
     <link rel="icon" href="/favicon.png">
@@ -100,20 +112,20 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>If you are getting the following exception:</p>
-<pre>org.hibernate.HibernateException: Wrong column type...</pre>
-when Hibernate 3.1 validates your MySQL 4.1 database schema using
-<pre>&lt;property name="hbm2ddl.auto"&gt;validate&lt;/property&gt;</pre>
-in your _hibernate.cfg.xml_ check whether you have custom sql-type in your Hibernate mappings and whether it is written in lower case as in example below (**sql-type="mediumblob"**):
-<pre>&lt;component name="photo" class="com.mpxsys.sample.model.user.BinaryData"&gt;
-  &lt;property name="data" type="binary"&gt;
-    &lt;column name="PHOTO_DATA" sql-type="mediumblob"/&gt;
-  &lt;/property&gt;
-  &lt;property name="name" column="PHOTO_NAME" type="string" /&gt;
-  &lt;property name="contentType" column="PHOTO_CONTENT_TYPE" type="string" /&gt;
-&lt;/component&gt;</pre>
-The exception
+<pre>
+org.hibernate.HibernateException: Wrong column type...
+</pre>
 
-`org.hibernate.HibernateException: Wrong column type: PHOTO_DATA, expected: MEDIUMBLOB
+<p>when Hibernate 3.1 validates your MySQL 4.1 database schema using</p>
+<pre>
+&lt;property name="hbm2ddl.auto"&gt;validate&lt;/property&gt;
+</pre>
+
+<p>in your <code>hibernate.cfg.xml</code> check whether you have custom sql-type in your Hibernate mappings and whether it is written in lower case as in example below (<code>sql-type=&quot;mediumblob&quot;</code>):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;component name=&quot;photo&quot; class=&quot;com.mpxsys.sample.model.user.BinaryData&quot;&gt;</div><div class="line">  &lt;property name=&quot;data&quot; type=&quot;binary&quot;&gt;</div><div class="line">    &lt;column name=&quot;PHOTO_DATA&quot; sql-type=&quot;mediumblob&quot;/&gt;</div><div class="line">  &lt;/property&gt;</div><div class="line">  &lt;property name=&quot;name&quot; column=&quot;PHOTO_NAME&quot; type=&quot;string&quot; /&gt;</div><div class="line">  &lt;property name=&quot;contentType&quot; column=&quot;PHOTO_CONTENT_TYPE&quot; type=&quot;string&quot; /&gt;</div><div class="line">&lt;/component&gt;</div></pre></td></tr></table></figure>
+<p>The exception</p>
+<pre>
+org.hibernate.HibernateException: Wrong column type: PHOTO_DATA, expected: MEDIUMBLOB
 at org.hibernate.mapping.Table.validateColumns(Table.java:219)
 at org.hibernate.cfg.Configuration.validateSchema(Configuration.java:964)
 at org.hibernate.tool.hbm2ddl.SchemaValidator.validate(SchemaValidator.java:116)
@@ -144,16 +156,11 @@ at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
 at java.lang.reflect.Method.invoke(Method.java:585)
 at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:275)
-at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)`
+at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+</init></init></pre>
 
-happens if you use upper case instead of (**sql-type="MEDIUMBLOB"**):
-<pre>&lt;component name="photo" class="com.mpxsys.sample.model.user.BinaryData"&gt;
-  &lt;property name="data" type="binary"&gt;
-    &lt;column name="PHOTO_DATA" sql-type="MEDIUMBLOB"/&gt;
-  &lt;/property&gt;
-  &lt;property name="name" column="PHOTO_NAME" type="string" /&gt;
-  &lt;property name="contentType" column="PHOTO_CONTENT_TYPE" type="string" /&gt;
-&lt;/component&gt;</pre></init></init>
+<p>happens if you use upper case instead of (<code>sql-type=&quot;MEDIUMBLOB&quot;</code>):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;component name=&quot;photo&quot; class=&quot;com.mpxsys.sample.model.user.BinaryData&quot;&gt;</div><div class="line">  &lt;property name=&quot;data&quot; type=&quot;binary&quot;&gt;</div><div class="line">    &lt;column name=&quot;PHOTO_DATA&quot; sql-type=&quot;MEDIUMBLOB&quot;/&gt;</div><div class="line">  &lt;/property&gt;</div><div class="line">  &lt;property name=&quot;name&quot; column=&quot;PHOTO_NAME&quot; type=&quot;string&quot; /&gt;</div><div class="line">  &lt;property name=&quot;contentType&quot; column=&quot;PHOTO_CONTENT_TYPE&quot; type=&quot;string&quot; /&gt;</div><div class="line">&lt;/component&gt;</div></pre></td></tr></table></figure>
       
     </div>
     
