@@ -379,7 +379,7 @@ to:
 </li>
 <li><p><strong>In Magento admin panel</strong>: Go to <em>Systems -&gt; Configuration -&gt; Payment Methods -&gt; PayPal Website Payments Standard</em> and check that <em>Payment Action</em> is set to _Sale _and <em>New Order</em> status to <em>Processing</em></p>
 </li>
-<li><p><strong>In Magento code</strong>: In file <code>Ipn.php</code> located in <code>app/code/core/Mage/Paypal/Model/Ipn.php</code> find function:<br><pre><br>public function getIpnFormData($key = null)<br></pre><br>comment out line:<br><pre><br>//return isset($this-&gt;_ipnFormData[$key]) ? $this-&gt;_ipnFormData[$key] : null;<br></pre><br>and add the following line immediately after it:<br><pre><br>return isset($this-&gt;_ipnFormData[$key]) ? urldecode($this-&gt;_ipnFormData[$key]) : null;<br></pre><br>This should do it.  Your order status should be changing from <code>Pending Payment</code> to <code>Processing</code> and emails should work also.</p>
+<li><p><strong>In Magento code</strong>: In file <code>Ipn.php</code> located in <code>app/code/core/Mage/Paypal/Model/Ipn.php</code> find function:<br><pre><br>public function getIpnFormData($key = null)<br></pre><br>comment out line:<br><pre><br>//return isset($this-&gt;_ipnFormData[$key]) ? $this&gt;_ipnFormData[$key] : null;<br></pre><br>and add the following line immediately after it:<br><pre><br>return isset($this-&gt;_ipnFormData[$key]) ? urldecode($this-&gt;_ipnFormData[$key]) : null;<br></pre><br>This should do it.  Your order status should be changing from <code>Pending Payment</code> to <code>Processing</code> and emails should work also.</p>
 </li>
 </ol>
 
