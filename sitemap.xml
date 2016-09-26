@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/</loc>
+    
+    <lastmod>2016-09-26T10:06:25.725Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/06/26/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/</loc>
+    
+    <lastmod>2016-09-26T10:05:55.464Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/12/04/cant-write-to-a-readonly-object-with-hibernate-read-only-second-level-cache/</loc>
     
     <lastmod>2016-09-26T10:04:36.312Z</lastmod>
@@ -261,14 +275,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
@@ -289,20 +303,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/23/migrating-from-cyrus-imap-to-dovecot-on-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.923Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
@@ -317,6 +317,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2006/01/17/java-lang-nosuchmethoderror-gethibernatelazyinitializer/</loc>
     
     <lastmod>2016-07-03T17:59:20.921Z</lastmod>
@@ -324,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -345,14 +352,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -401,13 +408,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/26/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.910Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/</loc>
     
     <lastmod>2016-07-03T17:59:20.907Z</lastmod>
@@ -443,14 +443,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/20/jbuilder-2006/</loc>
+    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.899Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/06/20/jbuilder-2006/</loc>
     
     <lastmod>2016-07-03T17:59:20.899Z</lastmod>
     
@@ -464,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/06/22/upgrading-fedora-core-3-to-fedora-core-4-with-yum/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     

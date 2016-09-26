@@ -6,18 +6,21 @@
   <title>Cyrus IMAP server problem after upgrading to Fedora Core 4 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="The problem of Berkley DB 4.3 in Fedora Core 4 vs Berkley DB 4.2 in Fedora Core 3 hits Cyrus IMAP server also. Basically the server stops working showing mulptiple errors in the log:
-Jun 26 20:01:44 m">
+
+Jun 26 20:01:44">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cyrus IMAP server problem after upgrading to Fedora Core 4">
 <meta property="og:url" content="https://kyrylkov.com/2005/06/26/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="The problem of Berkley DB 4.3 in Fedora Core 4 vs Berkley DB 4.2 in Fedora Core 3 hits Cyrus IMAP server also. Basically the server stops working showing mulptiple errors in the log:
-Jun 26 20:01:44 m">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.910Z">
+
+Jun 26 20:01:44">
+<meta property="og:updated_time" content="2016-09-26T10:05:55.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cyrus IMAP server problem after upgrading to Fedora Core 4">
 <meta name="twitter:description" content="The problem of Berkley DB 4.3 in Fedora Core 4 vs Berkley DB 4.2 in Fedora Core 3 hits Cyrus IMAP server also. Basically the server stops working showing mulptiple errors in the log:
-Jun 26 20:01:44 m">
+
+Jun 26 20:01:44">
   
   
     <link rel="icon" href="/favicon.png">
@@ -94,13 +97,14 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>The problem of Berkley DB 4.3 in Fedora Core 4 vs Berkley DB 4.2 in Fedora Core 3 hits Cyrus IMAP server also. Basically the server stops working showing mulptiple errors in the log:</p>
-<pre>Jun 26 20:01:44 mail imaps[3581]: DBERROR: critical database situation
+<pre>
+Jun 26 20:01:44 mail imaps[3581]: DBERROR: critical database situation
 Jun 26 20:01:44 mail master[3582]: about to exec /usr/lib/cyrus-imapd/lmtpd
 Jun 26 20:01:44 mail lmtpunix[3582]: DBERROR ´ : db4
 Jun 26 20:01:44 mail lmtpunix[3582]: DBERROR: critical database situation
 </pre>
 
-<p>The problem can be solved stopping the daemon and removing <em>deliver.db</em> and _tls<em>sessions.db</em> from <em>/var/lib/imap</em> and also erasing everything from <em>/var/lib/imapd/db/</em></p>
+<p>The problem can be solved stopping the daemon and removing <code>deliver.db</code> and <code>tls_sessions.db</code> from <code>/var/lib/imap</code> and also erasing everything from <code>/var/lib/imapd/db/</code></p>
 
       
     </div>

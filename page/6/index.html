@@ -310,13 +310,14 @@ sqlite trac2.db .dump | sqlite3 trac.db</pre>
     <div class="article-entry" itemprop="articleBody">
       
         <p>The problem of Berkley DB 4.3 in Fedora Core 4 vs Berkley DB 4.2 in Fedora Core 3 hits Cyrus IMAP server also. Basically the server stops working showing mulptiple errors in the log:</p>
-<pre>Jun 26 20:01:44 mail imaps[3581]: DBERROR: critical database situation
+<pre>
+Jun 26 20:01:44 mail imaps[3581]: DBERROR: critical database situation
 Jun 26 20:01:44 mail master[3582]: about to exec /usr/lib/cyrus-imapd/lmtpd
 Jun 26 20:01:44 mail lmtpunix[3582]: DBERROR ´ : db4
 Jun 26 20:01:44 mail lmtpunix[3582]: DBERROR: critical database situation
 </pre>
 
-<p>The problem can be solved stopping the daemon and removing <em>deliver.db</em> and _tls<em>sessions.db</em> from <em>/var/lib/imap</em> and also erasing everything from <em>/var/lib/imapd/db/</em></p>
+<p>The problem can be solved stopping the daemon and removing <code>deliver.db</code> and <code>tls_sessions.db</code> from <code>/var/lib/imap</code> and also erasing everything from <code>/var/lib/imapd/db/</code></p>
 
       
     </div>
