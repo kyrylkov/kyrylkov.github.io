@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2007/07/03/selinux-and-samba/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in /va">
-<meta property="og:updated_time" content="2016-07-03T17:59:20.954Z">
+<meta property="og:updated_time" content="2016-09-26T12:10:38.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SELinux and Samba">
 <meta name="twitter:description" content="Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in /va">
@@ -92,14 +92,33 @@ ga('send', 'pageview');
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in <em>/var/samba/log</em> may show lots of such messages:<pre>[2007/07/03 16:37:44, 0] smbd/service.c:make_connection_snum(911)<br>  ‘/opt/blah’ does not exist or permission denied when connecting to [blah]<br>  Error was Permission denied</pre>This is probably an SELinux problem and to fix it you’ll need to execute:<pre>chcon -t system_u:object_r:samba_share_t /opt</pre>or, in  order to survive relabel: </p>
-<ul>
-<li>add these lines to _/etc/selinux/targeted/contexts/files/file<em>contexts.local</em> file (if you are using <em>targeted</em> policy):<pre>/opt(/.*)?  system_u:object_r:samba_share_t:s0</pre></li>
-<li><em>probably</em>, reboot</li>
-<li>execute:<pre>restorecon -R /opt/</pre>This will set appropriate SELinux context on all files in <em>/opt</em> directory and SELinux won’t prevent Samba access anymore.</li>
-</ul>
-<p>To allow Samba to share your home directories with SELinux execute the following:<pre>setsebool -P samba_enable_home_dirs 1</pre></p>
+        <p>Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in <code>/var/samba/log</code> may show lots of such messages:</p>
+<pre>
+[2007/07/03 16:37:44, 0] smbd/service.c:make_connection_snum(911)
+  '/opt/blah' does not exist or permission denied when connecting to [blah] 
+  Error was Permission denied
+</pre>
 
+<p>This is probably an SELinux problem and to fix it you’ll need to execute:</p>
+<pre>
+chcon -t system_u:object_r:samba_share_t /opt
+</pre>
+
+<p>or, in order to survive relabel: </p>
+<ul>
+<li>add these lines to _/etc/selinux/targeted/contexts/files/file<em>contexts.local</em> file (if you are using <em>targeted</em> policy):<pre>
+/opt(/.*)?  system_u:object_r:samba_share_t:s0
+</pre></li>
+<li><em>probably</em>, reboot</li>
+<li>execute:<pre>
+restorecon -R /opt/
+</pre>
+
+</li>
+</ul>
+<p>This will set appropriate SELinux context on all files in <code>/opt</code> directory and SELinux won’t prevent Samba access anymore.</p>
+<p>To allow Samba to share your home directories with SELinux execute the following:</p>
+<pre>setsebool -P samba_enable_home_dirs 1</pre>
       
     </div>
     

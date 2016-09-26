@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2007/07/03/selinux-and-samba/</loc>
+    
+    <lastmod>2016-09-26T12:10:38.327Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/08/14/promise-sata300-tx4-on-fedora-core-4/</loc>
     
     <lastmod>2016-09-26T12:08:52.201Z</lastmod>
@@ -219,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2007/07/03/selinux-and-samba/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.954Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2015/05/12/air-quality-in-tallinn-tartu-narva-kohtla-jarve/</loc>
     
     <lastmod>2016-07-03T17:59:20.950Z</lastmod>
@@ -296,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.929Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
@@ -310,14 +303,21 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -408,14 +408,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
+    <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/29/new-imap-stunnel-configuration-stunnel3-vs-stunnel/</loc>
+    <loc>https://kyrylkov.com/2005/07/25/propfind-302-found-error-in-subversion/</loc>
     
     <lastmod>2016-07-03T17:59:20.912Z</lastmod>
     
