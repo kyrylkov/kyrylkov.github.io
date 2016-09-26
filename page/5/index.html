@@ -449,7 +449,7 @@ connect = localhost:993</pre>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a><span>></span><a class="article-category-link" href="/categories/Software-Development/System-Administration/">System Administration</a>
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
   </div>
 
       
@@ -457,8 +457,14 @@ connect = localhost:993</pre>
     <div class="article-entry" itemprop="articleBody">
       
         <p>It looks like it is impossible to have permalinks (and comment and who knows what else) working in Blojsom, which runs on port 80 through mod_jk on Tomcat 5.5.9 (in my case).</p>
-<p>All permalinks work from localhost only when they look like this: <pre><a href="http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html" target="_blank" rel="external">http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</a></pre> instead of <pre><a href="http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html" target="_blank" rel="external">http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</a></pre> In this second case I end up with “File not found” Apache error.</p>
-<p>I tried to play with a number of things, including changing host name in Tomcat <em>server.xml</em>, but nothing helped. It looks like either Apache or Tomcat (or mod_jk) fail to pick up the right virtual host name for some reason and settle for localhost instead.</p>
+<p>All permalinks work from localhost only when they look like this: </p>
+<pre>http://localhost/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</pre> 
+
+<p>instead of </p>
+<pre>http://www.mpxsys.com/blojsom/blog/kyrylkov/JBuilder/2005/06/21/JBuilder_2006.html</pre> 
+
+<p>In this second case I end up with “File not found” Apache error.</p>
+<p>I tried to play with a number of things, including changing host name in Tomcat <code>server.xml</code>, but nothing helped. It looks like either Apache or Tomcat (or mod_jk) fail to pick up the right virtual host name for some reason and settle for localhost instead.</p>
 <p>Anyway, in the end I settled for mod_proxy and left mod_jk problem be. Of course the question is why would I want mod_jk in the first place…</p>
 
       
