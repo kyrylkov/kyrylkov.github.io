@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2010/05/21/payment-problems-in-magento-paypal-standard-with-ipn-after-upgrade-from-1-3-x-to-1-4-0-1/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="Those who, after a seemingly successful upgrade from Magento 1.3.x to Magento 1.4.0.1, have problems with Magento acknowledging PayPal payments (changing order status from Pending Payment to Processin">
-<meta property="og:updated_time" content="2016-09-26T09:50:10.884Z">
+<meta property="og:updated_time" content="2016-09-26T09:50:51.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Payment problems in Magento Paypal Standard with IPN after upgrade from 1.3.x to 1.4.0.1">
 <meta name="twitter:description" content="Those who, after a seemingly successful upgrade from Magento 1.3.x to Magento 1.4.0.1, have problems with Magento acknowledging PayPal payments (changing order status from Pending Payment to Processin">
@@ -105,7 +105,7 @@ to:
 </li>
 <li><p><strong>In Magento admin panel</strong>: Go to <em>Systems -&gt; Configuration -&gt; Payment Methods -&gt; PayPal Website Payments Standard</em> and check that <em>Payment Action</em> is set to _Sale _and <em>New Order</em> status to <em>Processing</em></p>
 </li>
-<li><p><strong>In Magento code</strong>: In file <code>Ipn.php</code> located in <code>app/code/core/Mage/Paypal/Model/Ipn.php</code> find function:<br><pre><br>public function getIpnFormData($key = null)<br></pre><br>comment out line:<br><pre><br>//return isset($this-&gt;_ipnFormData[$key]) ? $this&gt;_ipnFormData[$key] : null;<br></pre><br>and add the following line immediately after it:<br><pre><br>return isset($this-&gt;_ipnFormData[$key]) ? urldecode($this-&gt;_ipnFormData[$key]) : null;<br></pre><br>This should do it.  Your order status should be changing from <code>Pending Payment</code> to <code>Processing</code> and emails should work also.</p>
+<li><p><strong>In Magento code</strong>: In file <code>Ipn.php</code> located in <code>app/code/core/Mage/Paypal/Model/Ipn.php</code> find function:<br><pre>public function getIpnFormData($key = null)</pre><br>comment out line:<br><pre>//return isset($this-&gt;_ipnFormData[$key]) ? $this&gt;_ipnFormData[$key] : null;</pre><br>and add the following line immediately after it:<br><pre>return isset($this-&gt;_ipnFormData[$key]) ? urldecode($this-&gt;_ipnFormData[$key]) : null;</pre><br>This should do it.  Your order status should be changing from <code>Pending Payment</code> to <code>Processing</code> and emails should work also.</p>
 </li>
 </ol>
 
