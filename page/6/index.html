@@ -513,32 +513,44 @@ while opening environment for filesystem
 <li><p>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</p>
 </li>
 <li><p>stop Apache: </p>
+</li>
+</ol>
 <pre>
 /sbin/service httpd stop
-</pre></li>
-<li>check whether it actually stopped:<pre>
+</pre>
+
+<ol>
+<li>check whether it actually stopped:</li>
+</ol>
+<pre>
 ps axu | grep http
-</pre></li>
-<li>if you see something like this:<pre>
+</pre>
+
+<ol>
+<li>if you see something like this:</li>
+</ol>
+<pre>
 apache    5420  0.0  2.0 17320 4556 ?        S    13:25   0:00 /usr/sbin/httpd
 apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd
 </pre>
-be sure to kill the remaining processes:
+
+<p>be sure to kill the remaining processes:</p>
 <pre>
 kill -9 5420 5423
-</pre></li>
-<li>fix the repository with <code>svnadmin recover</code> command:<pre>
+</pre>
+1. fix the repository with `svnadmin recover` command:
+<pre>
 svnadmin recover /var/www/svn/cp
-</pre></li>
-<li>change repository owner/group back to apache:<pre>
+</pre>
+1. change repository owner/group back to apache:
+<pre>
 chown -R apache:apache /var/www/svn/cp
-</pre></li>
-<li>start Apache:<pre>
+</pre>
+1. start Apache:
+<pre>
 /sbin/service httpd start
 </pre>
 
-</li>
-</ol>
 <p>Everything should work fine now.</p>
 
       

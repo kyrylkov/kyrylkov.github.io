@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2005/05/31/repairing-broken-subversion-repository/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn">
-<meta property="og:updated_time" content="2016-09-26T10:31:09.200Z">
+<meta property="og:updated_time" content="2016-09-26T10:32:31.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Repairing broken Subversion repository">
 <meta name="twitter:description" content="Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn">
@@ -96,32 +96,44 @@ ga('send', 'pageview');
 <li><p>log in to your Subversion server, be sure you have appropriate (possibly root) privileges</p>
 </li>
 <li><p>stop Apache: </p>
+</li>
+</ol>
 <pre>
 /sbin/service httpd stop
-</pre></li>
-<li>check whether it actually stopped:<pre>
+</pre>
+
+<ol>
+<li>check whether it actually stopped:</li>
+</ol>
+<pre>
 ps axu | grep http
-</pre></li>
-<li>if you see something like this:<pre>
+</pre>
+
+<ol>
+<li>if you see something like this:</li>
+</ol>
+<pre>
 apache    5420  0.0  2.0 17320 4556 ?        S    13:25   0:00 /usr/sbin/httpd
 apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd
 </pre>
-be sure to kill the remaining processes:
+
+<p>be sure to kill the remaining processes:</p>
 <pre>
 kill -9 5420 5423
-</pre></li>
-<li>fix the repository with <code>svnadmin recover</code> command:<pre>
+</pre>
+1. fix the repository with `svnadmin recover` command:
+<pre>
 svnadmin recover /var/www/svn/cp
-</pre></li>
-<li>change repository owner/group back to apache:<pre>
+</pre>
+1. change repository owner/group back to apache:
+<pre>
 chown -R apache:apache /var/www/svn/cp
-</pre></li>
-<li>start Apache:<pre>
+</pre>
+1. start Apache:
+<pre>
 /sbin/service httpd start
 </pre>
 
-</li>
-</ol>
 <p>Everything should work fine now.</p>
 
       
