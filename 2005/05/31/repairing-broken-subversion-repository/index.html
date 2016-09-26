@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2005/05/31/repairing-broken-subversion-repository/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn">
-<meta property="og:updated_time" content="2016-09-26T10:33:24.769Z">
+<meta property="og:updated_time" content="2016-09-26T10:35:05.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Repairing broken Subversion repository">
 <meta name="twitter:description" content="Somehow Subversion repository based on BDB tends to break at least in our case working on Fedora Core 3 with Trac 0.8.1 Usually an indication of this is either your Subversion client (TortoiseSVN, svn">
@@ -113,14 +113,20 @@ apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd
 be sure to kill the remaining processes:
 <pre>
 kill -9 5420 5423
-</pre></li>
-<li>fix the repository with <code>svnadmin recover</code> command:<pre>
+</pre>
+</li>
+<li><p>fix the repository with <code>svnadmin recover</code> command:</p>
+<pre>
 svnadmin recover /var/www/svn/cp
-</pre></li>
-<li>change repository owner/group back to apache:<pre>
+</pre>
+</li>
+<li><p>change repository owner/group back to apache:</p>
+<pre>
 chown -R apache:apache /var/www/svn/cp
-</pre></li>
-<li>start Apache:<pre>
+</pre>
+</li>
+<li><p>start Apache:</p>
+<pre>
 /sbin/service httpd start
 </pre>
 

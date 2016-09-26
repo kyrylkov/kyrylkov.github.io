@@ -530,14 +530,20 @@ apache    5423  0.0  2.0 17320 4564 ?        S    13:25   0:00 /usr/sbin/httpd
 be sure to kill the remaining processes:
 <pre>
 kill -9 5420 5423
-</pre></li>
-<li>fix the repository with <code>svnadmin recover</code> command:<pre>
+</pre>
+</li>
+<li><p>fix the repository with <code>svnadmin recover</code> command:</p>
+<pre>
 svnadmin recover /var/www/svn/cp
-</pre></li>
-<li>change repository owner/group back to apache:<pre>
+</pre>
+</li>
+<li><p>change repository owner/group back to apache:</p>
+<pre>
 chown -R apache:apache /var/www/svn/cp
-</pre></li>
-<li>start Apache:<pre>
+</pre>
+</li>
+<li><p>start Apache:</p>
+<pre>
 /sbin/service httpd start
 </pre>
 
