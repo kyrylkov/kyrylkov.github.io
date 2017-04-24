@@ -58,7 +58,7 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kyrylkov.com"></form>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://kyrylkov.com"></form>
         </div>
       </nav>
     </div>
@@ -296,14 +296,14 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2010/06/26/python-twitter-0-6-followers-bug/">Python Twitter 0.6 followers bug</a>
+      <a class="article-title" href="/2010/06/27/python-twitter-0-6-followers-bug/">Python Twitter 0.6 followers bug</a>
     </h1>
   
 
       </header>
     
     <div class="article-meta">
-      <a href="/2010/06/26/python-twitter-0-6-followers-bug/" class="article-date">
+      <a href="/2010/06/27/python-twitter-0-6-followers-bug/" class="article-date">
   <time datetime="2010-06-27T05:37:07.000Z" itemprop="datePublished">2010-06-27</time>
 </a>
       
@@ -600,6 +600,162 @@ restorecon -R /opt/
 
 
     
+      <article id="post-node.js-8-promises-async-await" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2007/04/24/node.js-8-promises-async-await/">Why Node.js 8 will be the biggest release for ECMAScript 2015 Promises and async functions</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2007/04/24/node.js-8-promises-async-await/" class="article-date">
+  <time datetime="2007-04-24T17:42:00.000Z" itemprop="datePublished">2007-04-24</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Software-Development/">Software Development</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Platform info:</p>
+<ul>
+<li>Windows_NT 10.0.15063 x64</li>
+<li>Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4</li>
+</ul>
+<p>Promises:</p>
+<ul>
+<li>Native = ECMAScript 2015 Promises</li>
+<li>Bluebird = Bluebird 3.5.0 Promises</li>
+</ul>
+<h2 id="Doxbee-sequential-bench-doxbee"><a href="#Doxbee-sequential-bench-doxbee" class="headerlink" title="Doxbee sequential (./bench doxbee)"></a>Doxbee sequential (<code>./bench doxbee</code>)</h2><table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2</td>
+<td>4.5.103.46</td>
+<td>1287</td>
+<td>190.12</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2</td>
+<td>5.1.281.95</td>
+<td>1506</td>
+<td>144.93</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>1185</td>
+<td>166.35</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>543</td>
+<td>88.25</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>375</td>
+<td>46.70</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Madeup-parallel-bench-parallel"><a href="#Madeup-parallel-bench-parallel" class="headerlink" title="Madeup parallel (./bench parallel)"></a>Madeup parallel (<code>./bench parallel</code>)</h2><table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2</td>
+<td>4.5.103.46</td>
+<td>3269</td>
+<td>496.14</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2</td>
+<td>5.1.281.95</td>
+<td>3365</td>
+<td>447.03</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>3087</td>
+<td>399.39</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>1288</td>
+<td>300.13</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>639</td>
+<td>102.90</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
       <article id="post-fedora-legacy-shutdown" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -704,67 +860,15 @@ restorecon -R /opt/
 
 
     
-      <article id="post-google-july-27" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2006/07/29/google-july-27/">Google July 27</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2006/07/29/google-july-27/" class="article-date">
-  <time datetime="2006-07-30T00:02:00.000Z" itemprop="datePublished">2006-07-30</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Uncategorized/">Uncategorized</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>On July 27, exactly one month after June 27, one of our larger web sites <strong>Multiplex Systems Store</strong> regained its position for all competitive sets of keywords. What exactly caused the problem still remains a question, but this is something that is referred to as “data refresh” by <a href="http://www.mattcutts.com/blog/" target="_blank" rel="external">Matt Cutts</a>.</p>
-<p>As a preventive measure for future, we are launching a static web site <strong>GSM Modem</strong> devoted exclusively to GSM modems, including GSM/GPRS/EDGE modules, terminals, PC cards and other equipment. The content is not there yet (just the domain) but we plan to add it soon. Initially it will be in Russian, but we may add Ukrainian and English content.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/seo/">seo</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
       <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
       </nav>
     </section>
     <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 Sergiy Kyrylkov&nbsp;
+      &copy; 2017 Sergiy Kyrylkov&nbsp;
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
     </div>
   </div>

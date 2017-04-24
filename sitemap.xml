@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2007/04/24/node.js-8-promises-async-await/</loc>
+    
+    <lastmod>2017-04-24T22:19:11.471Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2015/02/26/xabardocs/</loc>
     
     <lastmod>2016-10-05T18:01:42.927Z</lastmod>
@@ -16,28 +23,28 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/09/zen-cart-vs-oscommerce/</loc>
+    <loc>https://kyrylkov.com/2005/10/10/zen-cart-vs-oscommerce/</loc>
     
     <lastmod>2016-09-26T12:37:15.653Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/17/org-hibernate-hibernateexception-wrong-column-type/</loc>
+    <loc>https://kyrylkov.com/2006/01/18/org-hibernate-hibernateexception-wrong-column-type/</loc>
     
     <lastmod>2016-09-26T12:34:49.446Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/08/19/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
+    <loc>https://kyrylkov.com/2005/08/20/blojsom-on-tomcat-5-5-9-with-mod-jk/</loc>
     
     <lastmod>2016-09-26T12:34:12.097Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/11/19/promise-sata300-tx4-on-linux-2-6-x/</loc>
+    <loc>https://kyrylkov.com/2005/11/20/promise-sata300-tx4-on-linux-2-6-x/</loc>
     
     <lastmod>2016-09-26T12:33:32.851Z</lastmod>
     
@@ -51,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/25/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/06/26/subversion-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-09-26T12:30:33.362Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/07/29/google-july-27/</loc>
+    <loc>https://kyrylkov.com/2006/07/30/google-july-27/</loc>
     
     <lastmod>2016-09-26T12:29:13.133Z</lastmod>
     
@@ -93,14 +100,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/30/repairing-broken-subversion-repository/</loc>
+    <loc>https://kyrylkov.com/2005/05/31/repairing-broken-subversion-repository/</loc>
     
     <lastmod>2016-09-26T10:35:05.046Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/04/21/dotproject-gantt-chart-generation-problem/</loc>
+    <loc>https://kyrylkov.com/2005/04/22/dotproject-gantt-chart-generation-problem/</loc>
     
     <lastmod>2016-09-26T10:22:52.804Z</lastmod>
     
@@ -114,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/19/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
+    <loc>https://kyrylkov.com/2005/07/20/linux-ppc64-regression-tests-of-jikes-rvm-cvs-head/</loc>
     
     <lastmod>2016-09-26T10:09:21.976Z</lastmod>
     
@@ -128,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/04/21/more-on-dotproject-gantt-chart-generation-problem/</loc>
+    <loc>https://kyrylkov.com/2005/04/22/more-on-dotproject-gantt-chart-generation-problem/</loc>
     
     <lastmod>2016-09-26T10:07:47.112Z</lastmod>
     
@@ -142,7 +149,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/06/25/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/06/26/cyrus-imap-server-problem-after-upgrading-to-fedora-core-4/</loc>
     
     <lastmod>2016-09-26T10:05:55.464Z</lastmod>
     
@@ -156,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/04/22/gantt-chart-issue-completely-resolved/</loc>
+    <loc>https://kyrylkov.com/2005/04/23/gantt-chart-issue-completely-resolved/</loc>
     
     <lastmod>2016-09-26T09:58:45.476Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/14/13permission-denied-httpd-could-not-open-error-log-file/</loc>
+    <loc>https://kyrylkov.com/2006/05/15/13permission-denied-httpd-could-not-open-error-log-file/</loc>
     
     <lastmod>2016-09-26T09:53:59.833Z</lastmod>
     
@@ -191,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/09/sugarcrm-4-2-0-with-cyrillic-support/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/sugarcrm-4-2-0-with-cyrillic-support/</loc>
     
     <lastmod>2016-09-26T09:43:17.999Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2014/03/27/building-rackspace-cloud-monitoring-agent-on-freebsd-10/</loc>
+    <loc>https://kyrylkov.com/2014/03/28/building-rackspace-cloud-monitoring-agent-on-freebsd-10/</loc>
     
     <lastmod>2016-09-26T09:37:33.114Z</lastmod>
     
@@ -282,21 +289,21 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2015/05/11/air-quality-in-tallinn-tartu-narva-kohtla-jarve/</loc>
+    <loc>https://kyrylkov.com/2015/05/12/air-quality-in-tallinn-tartu-narva-kohtla-jarve/</loc>
     
     <lastmod>2016-07-03T17:59:20.950Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2013/02/20/quickbooks-error-code-20888-41171-creating-viewing-invoices/</loc>
+    <loc>https://kyrylkov.com/2013/02/21/quickbooks-error-code-20888-41171-creating-viewing-invoices/</loc>
     
     <lastmod>2016-07-03T17:59:20.948Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2010/06/26/python-twitter-0-6-followers-bug/</loc>
+    <loc>https://kyrylkov.com/2010/06/27/python-twitter-0-6-followers-bug/</loc>
     
     <lastmod>2016-07-03T17:59:20.942Z</lastmod>
     
@@ -324,13 +331,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/09/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.929Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
@@ -338,30 +338,30 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/15/zen-cart-and-mysql-5-x/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2006/05/16/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/15/migrating-from-cyrus-imap-to-dovecot-on-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/05/16/zen-cart-and-mysql-5-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.928Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/15/edgewall-trac-for-fedora-core/</loc>
+    <loc>https://kyrylkov.com/2006/01/16/edgewall-trac-for-fedora-core/</loc>
     
     <lastmod>2016-07-03T17:59:20.927Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2006/01/24/java-se-6-update/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
   </url>
   
@@ -373,21 +373,28 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/16/java-lang-nosuchmethoderror-gethibernatelazyinitializer/</loc>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2006/01/17/java-lang-nosuchmethoderror-gethibernatelazyinitializer/</loc>
     
     <lastmod>2016-07-03T17:59:20.921Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
     
@@ -401,21 +408,21 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/06/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/06/oscommerce-sql-errors-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/06/oscommerce-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.913Z</lastmod>
     
@@ -436,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/07/26/highpoint-rocket-raid-1640-and-fakeraids/</loc>
+    <loc>https://kyrylkov.com/2005/07/27/highpoint-rocket-raid-1640-and-fakeraids/</loc>
     
     <lastmod>2016-07-03T17:59:20.907Z</lastmod>
     
@@ -450,7 +457,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/17/diving-into-tapestry/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/diving-into-tapestry/</loc>
     
     <lastmod>2016-07-03T17:59:20.903Z</lastmod>
     
@@ -464,7 +471,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/05/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/</loc>
+    <loc>https://kyrylkov.com/2005/05/06/making-apache-2-x-with-custom-built-php-4-x-happy-on-fc3-with-no-original-php-rpms-installed/</loc>
     
     <lastmod>2016-07-03T17:59:20.898Z</lastmod>
     
@@ -478,14 +485,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/17/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2016-07-03T17:59:20.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/04/25/severe-error-listenerstart/</loc>
+    <loc>https://kyrylkov.com/2005/04/26/severe-error-listenerstart/</loc>
     
     <lastmod>2016-07-03T17:59:20.893Z</lastmod>
     
@@ -499,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/04/28/more-on-building-php-4-x-on-fedora-core-3-ldap-support/</loc>
+    <loc>https://kyrylkov.com/2005/04/29/more-on-building-php-4-x-on-fedora-core-3-ldap-support/</loc>
     
     <lastmod>2016-07-03T17:59:20.891Z</lastmod>
     
