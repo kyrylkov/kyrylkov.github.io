@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kyrylkov.com/2017/04/25/performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon/</loc>
+    <loc>https://kyrylkov.com/2017/04/25/performance-of-ecmascript-2015-promises-and-async-functions-in-nodejs-8/</loc>
     
-    <lastmod>2017-04-24T22:25:06.643Z</lastmod>
+    <lastmod>2017-04-24T22:27:22.000Z</lastmod>
     
   </url>
   
@@ -394,13 +394,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.919Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2006/01/10/blojsom-short-urls-with-apache-httpd-and-tomcat/</loc>
     
     <lastmod>2016-07-03T17:59:20.919Z</lastmod>
@@ -408,7 +401,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2006/01/10/hibernate-lazy-fetching-with-tapestry-3-x/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.919Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
@@ -422,7 +422,7 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
