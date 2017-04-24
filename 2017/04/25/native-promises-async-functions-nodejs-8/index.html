@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential./bench doxbee">
-<meta property="og:updated_time" content="2017-04-24T22:33:42.616Z">
+<meta property="og:updated_time" content="2017-04-24T22:34:28.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Performance of native ECMAScript 2015 promises and async functions in Node.js 8">
 <meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential./bench doxbee">
@@ -103,8 +103,104 @@ ga('send', 'pageview');
 <li>Native = ECMAScript 2015 Promises</li>
 <li>Bluebird = Bluebird 3.5.0 Promises</li>
 </ul>
-<h2 id="Doxbee-sequential"><a href="#Doxbee-sequential" class="headerlink" title="Doxbee sequential"></a>Doxbee sequential</h2><p><code>./bench doxbee</code>)<br>| Promises| Node.js | V8 | time(ms) | memory(MB) |<br>|—|—|—|—|—|<br>| Native | 4.8.2 Argon | 4.5.103.46 |1287 |190.12|<br>| Native | 6.10.2 Boron | 5.1.281.95|1506|144.93|<br>| Native | 7.9.0 | 5.5.372.43|1185|166.35|<br>| Native | 8.0.0 (nightly) |5.7.492.69|543|88.25|<br>| Bluebird | 8.0.0 (nightly)|5.7.492.69|375|46.70|</p>
-<h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code><br>| Promises | Node.js | V8 | time(ms) | memory(MB) |<br>|—|—|—|—|—|<br>| Native|4.8.2 Argon|4.5.103.46|3269|496.14|<br>| Native|6.10.2 Boron|5.1.281.95|3365|447.03|<br>| Native|7.9.0|5.5.372.43|3087|399.39|<br>| Native|8.0.0 (nightly)|5.7.492.69|1288|300.13|<br>| Bluebird | 8.0.0 (nightly) |5.7.492.69 | 639 | 102.90 |</p>
+<h2 id="Doxbee-sequential"><a href="#Doxbee-sequential" class="headerlink" title="Doxbee sequential"></a>Doxbee sequential</h2><p><code>./bench doxbee</code></p>
+<table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2 Argon</td>
+<td>4.5.103.46</td>
+<td>1287</td>
+<td>190.12</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2 Boron</td>
+<td>5.1.281.95</td>
+<td>1506</td>
+<td>144.93</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>1185</td>
+<td>166.35</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 (nightly)</td>
+<td>5.7.492.69</td>
+<td>543</td>
+<td>88.25</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 (nightly)</td>
+<td>5.7.492.69</td>
+<td>375</td>
+<td>46.70</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code></p>
+<table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2 Argon</td>
+<td>4.5.103.46</td>
+<td>3269</td>
+<td>496.14</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2 Boron</td>
+<td>5.1.281.95</td>
+<td>3365</td>
+<td>447.03</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>3087</td>
+<td>399.39</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 (nightly)</td>
+<td>5.7.492.69</td>
+<td>1288</td>
+<td>300.13</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 (nightly)</td>
+<td>5.7.492.69</td>
+<td>639</td>
+<td>102.90</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
