@@ -65,6 +65,59 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
+      <article id="post-more-on-building-php-4-x-on-fedora-core-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2005/04/21/more-on-building-php-4-x-on-fedora-core-3/">More on building PHP 4.x on Fedora Core 3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2005/04/21/more-on-building-php-4-x-on-fedora-core-3/" class="article-date">
+  <time datetime="2005-04-21T20:21:00.000Z" itemprop="datePublished">2005-04-21</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>There is one more parameter that should be used during configure step of building PHP to make phpMyAdmin happy <code>--enable-mbstring</code> so the final configuration string looks like this</p>
+<pre>
+./configure --with-apxs2=/usr/sbin/apxs --with-mysql=/usr --with-gd=/usr --with-zlib=/usr --enable-mbstring
+</pre>
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fedora/">fedora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
       <article id="post-building-php-4-x-on-fedora-core-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     

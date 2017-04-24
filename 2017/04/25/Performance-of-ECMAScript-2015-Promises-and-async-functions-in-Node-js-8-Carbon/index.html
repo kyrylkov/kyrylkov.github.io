@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>SELinux and Samba - Blog of Sergiy Kyrylkov</title>
+  <title>Performance of ECMAScript 2015 Promises and async functions in Node.js 8 Carbon - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in /va">
-<meta name="keywords" content="centos,rhel,selinux,samba">
+  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential (./bench doxb">
+<meta name="keywords" content="nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SELinux and Samba">
-<meta property="og:url" content="https://kyrylkov.com/2007/07/03/selinux-and-samba/index.html">
+<meta property="og:title" content="Performance of ECMAScript 2015 Promises and async functions in Node.js 8 Carbon">
+<meta property="og:url" content="https://kyrylkov.com/2017/04/25/Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in /va">
-<meta property="og:updated_time" content="2016-09-26T12:11:41.928Z">
+<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential (./bench doxb">
+<meta property="og:updated_time" content="2017-04-24T22:22:50.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SELinux and Samba">
-<meta name="twitter:description" content="Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in /va">
+<meta name="twitter:title" content="Performance of ECMAScript 2015 Promises and async functions in Node.js 8 Carbon">
+<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential (./bench doxb">
   
   
     <link rel="icon" href="/favicon.png">
@@ -66,7 +66,7 @@ ga('send', 'pageview');
     </div>
   </div>
 </header>
-    <section id="main" class="outer"><article id="post-selinux-and-samba" class="article article-type-post" itemscope itemprop="blogPost">
+    <section id="main" class="outer"><article id="post-Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -74,63 +74,135 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      SELinux and Samba
+      Performance of ECMAScript 2015 Promises and async functions in Node.js 8 Carbon
     </h1>
   
 
       </header>
     
     <div class="article-meta">
-      <a href="/2007/07/03/selinux-and-samba/" class="article-date">
-  <time datetime="2007-07-03T10:39:00.000Z" itemprop="datePublished">2007-07-03</time>
+      <a href="/2017/04/25/Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon/" class="article-date">
+  <time datetime="2017-04-24T22:22:26.000Z" itemprop="datePublished">2017-04-25</time>
 </a>
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Those who installed Samba on RHEL or any other SELinux enabled distribution may have faced the problem when they actually cannot access any Samba shares from their Windows machines.  Samba logs in <code>/var/samba/log</code> may show lots of such messages:</p>
-<pre>
-[2007/07/03 16:37:44, 0] smbd/service.c:make_connection_snum(911)
-  '/opt/blah' does not exist or permission denied when connecting to [blah] 
-  Error was Permission denied
-</pre>
-
-<p>This is probably an SELinux problem and to fix it you’ll need to execute:</p>
-<pre>
-chcon -t system_u:object_r:samba_share_t /opt
-</pre>
-
-<p>or, in order to survive relabel: </p>
+        <p>Platform info:</p>
 <ul>
-<li><p>add these lines to <code>/etc/selinux/targeted/contexts/files/file_contexts.local</code> file (if you are using <em>targeted</em> policy):</p>
-<pre>
-/opt(/.*)?  system_u:object_r:samba_share_t:s0
-</pre>
-</li>
-<li><p><em>probably</em>, reboot</p>
-</li>
-<li><p>execute:</p>
-<pre>
-restorecon -R /opt/
-</pre>
-
-</li>
+<li>Windows_NT 10.0.15063 x64</li>
+<li>Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4</li>
 </ul>
-<p>This will set appropriate SELinux context on all files in <code>/opt</code> directory and SELinux won’t prevent Samba access anymore.</p>
-<p>To allow Samba to share your home directories with SELinux execute the following:</p>
-<pre>setsebool -P samba_enable_home_dirs 1</pre>
+<p>Promises:</p>
+<ul>
+<li>Native = ECMAScript 2015 Promises</li>
+<li>Bluebird = Bluebird 3.5.0 Promises</li>
+</ul>
+<h2 id="Doxbee-sequential-bench-doxbee"><a href="#Doxbee-sequential-bench-doxbee" class="headerlink" title="Doxbee sequential (./bench doxbee)"></a>Doxbee sequential (<code>./bench doxbee</code>)</h2><table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2</td>
+<td>4.5.103.46</td>
+<td>1287</td>
+<td>190.12</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2</td>
+<td>5.1.281.95</td>
+<td>1506</td>
+<td>144.93</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>1185</td>
+<td>166.35</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>543</td>
+<td>88.25</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>375</td>
+<td>46.70</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Madeup-parallel-bench-parallel"><a href="#Madeup-parallel-bench-parallel" class="headerlink" title="Madeup parallel (./bench parallel)"></a>Madeup parallel (<code>./bench parallel</code>)</h2><table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2</td>
+<td>4.5.103.46</td>
+<td>3269</td>
+<td>496.14</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2</td>
+<td>5.1.281.95</td>
+<td>3365</td>
+<td>447.03</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>3087</td>
+<td>399.39</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>1288</td>
+<td>300.13</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>639</td>
+<td>102.90</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
     
     
       <footer class="article-footer">
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/">centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rhel/">rhel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/samba/">samba</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selinux/">selinux</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
 
       </footer>
     
@@ -139,18 +211,14 @@ restorecon -R /opt/
     
 <nav id="article-nav">
   
-    <a href="/2007/04/24/node.js-8-promises-async-await/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/05/12/air-quality-in-tallinn-tartu-narva-kohtla-jarve/" id="article-nav-newer" class="article-nav-link-wrap">
       <div class="article-nav-title"><span>&lt;</span>&nbsp;
         
-          Performance of ECMAScript 2015 Promises and async functions in Node.js 8 Carbon
+          Air Quality in Tallinn, Tartu, Narva, Kohtla-Järve
         
       </div>
     </a>
   
-  
-    <a href="/2008/03/23/1-81-red-hat-enterprise-linux-5-centos/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Установка 1С:Предприятия 8.1 на Red Hat Enterprise Linux 5 (RHEL 5, CentOS 5)&nbsp;<span>&gt;</span></div>
-    </a>
   
 </nav>
 
@@ -194,7 +262,7 @@ restorecon -R /opt/
 <script>
   var disqus_shortname = 'kyrylkov';
   
-  var disqus_url = 'https://kyrylkov.com/2007/07/03/selinux-and-samba/';
+  var disqus_url = 'https://kyrylkov.com/2017/04/25/Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon/';
   
   (function(){
     var dsq = document.createElement('script');

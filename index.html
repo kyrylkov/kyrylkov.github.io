@@ -65,6 +65,158 @@ ga('send', 'pageview');
   </div>
 </header>
     <section id="main" class="outer">
+      <article id="post-Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/25/Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon/">Performance of ECMAScript 2015 Promises and async functions in Node.js 8 Carbon</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2017/04/25/Performance-of-ECMAScript-2015-Promises-and-async-functions-in-Node-js-8-Carbon/" class="article-date">
+  <time datetime="2017-04-24T22:22:26.000Z" itemprop="datePublished">2017-04-25</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Platform info:</p>
+<ul>
+<li>Windows_NT 10.0.15063 x64</li>
+<li>Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4</li>
+</ul>
+<p>Promises:</p>
+<ul>
+<li>Native = ECMAScript 2015 Promises</li>
+<li>Bluebird = Bluebird 3.5.0 Promises</li>
+</ul>
+<h2 id="Doxbee-sequential-bench-doxbee"><a href="#Doxbee-sequential-bench-doxbee" class="headerlink" title="Doxbee sequential (./bench doxbee)"></a>Doxbee sequential (<code>./bench doxbee</code>)</h2><table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2</td>
+<td>4.5.103.46</td>
+<td>1287</td>
+<td>190.12</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2</td>
+<td>5.1.281.95</td>
+<td>1506</td>
+<td>144.93</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>1185</td>
+<td>166.35</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>543</td>
+<td>88.25</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>375</td>
+<td>46.70</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Madeup-parallel-bench-parallel"><a href="#Madeup-parallel-bench-parallel" class="headerlink" title="Madeup parallel (./bench parallel)"></a>Madeup parallel (<code>./bench parallel</code>)</h2><table>
+<thead>
+<tr>
+<th>Promises</th>
+<th>Node.js</th>
+<th>V8</th>
+<th>time(ms)</th>
+<th>memory(MB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Native</td>
+<td>4.8.2</td>
+<td>4.5.103.46</td>
+<td>3269</td>
+<td>496.14</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>6.10.2</td>
+<td>5.1.281.95</td>
+<td>3365</td>
+<td>447.03</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>7.9.0</td>
+<td>5.5.372.43</td>
+<td>3087</td>
+<td>399.39</td>
+</tr>
+<tr>
+<td>Native</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>1288</td>
+<td>300.13</td>
+</tr>
+<tr>
+<td>Bluebird</td>
+<td>8.0.0 nightly</td>
+<td>5.7.492.69</td>
+<td>639</td>
+<td>102.90</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+    
       <article id="post-air-quality-in-tallinn-tartu-narva-kohtla-jarve" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -575,71 +727,6 @@ ga('send', 'pageview');
       <footer class="article-footer">
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/freebsd/">freebsd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-      </footer>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-    
-      <article id="post-no-administrator-rights-in-gerrit" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/11/20/no-administrator-rights-in-gerrit/">No administrator rights in Gerrit</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2012/11/20/no-administrator-rights-in-gerrit/" class="article-date">
-  <time datetime="2012-11-20T15:42:52.000Z" itemprop="datePublished">2012-11-20</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/System-Administration/">System Administration</a>
-  </div>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After spending lots of time trying to make Gerrit work we agree with a conclusion that “<a href="http://www.mediawiki.org/wiki/Git/Gerrit_evaluation#The_case_against_Gerrit" target="_blank" rel="external">Gerrit is ugly, intimidating, and inhumane</a>“ and buggy.  At least for us and Ubuntu 12.04.1.</p>
-<p>According to Gerrit <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html#_registering_your_key_in_gerrit" target="_blank" rel="external">documentation</a>:</p>
-<blockquote>
-<p>The first user to sign-in and register an account will be automatically placed into the fully privileged Administrators group, permitting server management over the web and over SSH.</p>
-</blockquote>
-<p>But here is our 5 attempts to make it work:</p>
-<ol>
-<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install-quick.html" target="_blank" rel="external">installing Gerrit 2.5 with H2</a> (aka Quick Installation in 10 Minutes) with stock Ubuntu Apache as <a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/config-reverseproxy.html" target="_blank" rel="external">reverse proxy</a>, installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong></li>
-<li><a href="http://gerrit-documentation.googlecode.com/svn/Documentation/2.5/install.html" target="_blank" rel="external">installing Gerrit 2.5 with MySQL</a> with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
-<li>installing Gerrit 2.4.2 (maybe it’s a problem with 2.5 only?) with H2 with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID, <strong>no <strong>administrator </strong>rights</strong></li>
-<li>installing Gerrit 2.4.2 with MySQL with stock Ubuntu Apache as reverse proxy, installation successful, logging in with Google Account OpenID,<strong> no administrator rights</strong></li>
-<li>installing Gerrit 2.5 with MySQL (no Apache and reverse proxy this time), installation successful, logging in with Google Account OpenID, <strong>no administrator rights</strong><br>Thus whatever path we chose, Gerrit failed to properly grant administrator rights to the first user as it clearly indicated in the docs.</li>
-</ol>
-<p>There is a solution of course which is to <a href="https://groups.google.com/forum/#!msg/repo-discuss/FkIPsL28OXM/OBJvKaMh-wgJ" target="_blank" rel="external">edit database directly</a>.  However it makes one wonder what other nice “features” Gerrit is hiding.</p>
-<p>And off we go to <a href="http://phabricator.org/" target="_blank" rel="external">Phabricator</a>.</p>
-
-      
-    </div>
-    
-    
-      <footer class="article-footer">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-review/">code review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gerrit/">gerrit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
 
       </footer>
     
