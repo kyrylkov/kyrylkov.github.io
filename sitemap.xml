@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
+    <loc>https://kyrylkov.com/2017/04/25/performance-of-ecmascript-2015-promises-and-async-functions-in-nodejs-8/</loc>
     
-    <lastmod>2017-04-24T22:28:28.878Z</lastmod>
+    <lastmod>2017-04-24T22:29:50.149Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2017/04/25/performance-of-ecmascript-2015-promises-and-async-functions-in-nodejs-8/</loc>
+    <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
-    <lastmod>2017-04-24T22:27:22.000Z</lastmod>
+    <lastmod>2017-04-24T22:28:28.878Z</lastmod>
     
   </url>
   
@@ -345,14 +345,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
+    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/23/blojsom-3-0-with-hibernate-back-end-is-coming-up/</loc>
+    <loc>https://kyrylkov.com/2006/05/10/yum-problem-upgrading-to-fedora-core-5-fc5/</loc>
     
     <lastmod>2016-07-03T17:59:20.929Z</lastmod>
     
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
+    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2006/03/13/jvmxm008-workaround/</loc>
+    <loc>https://kyrylkov.com/2006/01/25/java-se-6-update/</loc>
     
     <lastmod>2016-07-03T17:59:20.922Z</lastmod>
     
@@ -415,6 +415,13 @@
   </url>
   
   <url>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
+    
+    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
@@ -423,13 +430,6 @@
   
   <url>
     <loc>https://kyrylkov.com/2005/10/07/oscommerce-sql-errors-on-fedora-core-4/</loc>
-    
-    <lastmod>2016-07-03T17:59:20.918Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
