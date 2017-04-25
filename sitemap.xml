@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kyrylkov.com/2007/04/24/node.js-8-promises-async-await/</loc>
+    
+    <lastmod>2017-04-25T07:46:25.622Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://kyrylkov.com/2015/02/01/es6-es7-node-js-io-js-nodemon/</loc>
+    
+    <lastmod>2017-04-25T07:45:41.727Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/</loc>
     
     <lastmod>2017-04-25T07:23:36.301Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://kyrylkov.com/2005/05/18/myeclipse-4-0-m1-finally/</loc>
     
     <lastmod>2017-04-24T22:28:28.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kyrylkov.com/2007/04/24/node.js-8-promises-async-await/</loc>
-    
-    <lastmod>2017-04-24T22:22:18.396Z</lastmod>
     
   </url>
   
@@ -296,13 +303,6 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2015/02/01/es6-es7-node-js-io-js-nodemon/</loc>
-    
-    <lastmod>2016-07-03T18:57:15.181Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kyrylkov.com/2015/05/12/air-quality-in-tallinn-tartu-narva-kohtla-jarve/</loc>
     
     <lastmod>2016-07-03T17:59:20.950Z</lastmod>
@@ -415,14 +415,14 @@
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
+    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kyrylkov.com/2005/10/07/blank-admin-screen-in-oscommerce-on-fedora-core-4/</loc>
+    <loc>https://kyrylkov.com/2005/09/22/more-on-jikes-rvm-on-linux-ppc64/</loc>
     
     <lastmod>2016-07-03T17:59:20.918Z</lastmod>
     
