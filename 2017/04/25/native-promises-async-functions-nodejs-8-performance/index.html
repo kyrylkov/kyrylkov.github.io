@@ -5,17 +5,17 @@
   
   <title>Performance of native ECMAScript 2015 promises and async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential./bench doxbee">
+  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Bluebirds benchmarks:  Doxbee s">
 <meta name="keywords" content="ecmascript 2015,ecmascript 2016,es6,es7,javascript,nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Performance of native ECMAScript 2015 promises and async functions in Node.js v8">
 <meta property="og:url" content="https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential./bench doxbee">
-<meta property="og:updated_time" content="2017-04-25T07:49:33.183Z">
+<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Bluebirds benchmarks:  Doxbee s">
+<meta property="og:updated_time" content="2017-04-26T12:26:52.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Performance of native ECMAScript 2015 promises and async functions in Node.js v8">
-<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Doxbee sequential./bench doxbee">
+<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Promises:  Native = ECMAScript 2015 Promises Bluebird = Bluebird 3.5.0 Promises  Bluebirds benchmarks:  Doxbee s">
   
   
     <link rel="icon" href="/favicon.png">
@@ -103,21 +103,24 @@ ga('send', 'pageview');
 <li>Native = ECMAScript 2015 Promises</li>
 <li>Bluebird = Bluebird 3.5.0 Promises</li>
 </ul>
+<p><a href="https://github.com/petkaantonov/bluebird/tree/master/benchmark" target="_blank" rel="external">Bluebirds benchmarks</a>:</p>
+<ul>
+<li>Doxbee sequential</li>
+<li>Madeup parallel </li>
+</ul>
 <h2 id="Doxbee-sequential"><a href="#Doxbee-sequential" class="headerlink" title="Doxbee sequential"></a>Doxbee sequential</h2><p><code>./bench doxbee</code></p>
-<table>
+<h3 id="Performance-of-native-ECMAScript-2016-Promises-in-different-versions-of-Node-js"><a href="#Performance-of-native-ECMAScript-2016-Promises-in-different-versions-of-Node-js" class="headerlink" title="Performance of native ECMAScript 2016 Promises in different versions of Node.js"></a>Performance of native ECMAScript 2016 Promises in different versions of Node.js</h3><table>
 <thead>
 <tr>
-<th>Promises</th>
 <th>Node.js</th>
 <th>LTS</th>
 <th>V8</th>
-<th>time, ms</th>
-<th>memory, MB</th>
+<th>Time, ms</th>
+<th>Memory, MB</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Native</td>
 <td>v4.8.2</td>
 <td>Argon</td>
 <td>4.5.103.46</td>
@@ -125,7 +128,6 @@ ga('send', 'pageview');
 <td>190.12</td>
 </tr>
 <tr>
-<td>Native</td>
 <td>v6.10.2</td>
 <td>Boron</td>
 <td>5.1.281.95</td>
@@ -133,7 +135,6 @@ ga('send', 'pageview');
 <td>144.93</td>
 </tr>
 <tr>
-<td>Native</td>
 <td>v7.9.0</td>
 <td>-</td>
 <td>5.5.372.43</td>
@@ -141,75 +142,87 @@ ga('send', 'pageview');
 <td>166.35</td>
 </tr>
 <tr>
-<td>Native</td>
 <td>v8.0.0 (nightly)</td>
 <td>(Carbon)</td>
 <td>5.7.492.69</td>
-<td>543</td>
-<td>88.25</td>
-</tr>
-<tr>
-<td>Bluebird</td>
-<td>v8.0.0 (nightly)</td>
-<td>(Carbon)</td>
-<td>5.7.492.69</td>
-<td>375</td>
-<td>46.70</td>
+<td>638</td>
+<td>88.22</td>
 </tr>
 </tbody>
 </table>
-<h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code></p>
+<h3 id="Performance-of-callbacks-vs-native-ECMAScript-2016-Promises-vs-Bluebird-Promises-vs-ECMAScript-2017-Async-in-Node-js-v8"><a href="#Performance-of-callbacks-vs-native-ECMAScript-2016-Promises-vs-Bluebird-Promises-vs-ECMAScript-2017-Async-in-Node-js-v8" class="headerlink" title="Performance of callbacks vs native ECMAScript 2016 Promises vs Bluebird Promises vs ECMAScript 2017 Async in Node.js v8"></a>Performance of callbacks vs native ECMAScript 2016 Promises vs Bluebird Promises vs ECMAScript 2017 Async in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
 <table>
 <thead>
 <tr>
-<th>Promises</th>
-<th>Node.js</th>
-<th>LTS</th>
-<th>V8</th>
-<th>time, ms</th>
-<th>memory, MB</th>
+<th>Async Type</th>
+<th>Time, ms</th>
+<th>Memory, MB</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Native</td>
-<td>v4.8.2</td>
-<td>Argon</td>
-<td>4.5.103.46</td>
-<td>3269</td>
-<td>496.14</td>
+<td>Callbacks</td>
+<td>105</td>
+<td>23.80</td>
 </tr>
 <tr>
-<td>Native</td>
-<td>v6.10.2</td>
-<td>Boron</td>
-<td>5.1.281.95</td>
-<td>3365</td>
-<td>447.03</td>
+<td>Bluebird Promises</td>
+<td>375</td>
+<td>46.41</td>
 </tr>
 <tr>
-<td>Native</td>
-<td>v7.9.0</td>
-<td>-</td>
-<td>5.5.372.43</td>
-<td>3087</td>
-<td>399.39</td>
+<td>Async w/ Native Promises</td>
+<td>499</td>
+<td>74.23</td>
 </tr>
 <tr>
-<td>Native</td>
-<td>v8.0.0 (nightly)</td>
-<td>(Carbon)</td>
-<td>5.7.492.69</td>
-<td>1288</td>
-<td>300.13</td>
+<td>Async w/ Bluebird Promises</td>
+<td>558</td>
+<td>70.64 </td>
 </tr>
 <tr>
-<td>Bluebird</td>
-<td>v8.0.0 (nightly)</td>
-<td>(Carbon)</td>
-<td>5.7.492.69</td>
-<td>639</td>
-<td>102.90</td>
+<td>Native Promises</td>
+<td>638</td>
+<td>88.22</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code></p>
+<h3 id="Performance-of-native-ECMAScript-2016-Promises-in-different-versions-of-Node-js-1"><a href="#Performance-of-native-ECMAScript-2016-Promises-in-different-versions-of-Node-js-1" class="headerlink" title="Performance of native ECMAScript 2016 Promises in different versions of Node.js"></a>Performance of native ECMAScript 2016 Promises in different versions of Node.js</h3><p>Node.js | LTS | V8 | Time, ms | Memory, MB |<br>|—|—|—|—|—|<br>| v4.8.2 | Argon | 4.5.103.46 | 3269 | 496.14 |<br>| v6.10.2 | Boron | 5.1.281.95 | 3365 | 447.03 |<br>| v7.9.0 | - | 5.5.372.43 | 3087 | 399.39 |<br>| v8.0.0 (nightly) | (Carbon) | 5.7.492.69| 1413 | 296.74 |</p>
+<h3 id="Performance-of-callbacks-vs-native-ECMAScript-2016-Promises-vs-Bluebird-Promises-vs-ECMAScript-2017-Async-in-Node-js-v8-1"><a href="#Performance-of-callbacks-vs-native-ECMAScript-2016-Promises-vs-Bluebird-Promises-vs-ECMAScript-2017-Async-in-Node-js-v8-1" class="headerlink" title="Performance of callbacks vs native ECMAScript 2016 Promises vs Bluebird Promises vs ECMAScript 2017 Async in Node.js v8"></a>Performance of callbacks vs native ECMAScript 2016 Promises vs Bluebird Promises vs ECMAScript 2017 Async in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
+<table>
+<thead>
+<tr>
+<th>Async Type</th>
+<th>Time, ms</th>
+<th>Memory, MB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Callbacks</td>
+<td>323</td>
+<td>69.78</td>
+</tr>
+<tr>
+<td>Bluebird Promises</td>
+<td>685</td>
+<td>101.01</td>
+</tr>
+<tr>
+<td>Async w/ Bluebird Promises</td>
+<td>719</td>
+<td>112.00</td>
+</tr>
+<tr>
+<td>Native Promises</td>
+<td>1413</td>
+<td>296.74</td>
+</tr>
+<tr>
+<td>Async w/ Native Promises</td>
+<td>1590</td>
+<td>305.59</td>
 </tr>
 </tbody>
 </table>
