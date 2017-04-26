@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Performance of native V8 promises and async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
+  <title>Performance of native Chrome V8 promises and async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 V8 Promises Bluebird Promises = Bluebird 3.5.0 Promises A">
+  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 Chrome V8 Promises Bluebird Promises = Bluebird 3.5.0 Pro">
 <meta name="keywords" content="ecmascript 2015,ecmascript 2016,es6,es7,javascript,nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Performance of native V8 promises and async functions in Node.js v8">
+<meta property="og:title" content="Performance of native Chrome V8 promises and async functions in Node.js v8">
 <meta property="og:url" content="https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 V8 Promises Bluebird Promises = Bluebird 3.5.0 Promises A">
-<meta property="og:updated_time" content="2017-04-26T12:42:16.710Z">
+<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 Chrome V8 Promises Bluebird Promises = Bluebird 3.5.0 Pro">
+<meta property="og:updated_time" content="2017-04-26T12:45:48.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Performance of native V8 promises and async functions in Node.js v8">
-<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 V8 Promises Bluebird Promises = Bluebird 3.5.0 Promises A">
+<meta name="twitter:title" content="Performance of native Chrome V8 promises and async functions in Node.js v8">
+<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 Chrome V8 Promises Bluebird Promises = Bluebird 3.5.0 Pro">
   
   
     <link rel="icon" href="/favicon.png">
@@ -74,7 +74,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Performance of native V8 promises and async functions in Node.js v8
+      Performance of native Chrome V8 promises and async functions in Node.js v8
     </h1>
   
 
@@ -100,10 +100,10 @@ ga('send', 'pageview');
 </ul>
 <p>Async types tested:</p>
 <ul>
-<li>Native Promises = ECMAScript 2015 V8 Promises</li>
+<li>Native Promises = ECMAScript 2015 Chrome V8 Promises</li>
 <li>Bluebird Promises = Bluebird 3.5.0 Promises</li>
-<li>Async /w Native Promises = ECMAScript 2016 V8 Async Functions</li>
-<li>Async /w Bluebird Promises = ECMAScript 2016 V8 Async Functions with Bluebird 3.5.0 Promises</li>
+<li>Async /w Native Promises = ECMAScript 2016 Chrome V8 Async Functions</li>
+<li>Async /w Bluebird Promises = ECMAScript 2016 Chrome V8 Async Functions with Bluebird 3.5.0 Promises</li>
 </ul>
 <p><a href="https://github.com/petkaantonov/bluebird/tree/master/benchmark" target="_blank" rel="external">Bluebirds benchmarks</a>:</p>
 <ul>
@@ -111,12 +111,12 @@ ga('send', 'pageview');
 <li>Madeup parallel </li>
 </ul>
 <h2 id="Doxbee-sequential"><a href="#Doxbee-sequential" class="headerlink" title="Doxbee sequential"></a>Doxbee sequential</h2><p><code>./bench doxbee</code></p>
-<h3 id="Performance-of-native-V8-Promises-in-different-versions-of-Node-js"><a href="#Performance-of-native-V8-Promises-in-different-versions-of-Node-js" class="headerlink" title="Performance of native V8 Promises in different versions of Node.js"></a>Performance of native V8 Promises in different versions of Node.js</h3><table>
+<h3 id="Performance-of-native-Chrome-V8-Promises-in-different-versions-of-Node-js"><a href="#Performance-of-native-Chrome-V8-Promises-in-different-versions-of-Node-js" class="headerlink" title="Performance of native Chrome V8 Promises in different versions of Node.js"></a>Performance of native Chrome V8 Promises in different versions of Node.js</h3><table>
 <thead>
 <tr>
 <th>Node.js</th>
 <th>LTS</th>
-<th>V8</th>
+<th>Chrome V8</th>
 <th>Time, ms</th>
 <th>Memory, MB</th>
 </tr>
@@ -152,7 +152,7 @@ ga('send', 'pageview');
 </tr>
 </tbody>
 </table>
-<h3 id="Performance-of-callbacks-vs-V8-Promises-vs-Bluebird-Promises-vs-V8-Async-Functions-in-Node-js-v8"><a href="#Performance-of-callbacks-vs-V8-Promises-vs-Bluebird-Promises-vs-V8-Async-Functions-in-Node-js-v8" class="headerlink" title="Performance of callbacks vs V8 Promises vs Bluebird Promises vs V8 Async Functions in Node.js v8"></a>Performance of callbacks vs V8 Promises vs Bluebird Promises vs V8 Async Functions in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
+<h3 id="Performance-of-callbacks-vs-Chrome-V8-Promises-vs-Bluebird-Promises-vs-Chrome-V8-Async-Functions-in-Node-js-v8"><a href="#Performance-of-callbacks-vs-Chrome-V8-Promises-vs-Bluebird-Promises-vs-Chrome-V8-Async-Functions-in-Node-js-v8" class="headerlink" title="Performance of callbacks vs Chrome V8 Promises vs Bluebird Promises vs Chrome V8 Async Functions in Node.js v8"></a>Performance of callbacks vs Chrome V8 Promises vs Bluebird Promises vs Chrome V8 Async Functions in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
 <table>
 <thead>
 <tr>
@@ -190,12 +190,12 @@ ga('send', 'pageview');
 </tbody>
 </table>
 <h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code></p>
-<h3 id="Performance-of-native-V8-Promises-in-different-versions-of-Node-js-1"><a href="#Performance-of-native-V8-Promises-in-different-versions-of-Node-js-1" class="headerlink" title="Performance of native V8 Promises in different versions of Node.js"></a>Performance of native V8 Promises in different versions of Node.js</h3><table>
+<h3 id="Performance-of-native-Chromes-V8-Promises-in-different-versions-of-Node-js"><a href="#Performance-of-native-Chromes-V8-Promises-in-different-versions-of-Node-js" class="headerlink" title="Performance of native Chromes V8 Promises in different versions of Node.js"></a>Performance of native Chromes V8 Promises in different versions of Node.js</h3><table>
 <thead>
 <tr>
 <th>Node.js</th>
 <th>LTS</th>
-<th>V8</th>
+<th>Chrome V8</th>
 <th>Time, ms</th>
 <th>Memory, MB</th>
 </tr>
@@ -231,7 +231,7 @@ ga('send', 'pageview');
 </tr>
 </tbody>
 </table>
-<h3 id="Performance-of-callbacks-vs-V8-Promises-vs-Bluebird-Promises-vs-V8-Async-Functions-in-Node-js-v8-1"><a href="#Performance-of-callbacks-vs-V8-Promises-vs-Bluebird-Promises-vs-V8-Async-Functions-in-Node-js-v8-1" class="headerlink" title="Performance of callbacks vs V8 Promises vs Bluebird Promises vs V8 Async Functions in Node.js v8"></a>Performance of callbacks vs V8 Promises vs Bluebird Promises vs V8 Async Functions in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
+<h3 id="Performance-of-callbacks-vs-Chrome-V8-Promises-vs-Bluebird-Promises-vs-V8-Async-Functions-in-Node-js-v8"><a href="#Performance-of-callbacks-vs-Chrome-V8-Promises-vs-Bluebird-Promises-vs-V8-Async-Functions-in-Node-js-v8" class="headerlink" title="Performance of callbacks vs Chrome V8 Promises vs Bluebird Promises vs V8 Async Functions in Node.js v8"></a>Performance of callbacks vs Chrome V8 Promises vs Bluebird Promises vs V8 Async Functions in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
 <table>
 <thead>
 <tr>
