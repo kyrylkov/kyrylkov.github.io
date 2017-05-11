@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Performance of native Chrome V8 promises and async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
+  <title>Performance of native promises and async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 Chrome V8 Promises Bluebird Promises = Bluebird 3.5.0 Pro">
 <meta name="keywords" content="ecmascript 2015,ecmascript 2016,es6,es7,javascript,nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Performance of native Chrome V8 promises and async functions in Node.js v8">
+<meta property="og:title" content="Performance of native promises and async functions in Node.js v8">
 <meta property="og:url" content="https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
 <meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 Chrome V8 Promises Bluebird Promises = Bluebird 3.5.0 Pro">
-<meta property="og:updated_time" content="2017-04-26T14:34:32.155Z">
+<meta property="og:updated_time" content="2017-05-11T16:45:48.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Performance of native Chrome V8 promises and async functions in Node.js v8">
+<meta name="twitter:title" content="Performance of native promises and async functions in Node.js v8">
 <meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Native Promises = ECMAScript 2015 Chrome V8 Promises Bluebird Promises = Bluebird 3.5.0 Pro">
   
   
@@ -74,7 +74,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Performance of native Chrome V8 promises and async functions in Node.js v8
+      Performance of native promises and async functions in Node.js v8
     </h1>
   
 
@@ -144,15 +144,15 @@ ga('send', 'pageview');
 <td>166.35</td>
 </tr>
 <tr>
-<td>v8.0.0 (nightly)</td>
+<td>v8.0.0-rc.0</td>
 <td>(Carbon)</td>
-<td>5.7.492.69</td>
-<td>638</td>
-<td>88.22</td>
+<td>5.8.283.38</td>
+<td>823</td>
+<td>90.24</td>
 </tr>
 </tbody>
 </table>
-<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
+<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-0-0"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-0-0" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8.0.0"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8.0.0</h3><p>Node.js v8.0.0-rc.0  (Carbon) / V8 5.8.283.38</p>
 <table>
 <thead>
 <tr>
@@ -164,28 +164,28 @@ ga('send', 'pageview');
 <tbody>
 <tr>
 <td>Callbacks</td>
-<td>105</td>
-<td>23.80</td>
+<td>99</td>
+<td>23.94</td>
 </tr>
 <tr>
 <td>Bluebird Promises</td>
-<td>375</td>
-<td>46.41</td>
-</tr>
-<tr>
-<td>Async w/ Native Promises</td>
-<td>499</td>
-<td>74.23</td>
-</tr>
-<tr>
-<td>Async w/ Bluebird Promises</td>
-<td>558</td>
-<td>70.64 </td>
+<td>300</td>
+<td>47.03</td>
 </tr>
 <tr>
 <td>Native Promises</td>
-<td>638</td>
-<td>88.22</td>
+<td>823</td>
+<td>90.24</td>
+</tr>
+<tr>
+<td>Async w/ Bluebird Promises</td>
+<td>463</td>
+<td>66.38</td>
+</tr>
+<tr>
+<td>Async w/ Native Promises</td>
+<td>690</td>
+<td>105.74</td>
 </tr>
 </tbody>
 </table>
@@ -223,15 +223,15 @@ ga('send', 'pageview');
 <td>399.39</td>
 </tr>
 <tr>
-<td>v8.0.0 (nightly)</td>
+<td>v8.0.0-rc.0</td>
 <td>(Carbon)</td>
-<td>5.7.492.69</td>
+<td>5.8.283.38</td>
 <td>1413</td>
 <td>296.74</td>
 </tr>
 </tbody>
 </table>
-<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-1"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-1" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8</h3><p>Node.js v8.0.0 (nightly) (Carbon) / V8 5.7.492.69 </p>
+<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8</h3><p>Node.js v8.0.0-rc.0  (Carbon) / V8 5.8.283.38</p>
 <table>
 <thead>
 <tr>
@@ -243,28 +243,28 @@ ga('send', 'pageview');
 <tbody>
 <tr>
 <td>Callbacks</td>
-<td>323</td>
-<td>69.78</td>
+<td>304</td>
+<td>70.90</td>
 </tr>
 <tr>
 <td>Bluebird Promises</td>
-<td>685</td>
-<td>101.01</td>
+<td>593</td>
+<td>99.18</td>
 </tr>
 <tr>
 <td>Async w/ Bluebird Promises</td>
-<td>719</td>
-<td>112.00</td>
+<td>618</td>
+<td>111.11</td>
 </tr>
 <tr>
 <td>Native Promises</td>
-<td>1413</td>
-<td>296.74</td>
+<td>1705</td>
+<td>296.31</td>
 </tr>
 <tr>
 <td>Async w/ Native Promises</td>
-<td>1590</td>
-<td>305.59</td>
+<td>1846</td>
+<td>313.09</td>
 </tr>
 </tbody>
 </table>
@@ -284,14 +284,10 @@ ga('send', 'pageview');
     
 <nav id="article-nav">
   
-    <a href="/2015/05/12/air-quality-in-tallinn-tartu-narva-kohtla-jarve/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-title"><span>&lt;</span>&nbsp;
-        
-          Air Quality in Tallinn, Tartu, Narva, Kohtla-Järve
-        
-      </div>
-    </a>
   
+    <a href="/2015/05/12/air-quality-in-tallinn-tartu-narva-kohtla-jarve/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Air Quality in Tallinn, Tartu, Narva, Kohtla-Järve&nbsp;<span>&gt;</span></div>
+    </a>
   
 </nav>
 
