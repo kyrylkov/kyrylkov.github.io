@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Performance of native ES2015 promises and ES2016 async functions in Node.js 8 - Blog of Sergiy Kyrylkov</title>
+  <title>Performance of native ES2015 promises and ES2016 async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises Asy">
+  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises + u">
 <meta name="keywords" content="ecmascript 2015,ecmascript 2016,es6,es7,javascript,nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Performance of native ES2015 promises and ES2016 async functions in Node.js 8">
+<meta property="og:title" content="Performance of native ES2015 promises and ES2016 async functions in Node.js v8">
 <meta property="og:url" content="https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises Asy">
-<meta property="og:updated_time" content="2017-06-24T12:26:59.284Z">
+<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises + u">
+<meta property="og:updated_time" content="2017-06-24T12:41:49.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Performance of native ES2015 promises and ES2016 async functions in Node.js 8">
-<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises Asy">
+<meta name="twitter:title" content="Performance of native ES2015 promises and ES2016 async functions in Node.js v8">
+<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises + u">
   
   
     <link rel="icon" href="/favicon.png">
@@ -74,7 +74,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Performance of native ES2015 promises and ES2016 async functions in Node.js 8
+      Performance of native ES2015 promises and ES2016 async functions in Node.js v8
     </h1>
   
 
@@ -101,9 +101,9 @@ ga('send', 'pageview');
 <p>Async types tested:</p>
 <ul>
 <li>Bluebird Promises = Bluebird 3.5.0 Promises</li>
-<li>Native Promises = ES2015 Chrome V8 Promises</li>
+<li>Native Promises = ES2015 Chrome V8 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
 <li>Async functions w/ Bluebird Promises = ES2016 Chrome V8 Async Functions with Bluebird 3.5.0 Promises</li>
-<li>Async functions w/ Native Promises = ES2016 Chrome V8 Async Functions with Chrome V8 Promises</li>
+<li>Async functions w/ Native Promises = ES2016 Chrome V8 Async Functions with Chrome V8 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
 </ul>
 <p><a href="https://github.com/petkaantonov/bluebird/tree/master/benchmark" target="_blank" rel="external">Bluebird benchmarks</a>:</p>
 <ul>
@@ -123,28 +123,28 @@ ga('send', 'pageview');
 </thead>
 <tbody>
 <tr>
-<td>4.8.2</td>
+<td>v4.8.2</td>
 <td>Argon</td>
 <td>4.5.103.46</td>
 <td>1287</td>
 <td>190.12</td>
 </tr>
 <tr>
-<td>6.10.2</td>
+<td>v6.10.2</td>
 <td>Boron</td>
 <td>5.1.281.95</td>
 <td>1506</td>
 <td>144.93</td>
 </tr>
 <tr>
-<td>7.10.0</td>
+<td>v7.10.0</td>
 <td>-</td>
 <td>5.5.372.43</td>
 <td>1206</td>
 <td>164.36</td>
 </tr>
 <tr>
-<td>8.1.2</td>
+<td>v8.1.2</td>
 <td>(Carbon)</td>
 <td>5.8.283.39</td>
 <td>589</td>
@@ -152,8 +152,8 @@ ga('send', 'pageview');
 </tr>
 </tbody>
 </table>
-<p>Conclusion: Node.js 8 comes with significantly improved performance of native promises; execution speed improves by a factor of 2.0-2.5 with memory utilization dropping by a factor of 2.3-2.7 in comparison with the previous versions of Node.js.</p>
-<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-1-2"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-1-2" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8.1.2"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8.1.2</h3><p>Node.8.1.2 (Carbon) / V8 5.8.283.41</p>
+<p>Notes: performance of native promises in Node.js v8 improves by a factor of 2.0-2.5 with memory utilization dropping by a factor of 2.3-2.7 in comparison with the previous versions of Node.js.</p>
+<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8</h3><p>Node.js v8.1.2 (Carbon) / V8 5.8.283.41</p>
 <table>
 <thead>
 <tr>
@@ -174,23 +174,23 @@ ga('send', 'pageview');
 <td>48.25</td>
 </tr>
 <tr>
-<td>Async Functions w/ Bluebird Promises</td>
+<td>Async functions w/ Bluebird Promises</td>
 <td>529</td>
 <td>70.70</td>
 </tr>
 <tr>
-<td>Native Promises + util.promisify</td>
+<td>Native Promises</td>
 <td>589</td>
 <td>69.51</td>
 </tr>
 <tr>
-<td>Async Functions w/ Native Promises + util.promisify</td>
+<td>Async functions w/ Native Promises</td>
 <td>632</td>
 <td>72.95</td>
 </tr>
 </tbody>
 </table>
-<p>Conclusion: native Chrome V8 ES2015 promises perform only 1.75 time slower than Bluebird promises using only 43% more memory. In contrast native ES2016 async functions in Node.js 8 perform only 20% slower than async function with Bluebird and use the same amount of memory.</p>
+<p>Notes: native ES2015 Chrome V8 promises in Node.js 8 perform 75%  slower than Bluebird promises using 43% more memory. In contrast, native ES2016 async functions in Node.js 8 perform 20% slower than async functions backed by Bluebird promises, but use the same amount of memory.</p>
 <h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code></p>
 <h3 id="Performance-of-Chrome-V8-Promises-in-current-versions-of-Node-js-1"><a href="#Performance-of-Chrome-V8-Promises-in-current-versions-of-Node-js-1" class="headerlink" title="Performance of Chrome V8 Promises in current versions of Node.js"></a>Performance of Chrome V8 Promises in current versions of Node.js</h3><table>
 <thead>
@@ -204,28 +204,28 @@ ga('send', 'pageview');
 </thead>
 <tbody>
 <tr>
-<td>4.8.2</td>
+<td>v4.8.2</td>
 <td>Argon</td>
 <td>4.5.103.46</td>
 <td>3269</td>
 <td>496.14</td>
 </tr>
 <tr>
-<td>6.10.2</td>
+<td>v6.10.2</td>
 <td>Boron</td>
 <td>5.1.281.95</td>
 <td>3365</td>
 <td>447.03</td>
 </tr>
 <tr>
-<td>7.9.0</td>
+<td>v7.9.0</td>
 <td>-</td>
 <td>5.5.372.43</td>
 <td>3087</td>
 <td>399.39</td>
 </tr>
 <tr>
-<td>8.1.2</td>
+<td>v8.1.2</td>
 <td>(Carbon)</td>
 <td>5.8.283.39</td>
 <td>1326</td>
@@ -233,8 +233,8 @@ ga('send', 'pageview');
 </tr>
 </tbody>
 </table>
-<p>Notes: Node.js 8 comes with significantly improved performance of native promises; execution speed improves by a factor of 2.3-2.5 with memory utilization dropping by a factor of 2.1-2.6 in comparison with the previous versions of Node.js.</p>
-<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-8"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-8" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js 8"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js 8</h3><p>Node.js 8.1.2 (Carbon) / V8 5.8.283.39</p>
+<p>Notes: performance of native promises in Node.js v8 improves by a factor of 2.3-2.5 with memory utilization dropping by a factor of 2.1-2.6 in comparison with the previous versions of Node.js.</p>
+<h3 id="Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-1"><a href="#Performance-of-Callbacks-vs-Promises-vs-Async-Functions-in-Node-js-v8-1" class="headerlink" title="Performance of Callbacks vs Promises vs Async Functions in Node.js v8"></a>Performance of Callbacks vs Promises vs Async Functions in Node.js v8</h3><p>Node.js v8.1.2 (Carbon) / V8 5.8.283.41</p>
 <table>
 <thead>
 <tr>
@@ -255,23 +255,23 @@ ga('send', 'pageview');
 <td>108.65</td>
 </tr>
 <tr>
-<td>ES2016 Async Functions w/ Bluebird Promises</td>
+<td>Async Functions w/ Bluebird Promises</td>
 <td>765</td>
 <td>119.32</td>
 </tr>
 <tr>
-<td>ES2015 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>Native Promises</td>
 <td>1326</td>
 <td>194.98</td>
 </tr>
 <tr>
-<td>ES2016 Async Functions w/ ES2015 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>Async Functions w/ Native Promises</td>
 <td>1339</td>
 <td>202.16</td>
 </tr>
 </tbody>
 </table>
-<p>Notes: native Chrome V8 ES2015 promises perform only 2 times slower than Bluebird promises using 79% more memory. In contrast native ES2016 async functions in Node.js 8 perform only 75% slower than async function with Bluebird, using 69% more memory.</p>
+<p>Notes: native Chrome V8 ES2015 promises perform 2 times slower than Bluebird promises using 79% more memory. In contrast native ES2016 async functions in Node.js 8 perform 75% slower, using 69% more memory than async functions backed with Bluebird promises.</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Node.js 8 comes with significantly improved performance of native ES2015 promises and ES2016 async functions, further boosted by the introduction of native <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a>.</p>
 
       
