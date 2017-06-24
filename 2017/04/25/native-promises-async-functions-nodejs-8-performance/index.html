@@ -5,17 +5,17 @@
   
   <title>Performance of native ES2015 promises and ES2016 async functions in Node.js v8 - Blog of Sergiy Kyrylkov</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises + u">
+  <meta name="description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises Asy">
 <meta name="keywords" content="ecmascript 2015,ecmascript 2016,javascript,nodejs,es2015,es2016">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Performance of native ES2015 promises and ES2016 async functions in Node.js v8">
 <meta property="og:url" content="https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/index.html">
 <meta property="og:site_name" content="Blog of Sergiy Kyrylkov">
-<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises + u">
-<meta property="og:updated_time" content="2017-06-24T12:52:32.431Z">
+<meta property="og:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises Asy">
+<meta property="og:updated_time" content="2017-06-24T13:24:24.297Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Performance of native ES2015 promises and ES2016 async functions in Node.js v8">
-<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises + u">
+<meta name="twitter:description" content="Platform info:  Windows_NT 10.0.15063 x64 Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz × 4  Async types tested:  Bluebird Promises = Bluebird 3.5.0 Promises Native Promises = ES2015 Chrome V8 Promises Asy">
   
   
     <link rel="icon" href="/favicon.png">
@@ -101,9 +101,9 @@ ga('send', 'pageview');
 <p>Async types tested:</p>
 <ul>
 <li>Bluebird Promises = Bluebird 3.5.0 Promises</li>
-<li>Native Promises = ES2015 Chrome V8 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
+<li>Native Promises = ES2015 Chrome V8 Promises</li>
 <li>Async functions w/ Bluebird Promises = ES2016 Chrome V8 Async Functions with Bluebird 3.5.0 Promises</li>
-<li>Async functions w/ Native Promises = ES2016 Chrome V8 Async Functions with Chrome V8 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
+<li>Async functions w/ Native Promises = ES2016 Chrome V8 Async Functions with Chrome V8 Promises</li>
 </ul>
 <p><a href="https://github.com/petkaantonov/bluebird/tree/master/benchmark" target="_blank" rel="external">Bluebird benchmarks</a>:</p>
 <ul>
@@ -144,7 +144,7 @@ ga('send', 'pageview');
 <td>164.36</td>
 </tr>
 <tr>
-<td>v8.1.2</td>
+<td>v8.1.2 w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>(Carbon)</td>
 <td>5.8.283.39</td>
 <td>589</td>
@@ -179,12 +179,12 @@ ga('send', 'pageview');
 <td>70.70</td>
 </tr>
 <tr>
-<td>Native Promises</td>
+<td>Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>589</td>
 <td>69.51</td>
 </tr>
 <tr>
-<td>Async functions w/ Native Promises</td>
+<td>Async functions w/ Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>632</td>
 <td>72.95</td>
 </tr>
@@ -225,7 +225,7 @@ ga('send', 'pageview');
 <td>399.39</td>
 </tr>
 <tr>
-<td>v8.1.2</td>
+<td>v8.1.2 w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>(Carbon)</td>
 <td>5.8.283.39</td>
 <td>1326</td>
@@ -260,12 +260,12 @@ ga('send', 'pageview');
 <td>119.32</td>
 </tr>
 <tr>
-<td>Native Promises</td>
+<td>Native Promises w/ + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>1326</td>
 <td>194.98</td>
 </tr>
 <tr>
-<td>Async Functions w/ Native Promises</td>
+<td>Async Functions w/ Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>1339</td>
 <td>202.16</td>
 </tr>

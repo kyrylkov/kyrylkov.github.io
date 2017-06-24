@@ -100,9 +100,9 @@ ga('send', 'pageview');
 <p>Async types tested:</p>
 <ul>
 <li>Bluebird Promises = Bluebird 3.5.0 Promises</li>
-<li>Native Promises = ES2015 Chrome V8 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
+<li>Native Promises = ES2015 Chrome V8 Promises</li>
 <li>Async functions w/ Bluebird Promises = ES2016 Chrome V8 Async Functions with Bluebird 3.5.0 Promises</li>
-<li>Async functions w/ Native Promises = ES2016 Chrome V8 Async Functions with Chrome V8 Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
+<li>Async functions w/ Native Promises = ES2016 Chrome V8 Async Functions with Chrome V8 Promises</li>
 </ul>
 <p><a href="https://github.com/petkaantonov/bluebird/tree/master/benchmark" target="_blank" rel="external">Bluebird benchmarks</a>:</p>
 <ul>
@@ -143,7 +143,7 @@ ga('send', 'pageview');
 <td>164.36</td>
 </tr>
 <tr>
-<td>v8.1.2</td>
+<td>v8.1.2 w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>(Carbon)</td>
 <td>5.8.283.39</td>
 <td>589</td>
@@ -178,12 +178,12 @@ ga('send', 'pageview');
 <td>70.70</td>
 </tr>
 <tr>
-<td>Native Promises</td>
+<td>Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>589</td>
 <td>69.51</td>
 </tr>
 <tr>
-<td>Async functions w/ Native Promises</td>
+<td>Async functions w/ Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>632</td>
 <td>72.95</td>
 </tr>
@@ -224,7 +224,7 @@ ga('send', 'pageview');
 <td>399.39</td>
 </tr>
 <tr>
-<td>v8.1.2</td>
+<td>v8.1.2 w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>(Carbon)</td>
 <td>5.8.283.39</td>
 <td>1326</td>
@@ -259,12 +259,12 @@ ga('send', 'pageview');
 <td>119.32</td>
 </tr>
 <tr>
-<td>Native Promises</td>
+<td>Native Promises w/ + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>1326</td>
 <td>194.98</td>
 </tr>
 <tr>
-<td>Async Functions w/ Native Promises</td>
+<td>Async Functions w/ Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>1339</td>
 <td>202.16</td>
 </tr>
