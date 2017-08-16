@@ -102,8 +102,8 @@ ga('send', 'pageview');
 <ul>
 <li>Bluebird Promises = Bluebird 3.5.0 Promises</li>
 <li>Native Promises = ES2015 Chrome V8 Promises</li>
-<li>Async functions w/ Bluebird Promises = ES2017 Chrome V8 Async Functions with Bluebird 3.5.0 Promises</li>
-<li>Async functions w/ Native Promises = ES2017 Chrome V8 Async Functions with Chrome V8 Promises</li>
+<li>Async functions + Bluebird promisify = ES2017 Chrome V8 Async Functions with <a href="http://bluebirdjs.com/docs/api/promise.promisify.html" target="_blank" rel="external">Bluebird 3.5.0 promisify</a></li>
+<li>Async functions + Native Promises = ES2017 Chrome V8 Async Functions with <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></li>
 </ul>
 <p><a href="https://github.com/kyrylkov/promise-async-performance/tree/master/doxbee-sequential" target="_blank" rel="external">Benchmarks</a>:</p>
 <ul>
@@ -137,7 +137,7 @@ ga('send', 'pageview');
 <td>141.76</td>
 </tr>
 <tr>
-<td>v8.3.0 w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>v8.3.0 + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>(Carbon)</td>
 <td>6.0.286.52</td>
 <td>592</td>
@@ -167,23 +167,23 @@ ga('send', 'pageview');
 <td>45.51</td>
 </tr>
 <tr>
-<td>Async functions w/ Bluebird Promises</td>
+<td>Async functions + <a href="http://bluebirdjs.com/docs/api/promise.promisify.html" target="_blank" rel="external">Bluebird promisify</a></td>
 <td>535</td>
 <td>71.02</td>
 </tr>
 <tr>
-<td>Async functions w/ Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>Async functions + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>592</td>
 <td>76.22</td>
 </tr>
 <tr>
-<td>Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>Native Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>592</td>
 <td>60.96</td>
 </tr>
 </tbody>
 </table>
-<p>Notes: native ES2015 Chrome V8 promises in Node.js 8 perform 75%  slower than Bluebird promises using 43% more memory. In contrast, native ES2017 async functions in Node.js 8 perform 20% slower than async functions backed by Bluebird promises, but use the same amount of memory.</p>
+<p>Notes: native ES2015 Chrome V8 promises in Node.js 8 perform 75%  slower than Bluebird promises using 43% more memory. In contrast, native ES2017 async functions in Node.js 8 perform 20% slower than async functions with Bluebird promisify, but use the same amount of memory.</p>
 <h2 id="Madeup-parallel"><a href="#Madeup-parallel" class="headerlink" title="Madeup parallel"></a>Madeup parallel</h2><p><code>./bench parallel</code></p>
 <h3 id="Performance-of-Chrome-V8-Promises-in-current-versions-of-Node-js-1"><a href="#Performance-of-Chrome-V8-Promises-in-current-versions-of-Node-js-1" class="headerlink" title="Performance of Chrome V8 Promises in current versions of Node.js"></a>Performance of Chrome V8 Promises in current versions of Node.js</h3><table>
 <thead>
@@ -211,7 +211,7 @@ ga('send', 'pageview');
 <td>447.39</td>
 </tr>
 <tr>
-<td>v8.3.0 w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>v8.3.0 + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>(Carbon)</td>
 <td>6.0.286.52</td>
 <td>1306</td>
@@ -241,23 +241,23 @@ ga('send', 'pageview');
 <td>102.60</td>
 </tr>
 <tr>
-<td>Async Functions w/ Bluebird Promises</td>
+<td>Async Functions + Bluebird promisify</td>
 <td>728</td>
 <td>115.60</td>
 </tr>
 <tr>
-<td>Native Promises w/ + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>Native Promises + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>1308</td>
 <td>194.98</td>
 </tr>
 <tr>
-<td>Async Functions w/ Native Promises w/ <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
+<td>Async Functions + <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a></td>
 <td>1336</td>
 <td>202.16</td>
 </tr>
 </tbody>
 </table>
-<p>Notes: native Chrome V8 ES2015 promises perform 2 times slower than Bluebird promises using 79% more memory. Native ES2017 async functions in Node.js 8 perform 75% slower, using 69% more memory than async functions backed by Bluebird promises.</p>
+<p>Notes: native Chrome V8 ES2015 promises perform 2 times slower than Bluebird promises using 79% more memory. Native ES2017 async functions in Node.js 8 perform 75% slower, using 69% more memory than async functions with Bluebird promisify.</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Node.js v8 comes with significantly improved performance of native ES2015 promises and ES2017 async functions, further boosted by the introduction of native <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank" rel="external">util.promisify</a>.</p>
 
       
